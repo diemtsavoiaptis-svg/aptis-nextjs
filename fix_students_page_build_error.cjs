@@ -1,4 +1,17 @@
-"use client";
+﻿const fs = require("fs");
+const path = require("path");
+
+const file = path.join(process.cwd(), "app", "dashboard", "students", "page.jsx");
+
+if (fs.existsSync(file)) {
+  const backup = file + ".backup-fix-invalid-vietnamese-setter-" + Date.now();
+  fs.copyFileSync(file, backup);
+  console.log("Backup:", backup);
+}
+
+fs.mkdirSync(path.dirname(file), { recursive: true });
+
+const content = `"use client";
 
 import Link from "next/link";
 
@@ -26,7 +39,7 @@ export default function StudentsPage() {
         </Link>
       </section>
 
-      <style jsx global>{`
+      <style jsx global>{\`
         * {
           box-sizing: border-box;
         }
@@ -127,7 +140,12 @@ export default function StudentsPage() {
             align-items: flex-start;
           }
         }
-      `}</style>
+      \`}</style>
     </main>
   );
 }
+`;
+
+fs.writeFileSync(file, content, "utf8");
+
+console.log("Fixed app/dashboard/students/page.jsx");
