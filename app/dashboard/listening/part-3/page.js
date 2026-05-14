@@ -118,7 +118,50 @@ export default function AdminListeningPart3Page() {
 
   return (
     <main className="page">
-      <section className="tablePanel">
+      <section className="shell">
+        <header className="hero">
+          <div className="partBadge">3</div>
+
+          <div className="heroText">
+            <p>QUẢN LÝ LISTENING</p>
+            <h1>Admin Part 3</h1>
+            <span>Quản lý audio, topic, 4 câu hỏi, 4 đáp án và paragraph phân tích ý nguyên.</span>
+
+            <div className="heroActions">
+              <Link href="/dashboard/listening">Về quản lý Listening</Link>
+              <Link href="/listening/part-3" className="primaryLink">Xem giao diện học viên</Link>
+            </div>
+          </div>
+        </header>
+
+        <section className="statsGrid">
+          <div className="statCard">
+            <span>TỔNG DÒNG</span>
+            <strong>{totalRows}</strong>
+          </div>
+          <div className="statCard">
+            <span>CÓ AUDIO</span>
+            <strong>{audioRows}</strong>
+          </div>
+          <div className="statCard">
+            <span>HOÀN THIỆN</span>
+            <strong>{completedRows}</strong>
+          </div>
+          <div className="statCard">
+            <span>ĐÃ CHỌN</span>
+            <strong>{selectedRows}</strong>
+          </div>
+          <div className="statCard">
+            <span>HIỆN KHÁCH</span>
+            <strong>{guestRows}</strong>
+          </div>
+        </section>
+
+        
+
+
+
+        <section className="tablePanel">
           <div className="topScrollWrap">
             <table>
               <thead>
