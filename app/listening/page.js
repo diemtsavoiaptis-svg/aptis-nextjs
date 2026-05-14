@@ -7,7 +7,7 @@ const parts = [
     href: "/listening/part-1",
     number: "1",
     label: "PART 1",
-    title: "Short Conversations",
+    title: "Hội thoại ngắn",
     desc: "Listen to short conversations and choose the correct answer A/B/C.",
     tag: "Multiple Choice",
   },
@@ -15,7 +15,7 @@ const parts = [
     href: "/listening/part-2",
     number: "2",
     label: "PART 2",
-    title: "Information Matching",
+    title: "Nối thông tin",
     desc: "Listen and match information with the correct speaker, place, or detail.",
     tag: "Matching",
   },
@@ -23,7 +23,7 @@ const parts = [
     href: "/listening/part-3",
     number: "3",
     label: "PART 3",
-    title: "Opinion / Identity",
+    title: "Ý kiến / Nhân vật",
     desc: "Identify the speaker, identity, or their specific point of view.",
     tag: "Speaker Opinion",
   },
@@ -31,13 +31,13 @@ const parts = [
     href: "/listening/part-4",
     number: "4",
     label: "PART 4",
-    title: "Monologue / Summary",
+    title: "Bài nói dài / Tóm tắt",
     desc: "Listen to a longer passage and identify the main topic or theme.",
     tag: "Main Idea",
   },
 ];
 
-export default function ListeningHomePage() {
+export default function Page() {
   return (
     <main className="listeningPage">
       <section className="listeningShell">
@@ -46,7 +46,7 @@ export default function ListeningHomePage() {
             <p className="eyebrow">APTIS LISTENING PRACTICE</p>
             <h1>Listening Module</h1>
             <p>
-              A clean 4-part practice structure for Guest Preview and Student Access.
+              A clean 4-part practice structure for Khách Preview and Học viên Access.
               This is a design-only version. Real data will be imported later.
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function ListeningHomePage() {
               <div className="partContent">
                 <div className="partTop">
                   <span>{part.tag}</span>
-                  <b>Design Preview</b>
+                  <b>Đang thiết kế Preview</b>
                 </div>
 
                 <h2>{part.title}</h2>

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Aptis practice platform rebuilt in JavaScript/Next.js",
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;

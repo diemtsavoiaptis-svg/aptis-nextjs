@@ -5,9 +5,9 @@ import { useMemo, useState } from "react";
 const demoContent = {
   1: {
     label: "PART 1",
-    title: "Listening Part 1 Practice",
+    title: "Listening Luyện tập Phần 1",
     subtitle: "Listen to short audio and choose the correct answer A/B/C.",
-    type: "Short Conversations",
+    type: "Hội thoại ngắn",
     questions: [
       {
         question: "What did she advise for people who lack motivation at work?",
@@ -45,7 +45,7 @@ const demoContent = {
     label: "PART 2",
     title: "Listening Part 2 Practice",
     subtitle: "Listen and match the information with the correct option.",
-    type: "Information Matching",
+    type: "Nối thông tin",
     questions: [
       {
         question: "Match the speaker with the correct activity.",
@@ -83,7 +83,7 @@ const demoContent = {
     label: "PART 3",
     title: "Listening Part 3 Practice",
     subtitle: "Identify the speaker or their specific point of view.",
-    type: "Opinion / Identity",
+    type: "Ý kiến / Nhân vật",
     questions: [
       {
         question: "Which speaker thinks online learning is more convenient?",
@@ -121,7 +121,7 @@ const demoContent = {
     label: "PART 4",
     title: "Listening Part 4 Practice",
     subtitle: "Listen to a monologue and identify the main topic or theme.",
-    type: "Monologue / Summary",
+    type: "Bài nói dài / Tóm tắt",
     questions: [
       {
         question: "What is the main topic of the passage?",
@@ -200,7 +200,7 @@ export default function ListeningPartPreview({ part = 1 }) {
         </header>
 
         <div className="progressTop">
-          <strong>Question {activeIndex + 1}/{total}</strong>
+          <strong>Câu {activeIndex + 1}/{total}</strong>
           <span>{progressPercent.toFixed(2).replace(".", ",")}%</span>
         </div>
 
@@ -210,8 +210,8 @@ export default function ListeningPartPreview({ part = 1 }) {
 
         <section className="card">
           <div className="cardTop">
-            <span className="questionPill">Question {activeIndex + 1}</span>
-            <span className="unlockPill">Design Preview</span>
+            <span className="questionPill">Câu {activeIndex + 1}</span>
+            <span className="unlockPill">Đang thiết kế Preview</span>
           </div>
 
           <h2 className="questionTitle">{current.question}</h2>
@@ -222,7 +222,7 @@ export default function ListeningPartPreview({ part = 1 }) {
 
           <div className="voiceTools">
             <button type="button" className="voiceBtn" onClick={() => setShowVoice(!showVoice)}>
-              {showVoice ? "Hide check voice" : "Check voice"}
+              {showVoice ? "Hide check voice" : "Xem lời thoại"}
             </button>
           </div>
 
@@ -253,16 +253,16 @@ export default function ListeningPartPreview({ part = 1 }) {
           </div>
 
           <button type="button" className="checkBtn">
-            Check answer
+            Kiểm tra đáp án
           </button>
 
           <div className="navRow">
             <button type="button" className="prevBtn" onClick={goPrev} disabled={activeIndex === 0}>
-              ← Previous question
+              ← Câu trước
             </button>
 
             <button type="button" className="nextBtn" onClick={goNext} disabled={activeIndex === total - 1}>
-              Next question →
+              Câu tiếp theo →
             </button>
           </div>
         </section>

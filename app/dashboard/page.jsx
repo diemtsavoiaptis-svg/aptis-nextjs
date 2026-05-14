@@ -38,7 +38,7 @@ const skills = [
   },
 ];
 
-export default function DashboardPage() {
+export default function Page() {
   return (
     <main className="text-rose-950">
       <section className="mx-auto max-w-6xl">

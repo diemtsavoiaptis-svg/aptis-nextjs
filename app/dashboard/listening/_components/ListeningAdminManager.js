@@ -92,7 +92,7 @@ const partConfigs = {
     subtitle: "Độc thoại / Tóm tắt ý chính",
     description: "Quản lý question, chủ đề, câu hỏi 16, câu hỏi 17, các đáp án chọn và dữ liệu paraphrase.",
     columns: [
-      { key: "question", label: "Question" },
+      { key: "question", label: "Câu" },
       { key: "topic", label: "Chủ đề" },
       { key: "question16", label: "Câu hỏi 16" },
       { key: "answer16A", label: "Câu trả lời 1" },
@@ -195,11 +195,11 @@ export default function ListeningAdminManager({ part = 1 }) {
     setPasteText("");
     setShowPaste(false);
   }
-  function toggleGuestVisibility() {
+  function toggleKháchVisibility() {
     setRows((oldRows) =>
       oldRows.map((row, index) =>
         index === selectedIndex
-          ? { ...row, showInGuest: !row.showInGuest }
+          ? { ...row, showInKhách: !row.showInKhách }
           : row
       )
     );
@@ -261,8 +261,8 @@ export default function ListeningAdminManager({ part = 1 }) {
           <button type="button" onClick={duplicateRow}>Nhân bản dòng</button>
           <button type="button" onClick={deleteRow}>Xóa dòng</button>
           <button type="button" onClick={() => setShowPaste(true)}>Dán hàng loạt</button>
-          <button type="button" onClick={toggleGuestVisibility}>
-            {selectedRow.showInGuest ? "Ẩn khỏi giao diện khách" : "Chọn câu để hiển thị ở giao diện khách"}
+          <button type="button" onClick={toggleKháchVisibility}>
+            {selectedRow.showInKhách ? "Ẩn khỏi giao diện khách" : "Chọn câu để hiển thị ở giao diện khách"}
           </button>
           <button type="button" onClick={exportJson}>Xuất JSON</button>
           <button type="button" onClick={clearRows} className="dangerBtn">Xóa tất cả</button>
@@ -290,7 +290,7 @@ export default function ListeningAdminManager({ part = 1 }) {
                   {rows.map((row, rowIndex) => (
                     <tr
                       key={rowIndex}
-                      className={`${rowIndex === selectedIndex ? "activeRow" : ""} ${row.showInGuest ? "guestVisibleRow" : ""}`}
+                      className={`${rowIndex === selectedIndex ? "activeRow" : ""} ${row.showInKhách ? "guestVisibleRow" : ""}`}
                       onClick={() => setSelectedIndex(rowIndex)}
                     >
                       <td>{rowIndex + 1}</td>
@@ -314,7 +314,7 @@ export default function ListeningAdminManager({ part = 1 }) {
             <div className="panelTitle">
               <h2>Dòng đang chọn</h2>
               <span>
-                Dòng {selectedIndex + 1} · {selectedRow.showInGuest ? "Đang hiển thị khách" : "Chưa hiển thị khách"}
+                Dòng {selectedIndex + 1} · {selectedRow.showInKhách ? "Đang hiển thị khách" : "Chưa hiển thị khách"}
               </span>
             </div>
 

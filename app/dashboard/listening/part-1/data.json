@@ -15,7 +15,14 @@
       "Home",
       "Bicycle"
     ],
-    "voiceData": "Welcome! I'm so glad you are interested in this beautiful property. This house was built in the 1920s and has maintained much of its original charm. The hardwood floors you see here are completely original, and they've been carefully preserved over the years. The same goes for the architecture- those high ceilings and detailed mouldings are a testament to the craftsmanship of that era. However, the furniture you see isn't original. It was replaced a few years ago to give the home a more modern, functional feel. But don't worry, the updates blend well with the classic features, giving you the best of both words- historic charm with modern comfort."
+    "voiceData": "Welcome! I'm so glad you are interested in this beautiful property. This house was built in the 1920s and has maintained much of its original charm. The hardwood floors you see here are completely original, and they've been carefully preserved over the years. The same goes for the architecture- those high ceilings and detailed mouldings are a testament to the craftsmanship of that era. However, the furniture you see isn't original. It was replaced a few years ago to give the home a more modern, functional feel. But don't worry, the updates blend well with the classic features, giving you the best of both words- historic charm with modern comfort.",
+    "guestVisible": true,
+    "audioLink": "https://drive.google.com/file/d/1tvS3HZYIx4xsVUjpj6bPMe0hrURlaZ5u/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -33,7 +40,14 @@
       "Request a transfer",
       "Take on additional responsibilities"
     ],
-    "voiceData": "Many people feel unhappy at work, and often, they think a higher salary or less work will fix it. But that's not always the solution. Sometimes, the problem is the work environment. A change of place can help improve how we feel at work. However, looking for a new job can be stressful and take time. One option is to ask for a transfer to another branch within the same company. This can offer the same benefits as getting a new job, without the challenges of starting over somewhere new."
+    "voiceData": "Many people feel unhappy at work, and often, they think a higher salary or less work will fix it. But that's not always the solution. Sometimes, the problem is the work environment. A change of place can help improve how we feel at work. However, looking for a new job can be stressful and take time. One option is to ask for a transfer to another branch within the same company. This can offer the same benefits as getting a new job, without the challenges of starting over somewhere new.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/190iMVfigwwaLhiHWObcivWC8hTlb952O/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -51,7 +65,14 @@
       "6.30pm",
       "7.00pm"
     ],
-    "voiceData": "Hey, I was just checking in to confirm what time we're meeting up tonight. I know we've been talking about hanging out, but I wanted to make sure. Are we still on for 6:30? That time works great for me, so I just wanted to double-check if it's good for you too. Alright, looking forward to it. See you then!"
+    "voiceData": "Hey, I was just checking in to confirm what time we're meeting up tonight. I know we've been talking about hanging out, but I wanted to make sure. Are we still on for 6:30? That time works great for me, so I just wanted to double-check if it's good for you too. Alright, looking forward to it. See you then!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1gE_WY6Qx52nZCikLo-CfheF7AVGyizjG/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -69,7 +90,14 @@
       "at a department store",
       "at a local market"
     ],
-    "voiceData": "ko có"
+    "voiceData": "ko có",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1uGrX1etZCNTR9HRvIE30IwBkvUztkq-z/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -87,7 +115,14 @@
       "going to the theatre",
       "playing sports"
     ],
-    "voiceData": "Whenever she has some free time, she loves going to the theatre. There's something special about watching live performances that really captures her attention. Whether it's a play, musical, or even a stand-up comedy show, she enjoys the atmosphere and the excitement of being in a theatre. It's her favorite way to unwind and escape into a different world for a few hours."
+    "voiceData": "Whenever she has some free time, she loves going to the theatre. There's something special about watching live performances that really captures her attention. Whether it's a play, musical, or even a stand-up comedy show, she enjoys the atmosphere and the excitement of being in a theatre. It's her favorite way to unwind and escape into a different world for a few hours.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/11_ibm_W-Tn-uA3poMI6G7vbzjcASOWJV/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -105,7 +140,14 @@
       "Swimming",
       "Football"
     ],
-    "voiceData": "She's always enjoyed sports, and football is the one she's really good at. She has great control over the ball and is quick on her feet, whether she's playing with friends or in a competitive setting."
+    "voiceData": "She's always enjoyed sports, and football is the one she's really good at. She has great control over the ball and is quick on her feet, whether she's playing with friends or in a competitive setting.",
+    "guestVisible": true,
+    "audioLink": "https://drive.google.com/file/d/1_nak-IlY-Im9VCMc2PLJzbW_JEXL5wV5/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -123,7 +165,14 @@
       "35 minutes",
       "60 minutes"
     ],
-    "voiceData": "Lately, I've started a new routine that I'm really enjoying! I decided to involve more exercise into my life. So, I began by walking for about 15 minutes every day, just to get moving. After that, I hop on my bike and cycle for 35 minutes. It's been refreshing! I love how it helps me clear my mind after a busy day. I'm thinking of sticking with this habit for the long run!"
+    "voiceData": "Lately, I've started a new routine that I'm really enjoying! I decided to involve more exercise into my life. So, I began by walking for about 15 minutes every day, just to get moving. After that, I hop on my bike and cycle for 35 minutes. It's been refreshing! I love how it helps me clear my mind after a busy day. I'm thinking of sticking with this habit for the long run!",
+    "guestVisible": true,
+    "audioLink": "https://drive.google.com/file/d/1XXB-ErZtGXwHhKiNtp7KYoTcoX3I0sNm/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -141,7 +190,14 @@
       "Wednesday",
       "On monday morning"
     ],
-    "voiceData": "Hi Professor Smith, this is John calling about our meeting for the assignment. I wanted to confirm our appointment time. I know we discussed a few options earlier. At first, I thought we agreed on Tuesday morning, but then I remembered that doesn't work with your schedule. Then I considered Thursday afternoon, but I have another class then. So, I'm pretty sure we settled on Thursday morning at 10 AM in your office. That's what I have written down. I'll bring my draft and notes for the project. If I've got the day or time wrong, or if you need me to bring anything else, please let me know. Looking forward to discussing the assignment with you. Have a great day!"
+    "voiceData": "Hi Professor Smith, this is John calling about our meeting for the assignment. I wanted to confirm our appointment time. I know we discussed a few options earlier. At first, I thought we agreed on Tuesday morning, but then I remembered that doesn't work with your schedule. Then I considered Thursday afternoon, but I have another class then. So, I'm pretty sure we settled on Thursday morning at 10 AM in your office. That's what I have written down. I'll bring my draft and notes for the project. If I've got the day or time wrong, or if you need me to bring anything else, please let me know. Looking forward to discussing the assignment with you. Have a great day!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1TdrkyNiCutelNgiL3LtP7YMVM4c2nY8X/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -159,7 +215,14 @@
       "Two o'clock",
       "Three o'clock"
     ],
-    "voiceData": "Hi, sweetheart! I just wanted to tell you that we'll meet at 3 o'clock when you finish school. After that, I can take you to your soccer club at 4 o'clock. If you need anything, just let me know, and I can pick it up for you. Then, we can head out to dinner at 5 o'clock. Looking forward to seeing you!"
+    "voiceData": "Hi, sweetheart! I just wanted to tell you that we'll meet at 3 o'clock when you finish school. After that, I can take you to your soccer club at 4 o'clock. If you need anything, just let me know, and I can pick it up for you. Then, we can head out to dinner at 5 o'clock. Looking forward to seeing you!",
+    "guestVisible": true,
+    "audioLink": "https://drive.google.com/file/d/1kmOuJHSR1FIYJwZQ6iBKdtdBfrUzNcmo/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -177,7 +240,14 @@
       "Red",
       "Green"
     ],
-    "voiceData": "Hey! It's Jack. I just moved to a new house in this busy neighborhood, and it's really cool! There are so many houses here in different colors-purple, blue, and white. My house is big and red! I'd love for you to come over and check it out. Let me know when you're free!."
+    "voiceData": "Hey! It's Jack. I just moved to a new house in this busy neighborhood, and it's really cool! There are so many houses here in different colors-purple, blue, and white. My house is big and red! I'd love for you to come over and check it out. Let me know when you're free!.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1onP-nH6KpNIau2woKJ8WEgdWhIhJcfn8/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -195,7 +265,14 @@
       "Go to the coffee shop",
       "Play football"
     ],
-    "voiceData": "Every day, I wake up at 7 A.M. and have a quick breakfast before going to work. I usually take the bus, and it takes about 30 minutes to get to the office. At work, I spend most of my time on the computer, answering emails and working on projects. I have lunch at noon and get back to work until 5 P.M. After work, I like to relax by playing football with my friends. It's a great way to stay active and have fun!"
+    "voiceData": "Every day, I wake up at 7 A.M. and have a quick breakfast before going to work. I usually take the bus, and it takes about 30 minutes to get to the office. At work, I spend most of my time on the computer, answering emails and working on projects. I have lunch at noon and get back to work until 5 P.M. After work, I like to relax by playing football with my friends. It's a great way to stay active and have fun!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1t_0r3g8kIJWgERvNT5pBVmnT1ljMp5El/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -213,7 +290,14 @@
       "Math",
       "Science"
     ],
-    "voiceData": "Hey sweetheart, I'm so proud of you! Your art project looks amazing, you're really talented. I love how you used all those bright colors. You always do such a great job with your drawings. But remember, you also need to spend some time on your other subjects too, like math and science. I know you can do well in those if you try hard, just like you do with art. Let's work on it together, okay?"
+    "voiceData": "Hey sweetheart, I'm so proud of you! Your art project looks amazing, you're really talented. I love how you used all those bright colors. You always do such a great job with your drawings. But remember, you also need to spend some time on your other subjects too, like math and science. I know you can do well in those if you try hard, just like you do with art. Let's work on it together, okay?",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1SrHJ9MpzPAXTkn2gYGZR-1lX5oWOfih4/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -231,7 +315,14 @@
       "Two weeks",
       "Two weeks"
     ],
-    "voiceData": "They traveled to India for a short trip, and they spent two weeks there. During that time, they explored different cities, experienced the local culture, and visited some famous landmarks. It was a quick but memorable visit."
+    "voiceData": "They traveled to India for a short trip, and they spent two weeks there. During that time, they explored different cities, experienced the local culture, and visited some famous landmarks. It was a quick but memorable visit.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1I4VCYq3F9YniJoDQCdr1qrLQ8LdUPeS3/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -249,7 +340,14 @@
       "Friday 14th",
       "Wednesday 12th"
     ],
-    "voiceData": "Hello! This is the doctor's office calling to change your appointment. I wanted to let you know that the new appointment is on Thursday the 13th. I understand you might have been expecting it to be on Friday the 14th, but we're all off this day due to the national dentist holiday. Please let us know if that works for you!"
+    "voiceData": "Hello! This is the doctor's office calling to change your appointment. I wanted to let you know that the new appointment is on Thursday the 13th. I understand you might have been expecting it to be on Friday the 14th, but we're all off this day due to the national dentist holiday. Please let us know if that works for you!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1tiwZs2ol7X9EK6NZ5O-JuttPGbAISoCP/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -267,7 +365,14 @@
       "Iced tea",
       "Beer"
     ],
-    "voiceData": "Hi there! I'm really thirsty. Can I have a drink, please? I was thinking about getting a beer, but it's a bit too early for that. Water sounds good, but I'm in the mood for something cooler. I'll go with an iced tea, please. That sounds perfect for this weather!"
+    "voiceData": "Hi there! I'm really thirsty. Can I have a drink, please? I was thinking about getting a beer, but it's a bit too early for that. Water sounds good, but I'm in the mood for something cooler. I'll go with an iced tea, please. That sounds perfect for this weather!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1oy0Srb9KOOWGTA7mh4ch7dIbZhHBPjry/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -285,7 +390,14 @@
       "In the mornings",
       "At night"
     ],
-    "voiceData": "Every morning, I start my day by going for a run. It helps me clear my mind and gives me energy. After lunch, at around two o'clock, I sit down at my working table, ready to write. My husband is my best critic, so I try to produce something before he gets home in the afternoon."
+    "voiceData": "Every morning, I start my day by going for a run. It helps me clear my mind and gives me energy. After lunch, at around two o'clock, I sit down at my working table, ready to write. My husband is my best critic, so I try to produce something before he gets home in the afternoon.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/13fUumJoSPAQcgvdUv07XWm6t_Mac3kwX/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -303,7 +415,14 @@
       "By plane",
       "By train"
     ],
-    "voiceData": "He travels most of the time, enjoying the convenience and comfort of his journeys. Whether it's for work or leisure, he finds it the best way to get around, especially because of the scenic views. He travels by train."
+    "voiceData": "He travels most of the time, enjoying the convenience and comfort of his journeys. Whether it's for work or leisure, he finds it the best way to get around, especially because of the scenic views. He travels by train.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1BaSgQhmyoLCbyj9-QDxp2ddUEx_wY8ZD/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -321,7 +440,14 @@
       "Sees her family",
       "Goes to a birthday party"
     ],
-    "voiceData": "Normally, on Saturdays, I spend the day with my family. We like to have brunch together and then do some fun activities, like playing board games or going for a walk. It's a nice way to relax and catch up. But this week, I have something different planned. I'm going to see a friend for her birthday and go shopping together instead. I'm looking forward to it, but I know I'll miss our usual family time!"
+    "voiceData": "Normally, on Saturdays, I spend the day with my family. We like to have brunch together and then do some fun activities, like playing board games or going for a walk. It's a nice way to relax and catch up. But this week, I have something different planned. I'm going to see a friend for her birthday and go shopping together instead. I'm looking forward to it, but I know I'll miss our usual family time!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1WKwhxCCtLzgN7mRRj0M3Nq88BR1WiAfx/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -339,7 +465,14 @@
       "Shopping",
       "Hiking"
     ],
-    "voiceData": "On our family trip last summer, we had such a great time! My wife really enjoys photography. So, when we went walking together in the parks, she spent a lot of time taking pictures of the beautiful landscapes. Well, at least she is not crazy about shopping."
+    "voiceData": "On our family trip last summer, we had such a great time! My wife really enjoys photography. So, when we went walking together in the parks, she spent a lot of time taking pictures of the beautiful landscapes. Well, at least she is not crazy about shopping.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1gdGOJ0c8zjmxgfx5oRFup3kzPHWORSW5/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -357,7 +490,14 @@
       "Her mother",
       "A large stone"
     ],
-    "voiceData": "I've always loved science, but there was a moment that really encouraged me to become a scientist. I remember when I was a child, I found a large stone during a school trip. It sparked my curiosity about geology. My mother also inspired me to explore my interests in science. Of course, I use the computer a lot now for my research, but that stone was the beginning."
+    "voiceData": "I've always loved science, but there was a moment that really encouraged me to become a scientist. I remember when I was a child, I found a large stone during a school trip. It sparked my curiosity about geology. My mother also inspired me to explore my interests in science. Of course, I use the computer a lot now for my research, but that stone was the beginning.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Ui0X8GpBPNS5P3rlH1OUP-P9GEch3vse/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -375,7 +515,14 @@
       "Friday afternoon",
       "Wednesday afternoon"
     ],
-    "voiceData": "This week is pretty busy, but the most important thing is the meeting on Wednesday afternoon. We usually have it on Monday, but this time we had to change the day. Wednesday works better because everyone is free. I have a lot to prepare before then, so I'll spend Tuesday getting everything ready. It's a big meeting, and we need to finalize some plans. I'm just glad it's not on Friday, or I'd be too tired!"
+    "voiceData": "This week is pretty busy, but the most important thing is the meeting on Wednesday afternoon. We usually have it on Monday, but this time we had to change the day. Wednesday works better because everyone is free. I have a lot to prepare before then, so I'll spend Tuesday getting everything ready. It's a big meeting, and we need to finalize some plans. I'm just glad it's not on Friday, or I'd be too tired!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1vFrdbvVYNUYlqvi-TQQIeMf32aegc4Ox/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -393,7 +540,14 @@
       "2000",
       "2500"
     ],
-    "voiceData": "I just heard the news that the local authority is planning to build 2000 new houses! I remember they were initially saying it would only be 1500. But then I heard someone mention 2500! That's quite a jump. I wonder how this will affect the neighborhood. Will it bring in more families or just more traffic? It'll be interesting to see how it all unfolds."
+    "voiceData": "I just heard the news that the local authority is planning to build 2000 new houses! I remember they were initially saying it would only be 1500. But then I heard someone mention 2500! That's quite a jump. I wonder how this will affect the neighborhood. Will it bring in more families or just more traffic? It'll be interesting to see how it all unfolds.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1vgbZ_WYriIyaE1_5QmVcTNdr--AoLEL_/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -411,7 +565,14 @@
       "Librarian",
       "Teacher"
     ],
-    "voiceData": "When I was younger, I didn't always dream of being a writer. My first job was actually as a teacher. I taught English to small children, and I loved helping them learn to read and write. It wasn't easy, though. I spent a lot of time grading papers and preparing lessons. But that job taught me how to use words well, and now I write stories for everyone to enjoy."
+    "voiceData": "When I was younger, I didn't always dream of being a writer. My first job was actually as a teacher. I taught English to small children, and I loved helping them learn to read and write. It wasn't easy, though. I spent a lot of time grading papers and preparing lessons. But that job taught me how to use words well, and now I write stories for everyone to enjoy.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1tLznHhyU4Ec2Avjq2fKDckFg7pLUt70i/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -429,7 +590,14 @@
       "Having the meeting without him",
       "Wait for him longer"
     ],
-    "voiceData": "Hi, Jane! It looks like James is running late again. I'm starting to wonder if we should wait for him. I don't want to waste too much time. I feel like we could have the meeting without him. We have a lot to discuss, and we can always update him later. I think it's better to move forward instead of just waiting. So let's go ahead."
+    "voiceData": "Hi, Jane! It looks like James is running late again. I'm starting to wonder if we should wait for him. I don't want to waste too much time. I feel like we could have the meeting without him. We have a lot to discuss, and we can always update him later. I think it's better to move forward instead of just waiting. So let's go ahead.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1235HoeFNZCtojJWLgPXcA04PpLHZUJkm/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -447,7 +615,14 @@
       "10.30",
       "9.45"
     ],
-    "voiceData": "Hey, just wanted to give you a quick heads-up. I won't be able to join the meeting with the clients at 10:15 like we planned-I've got something that suddenly came up. I know it's last minute, but could you go ahead and handle the presentation on your own? You're familiar with everything, so I trust you've got this. Let me know how it goes afterward. Thanks, I really appreciate it!"
+    "voiceData": "Hey, just wanted to give you a quick heads-up. I won't be able to join the meeting with the clients at 10:15 like we planned-I've got something that suddenly came up. I know it's last minute, but could you go ahead and handle the presentation on your own? You're familiar with everything, so I trust you've got this. Let me know how it goes afterward. Thanks, I really appreciate it!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1DQCt85eWU_ozdCG67ycK4N-A31nVcq91/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -465,7 +640,14 @@
       "Suggest a drink",
       "Ask for help"
     ],
-    "voiceData": "Hi James, it's Vincent. I just want to check in and see how you're doing. It's been a while since we last caught up! How about we grab a drink later? I know a great new place that has very nice tea. You should definitely try it next time you visit me. Text me back!"
+    "voiceData": "Hi James, it's Vincent. I just want to check in and see how you're doing. It's been a while since we last caught up! How about we grab a drink later? I know a great new place that has very nice tea. You should definitely try it next time you visit me. Text me back!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1ZAvN7EhHFvJZoTGIzgLzlIObAeC-qWcX/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -483,7 +665,14 @@
       "bread",
       "milk"
     ],
-    "voiceData": "Hi Sally, it's Mom. How are you? I just wanted to remind you about dinner tonight. We're having your favorite, spaghetti! Don't forget to pick up your brother from school at 4 o'clock. Oh, and can you stop by the store on your way home? We're out of eggs, and I need some to finish baking the cake. Thanks, sweetie!"
+    "voiceData": "Hi Sally, it's Mom. How are you? I just wanted to remind you about dinner tonight. We're having your favorite, spaghetti! Don't forget to pick up your brother from school at 4 o'clock. Oh, and can you stop by the store on your way home? We're out of eggs, and I need some to finish baking the cake. Thanks, sweetie!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Q3yhO8dTiak4kT-cnTvlI0ZxuB-pL9Ho/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -501,7 +690,14 @@
       "11:00",
       "10:00"
     ],
-    "voiceData": "Hey! I was thinking about our meet-up. We plan to meet at 9:30, but I just realized I have a class that finishes at 9:00, so I might not make it in time. How about we meet at 10:00 instead? That should give me enough time to get there. Does that work for you?"
+    "voiceData": "Hey! I was thinking about our meet-up. We plan to meet at 9:30, but I just realized I have a class that finishes at 9:00, so I might not make it in time. How about we meet at 10:00 instead? That should give me enough time to get there. Does that work for you?",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1WFo2S6KyVgvDbYrcZ4OKWNLpvqA9rJms/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -519,7 +715,14 @@
       "Stay late at the office",
       "Hang out with friends"
     ],
-    "voiceData": "Hey Max, it's Anna. I want to ask you for a favor this afternoon. I have to stay late at the office to finish some work. Could you please pick up my kids from school? After that, I know you'll want to hang out with your friends, so feel free to take them along. I really appreciate your help!"
+    "voiceData": "Hey Max, it's Anna. I want to ask you for a favor this afternoon. I have to stay late at the office to finish some work. Could you please pick up my kids from school? After that, I know you'll want to hang out with your friends, so feel free to take them along. I really appreciate your help!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1R2hnAuQb4rU0OaX1OtkQ_uWvdfGHzOiX/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -537,7 +740,14 @@
       "Romantic film",
       "Comedy film"
     ],
-    "voiceData": "Today, I want to recommend an action film that really impressed me. The lead actor, who is usually known for his romantic roles, delivered an outstanding performance. Of course, if you're in the mood for something lighter, there are plenty of comedies to enjoy as well. But if you're looking for excitement, this action film is definitely worth a watch!"
+    "voiceData": "Today, I want to recommend an action film that really impressed me. The lead actor, who is usually known for his romantic roles, delivered an outstanding performance. Of course, if you're in the mood for something lighter, there are plenty of comedies to enjoy as well. But if you're looking for excitement, this action film is definitely worth a watch!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1ATJbqqmsSIHd7_JH0c-VtKJbXXCHFuCv/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -555,7 +765,14 @@
       "The library",
       "The park"
     ],
-    "voiceData": "Malik has been hearing a lot about an important event, and the town hall is where he wants to go because he believes it will give him a chance to learn more, engage with the community, and share his own ideas."
+    "voiceData": "Malik has been hearing a lot about an important event, and the town hall is where he wants to go because he believes it will give him a chance to learn more, engage with the community, and share his own ideas.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1djerro4Fbhq-8d_sPxFOmjFKqanXvTNU/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -573,7 +790,14 @@
       "By car",
       "By bike"
     ],
-    "voiceData": "Hi, everyone! I'm Greg, and I want to tell you about a typical working day in my life. I usually wake up early, around 7 A.M. After a quick breakfast, I get ready for work. I like to wear smart clothes because I work in an office. I go by bus every day, which takes about 30 minutes. I enjoy looking out the window and listening to music on my way. When I arrive at the office, I start my day by checking emails and planning my tasks. I have meetings with my team, and we work together on projects."
+    "voiceData": "Hi, everyone! I'm Greg, and I want to tell you about a typical working day in my life. I usually wake up early, around 7 A.M. After a quick breakfast, I get ready for work. I like to wear smart clothes because I work in an office. I go by bus every day, which takes about 30 minutes. I enjoy looking out the window and listening to music on my way. When I arrive at the office, I start my day by checking emails and planning my tasks. I have meetings with my team, and we work together on projects.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1kND5eWYXP1VgflEZfz3M_HeNLkjesRFw/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -591,7 +815,14 @@
       "In the afternoon",
       "In the evening"
     ],
-    "voiceData": "Hello, everyone! I'm here to talk about nutrition and how important it is for our health. Eating fruits is very beneficial, especially for children. Fruits have vitamins and minerals that help kids grow strong and stay healthy. The best time for children to eat fruit is in the morning. This gives them energy for the day ahead. You can add fruit to breakfast, like in a smoothie or with yogurt. It's a delicious and healthy way to start the day! So, let's encourage our kids to eat more fruit in the morning! Thank you!"
+    "voiceData": "Hello, everyone! I'm here to talk about nutrition and how important it is for our health. Eating fruits is very beneficial, especially for children. Fruits have vitamins and minerals that help kids grow strong and stay healthy. The best time for children to eat fruit is in the morning. This gives them energy for the day ahead. You can add fruit to breakfast, like in a smoothie or with yogurt. It's a delicious and healthy way to start the day! So, let's encourage our kids to eat more fruit in the morning! Thank you!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/10PsK_zUcDzpN9II27bz7Fau07PH8Iljy/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -609,7 +840,14 @@
       "To take care of their kids",
       "To have some quiet time"
     ],
-    "voiceData": "I usually wake up early each day before anyone else. Some people get up early to go to work or to take care of their kids, but for me, it's all about enjoying that calm before the busyness begins. I enjoy this quiet time because it helps me start my day peacefully. It's nice to have a few moments to myself, sipping coffee and planning my day ahead."
+    "voiceData": "I usually wake up early each day before anyone else. Some people get up early to go to work or to take care of their kids, but for me, it's all about enjoying that calm before the busyness begins. I enjoy this quiet time because it helps me start my day peacefully. It's nice to have a few moments to myself, sipping coffee and planning my day ahead.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1dPlYJ9RMO54ofxh4TH_s-cqYrf85vAwE/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -627,7 +865,14 @@
       "To take his family on vacations",
       "He has to drive to work"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1xZxcGaok-sUpanXsTrXXkXB77kcWEcGM/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -645,7 +890,14 @@
       "Shoes",
       "Books"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1ROH2L_2nChP5xQqnS8rSmFV9fzr4yopT/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -663,7 +915,14 @@
       "A university area",
       "A residential neighborhood"
     ],
-    "voiceData": "He's describing a place with a vibrant atmosphere, full of students and professors. The university area is where he's talking about, known for its lively campus, beautiful buildings, and the mix of academic and social life that surrounds it."
+    "voiceData": "He's describing a place with a vibrant atmosphere, full of students and professors. The university area is where he's talking about, known for its lively campus, beautiful buildings, and the mix of academic and social life that surrounds it.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1ULPNZd_HO_UbsRgPPZIfQnbLOfPyWeUk/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -681,7 +940,14 @@
       "Persuading his family",
       "Getting the financing"
     ],
-    "voiceData": "I've been having a tough time lately. I really want to move abroad for a new job, but my family isn't on board with it. They're worried about me leaving and don't understand why I want to go so far away. I've tried to explain all the benefits, but they just don't seem to get it. It's really frustrating because I want their support, but it feels like I'm not getting through to them."
+    "voiceData": "I've been having a tough time lately. I really want to move abroad for a new job, but my family isn't on board with it. They're worried about me leaving and don't understand why I want to go so far away. I've tried to explain all the benefits, but they just don't seem to get it. It's really frustrating because I want their support, but it feels like I'm not getting through to them.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/17D2yyQj2GwIxdnnMDcfxplJBQZO8cH8b/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -699,7 +965,14 @@
       "2000 years",
       "1500 years"
     ],
-    "voiceData": "Welcome to Rock City, everyone! I'm excited to show you around this amazing place. Rock City has a very long and interesting history. People first started living here about 1500 years ago. Can you believe how old that is? It's older than many famous cities in the world! The city got its name because of all the big rocks you can see around us. Over time, people built houses and roads between these rocks. Today, we can still see many old buildings from long ago."
+    "voiceData": "Welcome to Rock City, everyone! I'm excited to show you around this amazing place. Rock City has a very long and interesting history. People first started living here about 1500 years ago. Can you believe how old that is? It's older than many famous cities in the world! The city got its name because of all the big rocks you can see around us. Over time, people built houses and roads between these rocks. Today, we can still see many old buildings from long ago.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1R2xmVK9ZPpTEvA8heo9uLYbFAe51IP45/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -717,7 +990,14 @@
       "on the first floor",
       "on the second floor"
     ],
-    "voiceData": "Welcome to our university! When you enter the campus, you'll see the library on your left and the cafeteria on your right. If you need help with anything, the main office is on the first floor of the center campus building. There, you can ask about classes, schedules, or anything else. Behind the main building, you'll find the gym and sports area. For quiet study, there are some nice spots in the garden near the science building. Make sure to explore and enjoy your time here!"
+    "voiceData": "Welcome to our university! When you enter the campus, you'll see the library on your left and the cafeteria on your right. If you need help with anything, the main office is on the first floor of the center campus building. There, you can ask about classes, schedules, or anything else. Behind the main building, you'll find the gym and sports area. For quiet study, there are some nice spots in the garden near the science building. Make sure to explore and enjoy your time here!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1BTPM4uLHUwyjR-BomAqEOBLD-O-9gsxE/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -735,7 +1015,14 @@
       "250 pounds",
       "300 pounds"
     ],
-    "voiceData": "Hi, it's me Max. I'm calling about the computer that you are selling. You see. My computer is old and slow. I can't play any games on it any more and would like to replace it with a new one. How much do you offer? I can pay 250 pounds. This afternoon I am busy but we can discuss this tomorrow morning. Is that okay? Call me back soon."
+    "voiceData": "Hi, it's me Max. I'm calling about the computer that you are selling. You see. My computer is old and slow. I can't play any games on it any more and would like to replace it with a new one. How much do you offer? I can pay 250 pounds. This afternoon I am busy but we can discuss this tomorrow morning. Is that okay? Call me back soon.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Vl6MtR_xNIxQT0AYWDTn_NpUCn_uptmJ/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -753,7 +1040,14 @@
       "The cinema",
       "The town hall"
     ],
-    "voiceData": "He has some important things to discuss tomorrow, and the town hall is where he wants to go, as it's the perfect place for the meeting and gathering more information."
+    "voiceData": "He has some important things to discuss tomorrow, and the town hall is where he wants to go, as it's the perfect place for the meeting and gathering more information.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1R393cLf3HCiCZSZWCmd05XA4nqcgRfIQ/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -771,7 +1065,14 @@
       "Food",
       "Snacks"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/10LJkXOgbJBoZ2FDDfwPiOdIHVXlf4Mmp/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -789,7 +1090,14 @@
       "10",
       "20"
     ],
-    "voiceData": "Welcome, everyone! Today, I'm excited to introduce you to our charming small town. Right here in the town square, you'll find local shops, cozy cafes, and a beautiful fountain where people gather to relax. This square is the heart of our community, often filled with cool events like farmers' markets and live music. Currently, there are 10,000 people living in this town. As we explore, you'll see the unique blend of history and modern life that makes our town so special."
+    "voiceData": "Welcome, everyone! Today, I'm excited to introduce you to our charming small town. Right here in the town square, you'll find local shops, cozy cafes, and a beautiful fountain where people gather to relax. This square is the heart of our community, often filled with cool events like farmers' markets and live music. Currently, there are 10,000 people living in this town. As we explore, you'll see the unique blend of history and modern life that makes our town so special.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1nC9ust4bkwzUjj76BE2yP2XCjdHIWunN/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -807,7 +1115,14 @@
       "at the station",
       "at the university"
     ],
-    "voiceData": "Hi, it's me! I wanted to confirm where we're meeting today. I thought we agreed to meet at the park, right? It's a nice place to relax and catch up. The station would be too crowded, and the university is a bit far for me. Let's stick to the park so we can enjoy the weather. What time should I meet you there?"
+    "voiceData": "Hi, it's me! I wanted to confirm where we're meeting today. I thought we agreed to meet at the park, right? It's a nice place to relax and catch up. The station would be too crowded, and the university is a bit far for me. Let's stick to the park so we can enjoy the weather. What time should I meet you there?",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1rLhIlaSwaJ0NcOlr1uZx5aGlzWTdmVAH/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -825,7 +1140,14 @@
       "Red",
       "Black"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1_sJfLMBq-uQVSojgwhYw1zhHORZ8HicM/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -843,7 +1165,14 @@
       "to become a teacher",
       "to become a researcher"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1zytvyOs1c3u0C3hER9IWBnWcaTrDJnGs/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -861,7 +1190,14 @@
       "on Saturday",
       "on Sunday"
     ],
-    "voiceData": "The assignment needs to be submitted soon, and it's due on Saturday. Make sure to finish it by then to avoid any last-minute stress."
+    "voiceData": "The assignment needs to be submitted soon, and it's due on Saturday. Make sure to finish it by then to avoid any last-minute stress.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1CkMvF0ZcpEcxFwBzvg-oSU0xQUhFiq0k/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -879,7 +1215,14 @@
       "Math",
       "Computer"
     ],
-    "voiceData": "Hi, I'm Ben, and I want to share a bit about my studies. Last term, I took English, math, and science. They were all interesting, but math was a bit tough for me. I worked hard, though, and got good results in the end. This year, I'm really excited because I'm going to take a computer course. I've always wanted to learn more about technology, so I'm looking forward to it!"
+    "voiceData": "Hi, I'm Ben, and I want to share a bit about my studies. Last term, I took English, math, and science. They were all interesting, but math was a bit tough for me. I worked hard, though, and got good results in the end. This year, I'm really excited because I'm going to take a computer course. I've always wanted to learn more about technology, so I'm looking forward to it!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1F8MpP2gh60RIpItWeyhuQ4AEPzrmZs5A/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -897,7 +1240,14 @@
       "the action scenes",
       "the ending"
     ],
-    "voiceData": "\"The Fall\" is one of my favorite films, which I saw last weekend. The film was so terrific that it kept me on the edge of my seat all the time. I usually don't like watching action movies as they feel the same and repetitive with those dull racing car scenes and meaningless fights that go on for hours. The mountain scenes were rather unusual. The sequencing fascinatingly brings out the most captivating parts for me. The ending, however, was a bit sad. Many people wish it was a happy ending."
+    "voiceData": "\"The Fall\" is one of my favorite films, which I saw last weekend. The film was so terrific that it kept me on the edge of my seat all the time. I usually don't like watching action movies as they feel the same and repetitive with those dull racing car scenes and meaningless fights that go on for hours. The mountain scenes were rather unusual. The sequencing fascinatingly brings out the most captivating parts for me. The ending, however, was a bit sad. Many people wish it was a happy ending.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1ehtPJahA7JVi70WEEPGS1ZEGCg8zr4jE/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -915,7 +1265,14 @@
       "the characters",
       "the ending"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1BkZiNiudWoA8YBpszooJEc-azV9_QhNT/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -933,7 +1290,14 @@
       "to say thank you",
       "to discuss ideas"
     ],
-    "voiceData": "Hi, Kay! It's Douglas. I hope you are doing well. I wanted to call you today to say thank you for all your help with the project. Your advice was really valuable, and it made a big difference. I also wanted to ask for a favor. If you have some time, I would love to meet and discuss a few ideas I have. Let me know when you are free!\\"
+    "voiceData": "Hi, Kay! It's Douglas. I hope you are doing well. I wanted to call you today to say thank you for all your help with the project. Your advice was really valuable, and it made a big difference. I also wanted to ask for a favor. If you have some time, I would love to meet and discuss a few ideas I have. Let me know when you are free!\\",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1kmueJSByh3QzAkwUaE3xRuYh468IBeW5/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -951,7 +1315,14 @@
       "Over 300,000 copies",
       "Over 500,000 copies"
     ],
-    "voiceData": "I am excited to share the latest sales figures for our company. This month, we had a fantastic response to our magazine, Freeze Frame. I'm proud to announce that we sold over 300,000 copies! This is a big increase from last month. Many people are buying our magazine, and we are very grateful for your support! We hope to sell even more in the future."
+    "voiceData": "I am excited to share the latest sales figures for our company. This month, we had a fantastic response to our magazine, Freeze Frame. I'm proud to announce that we sold over 300,000 copies! This is a big increase from last month. Many people are buying our magazine, and we are very grateful for your support! We hope to sell even more in the future.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1q30GIhziCS2aoENQ5jCKaXxVVK8PsEKE/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -969,7 +1340,14 @@
       "At the park",
       "At the marketplace"
     ],
-    "voiceData": "Hi, Mia! It's Anna. I hope you're having a great day! I wanted to see if we are still meeting at the marketplace later. I'm really excited because I want to try that new ice cream shop we talked about. I heard they have some amazing flavors! I'll be there around 3 P.M. Let's also check out the fresh fruits and vegetables. It's always fun to shop together! See you soon!"
+    "voiceData": "Hi, Mia! It's Anna. I hope you're having a great day! I wanted to see if we are still meeting at the marketplace later. I'm really excited because I want to try that new ice cream shop we talked about. I heard they have some amazing flavors! I'll be there around 3 P.M. Let's also check out the fresh fruits and vegetables. It's always fun to shop together! See you soon!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1b4oc2geW1CDW9S1Ihdn19Gp3eAj5smIJ/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -987,7 +1365,14 @@
       "Phone",
       "Glasses"
     ],
-    "voiceData": "I was at my friend's house the other day, and I just realized I left my glasses there. I didn't notice until later, so now I'll have to give them a call and ask if I can swing by to pick them up."
+    "voiceData": "I was at my friend's house the other day, and I just realized I left my glasses there. I didn't notice until later, so now I'll have to give them a call and ask if I can swing by to pick them up.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1SzZlUj8-QsuvNs1b3M24tCxllALBrQMy/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1005,7 +1390,14 @@
       "The boys' team",
       "The coaches"
     ],
-    "voiceData": "I'm just about to take a photo of the girls' team now. They're all lined up and ready, smiling for the camera. I've already taken pictures of the boys earlier, so it's their turn. The coaches will have their photo taken after this. The girls are excited because this picture will be in the school magazine. Alright, everyone, say \"cheese\"!"
+    "voiceData": "I'm just about to take a photo of the girls' team now. They're all lined up and ready, smiling for the camera. I've already taken pictures of the boys earlier, so it's their turn. The coaches will have their photo taken after this. The girls are excited because this picture will be in the school magazine. Alright, everyone, say \"cheese\"!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1joXONOOPcYE7cvNePf65cdhY9wUZAHjW/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1023,7 +1415,14 @@
       "15 minutes",
       "20 minutes"
     ],
-    "voiceData": "Hello everyone. Today, I want to tell you about the conference that took place last week. It was very interesting, and many people attended. I spoke about new ideas in business. My presentation wasn't very long, but I had a lot to say. The other speakers talked about technology and education. After the talks, there were some questions from the audience. My speech lasted about 15 minutes, shorter than expected. However, the audience was very attentive, and I was happy to see that."
+    "voiceData": "Hello everyone. Today, I want to tell you about the conference that took place last week. It was very interesting, and many people attended. I spoke about new ideas in business. My presentation wasn't very long, but I had a lot to say. The other speakers talked about technology and education. After the talks, there were some questions from the audience. My speech lasted about 15 minutes, shorter than expected. However, the audience was very attentive, and I was happy to see that.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1sCPEQCfdGN27muqPQ7WBpjQK_cuMsq-9/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1041,7 +1440,14 @@
       "Go to the beach",
       "Visit relatives"
     ],
-    "voiceData": "Hello, everyone! I want to share what my family usually does on weekends. We love spending time together and often go for a walk in the park. It's a nice way to relax and enjoy nature. We like to see the flowers and sometimes have a picnic. However, this weekend is different! My sister is visiting us, and we have planned a small family gathering at home. We will cook a big meal together and play some games. It will be fun to catch up and spend quality time as a family. I'm really looking forward to it!"
+    "voiceData": "Hello, everyone! I want to share what my family usually does on weekends. We love spending time together and often go for a walk in the park. It's a nice way to relax and enjoy nature. We like to see the flowers and sometimes have a picnic. However, this weekend is different! My sister is visiting us, and we have planned a small family gathering at home. We will cook a big meal together and play some games. It will be fun to catch up and spend quality time as a family. I'm really looking forward to it!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1cR8L7qaVFo0_pBF1j1GxENSkXScVDVxj/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1059,7 +1465,14 @@
       "Long and white",
       "Long and red"
     ],
-    "voiceData": "I want to tell you about something special I just bought. It's a beautiful dress. The dress is long and red, just like a sunset! I feel so happy when I wear it. The fabric is soft, and it flows nicely when I walk. I can wear it to a party or a nice dinner. I love my new dress!"
+    "voiceData": "I want to tell you about something special I just bought. It's a beautiful dress. The dress is long and red, just like a sunset! I feel so happy when I wear it. The fabric is soft, and it flows nicely when I walk. I can wear it to a party or a nice dinner. I love my new dress!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/17MWsgficZyWiMnFG8dHATGD2rn8Grl7f/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1077,7 +1490,14 @@
       "Living room",
       "Bathroom"
     ],
-    "voiceData": "You know, when I think about my favorite room in the house, it's kind of hard to choose. I mean, I really enjoy the kitchen since I love cooking, and the living room is great for hanging out with friends. But honestly, I have to say the bathroom is my favorite! It might sound strange, but it's the one place where I can truly relax."
+    "voiceData": "You know, when I think about my favorite room in the house, it's kind of hard to choose. I mean, I really enjoy the kitchen since I love cooking, and the living room is great for hanging out with friends. But honestly, I have to say the bathroom is my favorite! It might sound strange, but it's the one place where I can truly relax.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1WSBbg_syHfwi915tfSaLhBGu2XBRNoA-/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1095,7 +1515,14 @@
       "Stayed at home",
       "Visited a café"
     ],
-    "voiceData": "My weekends are not always the same. This week has been busy, but I always look forward to my free time. Last weekend, I stayed at home and enjoyed some quiet moments with a good book. I also watched a few movies and cooked a nice dinner for myself. This weekend, I plan to go out with friends. We might visit a new café or go for a walk in the park. I love spending time with my friends and relaxing after a busy week!"
+    "voiceData": "My weekends are not always the same. This week has been busy, but I always look forward to my free time. Last weekend, I stayed at home and enjoyed some quiet moments with a good book. I also watched a few movies and cooked a nice dinner for myself. This weekend, I plan to go out with friends. We might visit a new café or go for a walk in the park. I love spending time with my friends and relaxing after a busy week!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1aqvGTI7srVCFmncZ_pr-a4JpNNT1Xx6g/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1113,7 +1540,14 @@
       "Bedroom",
       "Kitchen"
     ],
-    "voiceData": "Hello, and welcome! Let me tell you about this lovely property. It has two spacious bedrooms, both with big windows that let in lots of natural light. The bathroom is modern, with a large shower and plenty of storage space. The living room is cozy, perfect for relaxing after a long day. But the kitchen is the star of the house-it's the largest room, with lots of counter space for cooking, and it's great for hosting dinners. You'll love it here!"
+    "voiceData": "Hello, and welcome! Let me tell you about this lovely property. It has two spacious bedrooms, both with big windows that let in lots of natural light. The bathroom is modern, with a large shower and plenty of storage space. The living room is cozy, perfect for relaxing after a long day. But the kitchen is the star of the house-it's the largest room, with lots of counter space for cooking, and it's great for hosting dinners. You'll love it here!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1lSvWcM6VrLVceo0_H49NPQK9vfCYbeD9/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1131,7 +1565,14 @@
       "Hot and sunny",
       "Mild and dry"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1giNTxYZmJRLQKdyGa1uLxFNqvOqrRoMr/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1149,7 +1590,14 @@
       "two",
       "three"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/162fTPBYlfQGzBgTKaQqmkC2XGGJi11-k/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1167,7 +1615,14 @@
       "She takes the bus",
       "She walks"
     ],
-    "voiceData": "She prefers to stay active, so instead of taking a bus or driving, she walks to school every day. It's a nice way for her to get some fresh air and clear her mind before starting the day."
+    "voiceData": "She prefers to stay active, so instead of taking a bus or driving, she walks to school every day. It's a nice way for her to get some fresh air and clear her mind before starting the day.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/17ryxl6vgqsBdtLMqLxcax_DpyQyFw5l_/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1185,7 +1640,14 @@
       "09:00",
       "09:15"
     ],
-    "voiceData": "Good morning, everyone. This is an important announcement about a change in the train schedule. The train to London will now leave at 9:15, not 9:30 as planned. Please listen carefully to this information. If you are taking this train, please go to Platform 3 now. Thank you for your attention, and have a good day."
+    "voiceData": "Good morning, everyone. This is an important announcement about a change in the train schedule. The train to London will now leave at 9:15, not 9:30 as planned. Please listen carefully to this information. If you are taking this train, please go to Platform 3 now. Thank you for your attention, and have a good day.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1iCB3DZzxI4ohbe-tYMx8zwlJwpiyAk6w/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1203,7 +1665,14 @@
       "Tall",
       "Short"
     ],
-    "voiceData": "Hey, could you do me a favor? My sister is waiting outside, and I need you to give her my book. She's the one who is short and has straight hair, so you can't miss her. I also think she's wearing a blue jacket today. If you see her, just hand it to her, and I'll be so grateful. Thanks for helping me out!"
+    "voiceData": "Hey, could you do me a favor? My sister is waiting outside, and I need you to give her my book. She's the one who is short and has straight hair, so you can't miss her. I also think she's wearing a blue jacket today. If you see her, just hand it to her, and I'll be so grateful. Thanks for helping me out!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1QQmp1YW4lIMwixCv8EMkkULYn_gOlk9-/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1221,7 +1690,14 @@
       "Juice",
       "Coffee"
     ],
-    "voiceData": "When it comes to lunch, I have a simple pleasure: I really enjoy a warm cup of tea. It's my favorite drink to have while I eat. I find it calming, and it makes my meal feel special. Sometimes people ask me why I don't choose coffee or juice, but for me, tea is just perfect. It warms my heart and gives me a moment to relax."
+    "voiceData": "When it comes to lunch, I have a simple pleasure: I really enjoy a warm cup of tea. It's my favorite drink to have while I eat. I find it calming, and it makes my meal feel special. Sometimes people ask me why I don't choose coffee or juice, but for me, tea is just perfect. It warms my heart and gives me a moment to relax.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1-wfDTrcWDZVPxOUE5uWAZlBRHaLfSztl/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1239,7 +1715,14 @@
       "At the station",
       "Outside a shop"
     ],
-    "voiceData": "Hi honey, it's me! Just a reminder that the train leaves at 5, so you should arrive around 6 o'clock. I'll be there to pick you up at the train station. Let's meet outside the shop opposite the station. I can't wait to have dinner together! See you soon!"
+    "voiceData": "Hi honey, it's me! Just a reminder that the train leaves at 5, so you should arrive around 6 o'clock. I'll be there to pick you up at the train station. Let's meet outside the shop opposite the station. I can't wait to have dinner together! See you soon!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1dmXfhf5L4pbt4D-Jkz4Ai_F-Si6nYbYP/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1257,7 +1740,14 @@
       "7 o'clock",
       "5 o'clock"
     ],
-    "voiceData": "I usually have dinner every evening. It's become a habit for me to enjoy a meal at that time after a long day. I find it's the perfect time to unwind and relax. Plus, I love to spend time with my family during dinner. It's our chance to catch up and enjoy some good food together. We usually have dinner at 7 o'clock and it is definitely my favorite meal of the day!"
+    "voiceData": "I usually have dinner every evening. It's become a habit for me to enjoy a meal at that time after a long day. I find it's the perfect time to unwind and relax. Plus, I love to spend time with my family during dinner. It's our chance to catch up and enjoy some good food together. We usually have dinner at 7 o'clock and it is definitely my favorite meal of the day!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1wVmga39aWt2-fAxXQuR1Hh1GeXDOKRw2/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1275,7 +1765,14 @@
       "Speak at the conference",
       "Write an essay"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1mTeihaJAlMTMR1KchCShAnbI9zT3_qG4/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1293,7 +1790,14 @@
       "History classes",
       "Sports"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1cKAUzWWqAaU5j_LrispndNH0tAK6ExIn/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1311,7 +1815,14 @@
       "The north",
       "The south"
     ],
-    "voiceData": "I can't wait for my next holiday! This time, I'm heading to the south, where the mountains are. I've never been there before, but I've heard it's beautiful. I'm looking forward to hiking and seeing the snow-covered peaks. It's going to be a nice change from the city. Hopefully, the weather will be perfect!"
+    "voiceData": "I can't wait for my next holiday! This time, I'm heading to the south, where the mountains are. I've never been there before, but I've heard it's beautiful. I'm looking forward to hiking and seeing the snow-covered peaks. It's going to be a nice change from the city. Hopefully, the weather will be perfect!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1tAWiJ9FQHixFT40ZP93VIEnvU_yRNBcH/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1329,7 +1840,14 @@
       "The rhythm",
       "The words"
     ],
-    "voiceData": "Good evening, listeners! Today, I want to talk about a new song that's quickly becoming popular - You're my everything. The tune is really catchy, and it makes you want to dance right away. The instruments used are simple but create a great rhythm. However, the most attractive part of all is the words. The lyrics tell a beautiful story that everyone can relate to. It's no wonder so many people are loving this song! If you haven't heard it yet, make sure to give it a listen soon!"
+    "voiceData": "Good evening, listeners! Today, I want to talk about a new song that's quickly becoming popular - You're my everything. The tune is really catchy, and it makes you want to dance right away. The instruments used are simple but create a great rhythm. However, the most attractive part of all is the words. The lyrics tell a beautiful story that everyone can relate to. It's no wonder so many people are loving this song! If you haven't heard it yet, make sure to give it a listen soon!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1rnudV35UeHOsA0L-VEw9i1amOUVdtAts/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1347,7 +1865,14 @@
       "Cars",
       "Fires from the countryside"
     ],
-    "voiceData": "I really like living in the countryside. There are many green fields, tall trees, and small rivers. The air usually smells fresh and clean. But sometimes, the air becomes dirty and hard to breathe. Many people think cars on the roads make the air bad. Others say the smoke from big factories is the problem. These things can make the air dirty, but in the countryside, there's a bigger issue. Farmers often start fires to clean their fields. They burn old plants and grass. These fires make a lot of smoke that goes into the air. It's sad because the smoke can hurt animals and make people sick. We need to find better ways to clean fields without using fire."
+    "voiceData": "I really like living in the countryside. There are many green fields, tall trees, and small rivers. The air usually smells fresh and clean. But sometimes, the air becomes dirty and hard to breathe. Many people think cars on the roads make the air bad. Others say the smoke from big factories is the problem. These things can make the air dirty, but in the countryside, there's a bigger issue. Farmers often start fires to clean their fields. They burn old plants and grass. These fires make a lot of smoke that goes into the air. It's sad because the smoke can hurt animals and make people sick. We need to find better ways to clean fields without using fire.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1hOwKPMMLcrz7RYY6l2Q87RnVrIEwzX_-/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1365,7 +1890,14 @@
       "3,550 pounds",
       "3,000 pounds"
     ],
-    "voiceData": "Hey, I just wanted to tell you about my new car! It's a small one, perfect for my needs. I got it for a great price-only 3,250 pounds! Can you believe it? I was looking at bigger models too, but they were way more expensive, around 3,550 pounds or even 4,250 pounds. I'm really happy with my choice!"
+    "voiceData": "Hey, I just wanted to tell you about my new car! It's a small one, perfect for my needs. I got it for a great price-only 3,250 pounds! Can you believe it? I was looking at bigger models too, but they were way more expensive, around 3,550 pounds or even 4,250 pounds. I'm really happy with my choice!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1gaCucQ0492icvQFjTrznX98QMMdYP5Zh/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1383,7 +1915,14 @@
       "Room 101",
       "Room 203"
     ],
-    "voiceData": "They've decided to meet up for their study session, and room 301 is where they'll study. It's a quiet space with plenty of desks, so it's perfect for focusing and getting some work done."
+    "voiceData": "They've decided to meet up for their study session, and room 301 is where they'll study. It's a quiet space with plenty of desks, so it's perfect for focusing and getting some work done.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1s2rNagrunYbAd3Dl_dFddGlj2wSTW5Ra/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1401,7 +1940,14 @@
       "25",
       "30"
     ],
-    "voiceData": "Stephanie is eager to start a career and is looking for a job taking care of children. She's 21 years old and believes this is the perfect age to begin working in childcare and gaining experience."
+    "voiceData": "Stephanie is eager to start a career and is looking for a job taking care of children. She's 21 years old and believes this is the perfect age to begin working in childcare and gaining experience.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1jIDTk8zJ5OHKWXn8jc6dc3b3iwK9OPHb/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1419,7 +1965,14 @@
       "Tired",
       "Sick"
     ],
-    "voiceData": "Hi, Evan! This is Mom. I just wanted to leave you a message to check on you. I heard you're not feeling well, and I'm really worried about you. Make sure you're resting and drinking plenty of fluids. Do you need anything? I can bring you some soup or your favorite snacks. Please take care of yourself! I love you and hope you feel better soon. Call me back when you can!"
+    "voiceData": "Hi, Evan! This is Mom. I just wanted to leave you a message to check on you. I heard you're not feeling well, and I'm really worried about you. Make sure you're resting and drinking plenty of fluids. Do you need anything? I can bring you some soup or your favorite snacks. Please take care of yourself! I love you and hope you feel better soon. Call me back when you can!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1UAJDQ9on5rfidi3DK0hgiJzddd_cPqV1/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1437,7 +1990,14 @@
       "09:15",
       "09:30"
     ],
-    "voiceData": "This morning was rough at the station. I thought the train would leave around 9:00, but I heard it would be delayed. It finally departed at 9:30, though some people said it might be even later. Usually, if it's delayed, it could leave as late as 10:00. I'm glad it didn't take that long today!"
+    "voiceData": "This morning was rough at the station. I thought the train would leave around 9:00, but I heard it would be delayed. It finally departed at 9:30, though some people said it might be even later. Usually, if it's delayed, it could leave as late as 10:00. I'm glad it didn't take that long today!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/16_jWNKIYG7OYdGn9mQFR0unVH15x0Ngw/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1455,7 +2015,14 @@
       "Make plans later",
       "Stay at home"
     ],
-    "voiceData": "I'm thinking about what to do this evening. I could go to the movies, but I'm not sure if that's the best idea. I might prefer to stay at home and relax. However, I want to discuss this with my friend first. It might be better to plan when we can decide together. I believe keeping our options open is a good idea. So for now, I'll wait and see what we want to do."
+    "voiceData": "I'm thinking about what to do this evening. I could go to the movies, but I'm not sure if that's the best idea. I might prefer to stay at home and relax. However, I want to discuss this with my friend first. It might be better to plan when we can decide together. I believe keeping our options open is a good idea. So for now, I'll wait and see what we want to do.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1ewElYByRg3OOXXx6T_BWNT5mTIGidPZ6/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1473,7 +2040,14 @@
       "The mountains",
       "The city"
     ],
-    "voiceData": "I'm so excited about my upcoming holiday! I've been thinking about where to go for a long time. Some of my friends suggested going to a nice beach. Others talked about exploring interesting caves. But I've made up my mind - I'm going to the mountains! The mountains are so beautiful with their green forests. I can't wait to breathe the fresh air up there. They are perfect for relaxing and enjoying nature.\\"
+    "voiceData": "I'm so excited about my upcoming holiday! I've been thinking about where to go for a long time. Some of my friends suggested going to a nice beach. Others talked about exploring interesting caves. But I've made up my mind - I'm going to the mountains! The mountains are so beautiful with their green forests. I can't wait to breathe the fresh air up there. They are perfect for relaxing and enjoying nature.\\",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1CGMkCr1hrviwcaQ-8kVM5v7US0GyMq1I/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1491,7 +2065,14 @@
       "In the lobby",
       "At the train station"
     ],
-    "voiceData": "Good morning, everyone! Let me walk you through today's schedule. First, we'll start the day at 9:00 AM with a visit to the City Museum, where you'll have about two hours to explore the exhibits. After that, at 12:30 PM, we'll head to the Central Park for a picnic lunch and a relaxing stroll. Around 3:00 PM, we'll make our way to the Old Town Market, where you can shop for souvenirs and enjoy some local treats. We'll wrap up our activities by 6:00 PM, giving you a little free time back at the hotel. Finally, at 8:00 PM, we'll meet at the hotel's main entrance to catch the bus to the airport. Make sure to be on time, and we'll head to the airport together!"
+    "voiceData": "Good morning, everyone! Let me walk you through today's schedule. First, we'll start the day at 9:00 AM with a visit to the City Museum, where you'll have about two hours to explore the exhibits. After that, at 12:30 PM, we'll head to the Central Park for a picnic lunch and a relaxing stroll. Around 3:00 PM, we'll make our way to the Old Town Market, where you can shop for souvenirs and enjoy some local treats. We'll wrap up our activities by 6:00 PM, giving you a little free time back at the hotel. Finally, at 8:00 PM, we'll meet at the hotel's main entrance to catch the bus to the airport. Make sure to be on time, and we'll head to the airport together!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1qGgl_4ng6BifKMOMQGNXKwG2DITG_-qK/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1509,7 +2090,14 @@
       "The hotel",
       "The river boat"
     ],
-    "voiceData": "Welcome to our scenic tour! I'm excited to show you this beautiful area. We'll start along the coast to enjoy the amazing ocean views. Then, we'll go up to the mountain looking for some breathtaking views. After that, we'll head down to the harbor and take a relaxing riverboat cruise. While on the boat, you can enjoy afternoon tea and see the charming riverside scenery. After the boat trip, we'll end the day with a walk on the beach. Don't forget your camera-there will be lots of chances for great photos!"
+    "voiceData": "Welcome to our scenic tour! I'm excited to show you this beautiful area. We'll start along the coast to enjoy the amazing ocean views. Then, we'll go up to the mountain looking for some breathtaking views. After that, we'll head down to the harbor and take a relaxing riverboat cruise. While on the boat, you can enjoy afternoon tea and see the charming riverside scenery. After the boat trip, we'll end the day with a walk on the beach. Don't forget your camera-there will be lots of chances for great photos!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1ck3Nch3hdKEpm_YrHAqykeu4VPn5ZYdb/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1527,7 +2115,14 @@
       "With a famous singer",
       "With the city's favorite group"
     ],
-    "voiceData": "I can't wait for the concert this weekend! It's going to be such an exciting event. The highlight ending will be the city's favorite group performing on stage. I've heard they have some amazing songs planned. There will also be a fireworks performance to celebrate before that, and I'm sure the orchestra will do some singing as well. It's going to be a night to remember!"
+    "voiceData": "I can't wait for the concert this weekend! It's going to be such an exciting event. The highlight ending will be the city's favorite group performing on stage. I've heard they have some amazing songs planned. There will also be a fireworks performance to celebrate before that, and I'm sure the orchestra will do some singing as well. It's going to be a night to remember!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1GAjDpxfKT5HI5slljGJJjyVDYKLNi8OY/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1545,7 +2140,14 @@
       "102030",
       "301020"
     ],
-    "voiceData": "Hello, I need to call the teleshop for some information. My phone is not working. Can you remind me of the number? I think it starts with 20 or 10 or 30 something. Is it 102030 or 301020? No, wait! I remember now-it's 201030! I really need to order that new gadget. Thanks for your help!"
+    "voiceData": "Hello, I need to call the teleshop for some information. My phone is not working. Can you remind me of the number? I think it starts with 20 or 10 or 30 something. Is it 102030 or 301020? No, wait! I remember now-it's 201030! I really need to order that new gadget. Thanks for your help!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/14R9SU2X_N7Am_3sppD_9QZkwSMlS_LQT/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1563,7 +2165,14 @@
       "Phone",
       "Laptop"
     ],
-    "voiceData": "Hey, it's Alice. I think I might have left something at your house. I had my book with me. It's in my backpack. My laptop's here too. But I can't find my phone anywhere! Did you happen to see it after I left? I think I might have left it on the table."
+    "voiceData": "Hey, it's Alice. I think I might have left something at your house. I had my book with me. It's in my backpack. My laptop's here too. But I can't find my phone anywhere! Did you happen to see it after I left? I think I might have left it on the table.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1C5qNmruBOL4ThWiVz9mUGgSJP4Wx1WDt/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1581,7 +2190,14 @@
       "Quarter to eight",
       "7:30 PM"
     ],
-    "voiceData": "Hi Rose. It's Ahmed, what time should we meet for dinner tonight? How about we meet at quarter past seven instead? Oh wait, I just remembered-I have a meeting ending at a half past seven. Let's make it quarter to eight instead so we could have 15 minutes to travel. Does that work for you?"
+    "voiceData": "Hi Rose. It's Ahmed, what time should we meet for dinner tonight? How about we meet at quarter past seven instead? Oh wait, I just remembered-I have a meeting ending at a half past seven. Let's make it quarter to eight instead so we could have 15 minutes to travel. Does that work for you?",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1v-S0AIV9KDmSv4iCyuIM3UyxZGsYRA2R/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1599,7 +2215,14 @@
       "Beach trip",
       "Road trip"
     ],
-    "voiceData": "This year, my family and I are going to the beach for our holiday. I'm really excited because I love swimming and relaxing by the sea. Last year, we went camping on the mountain, which was fun, but this time we wanted to do something different. We're staying in a small house near the beach, and I can't wait to watch the sunset every evening. My kids are excited too; they want to build sandcastles and play in the water. I think it's going to be a great holiday!"
+    "voiceData": "This year, my family and I are going to the beach for our holiday. I'm really excited because I love swimming and relaxing by the sea. Last year, we went camping on the mountain, which was fun, but this time we wanted to do something different. We're staying in a small house near the beach, and I can't wait to watch the sunset every evening. My kids are excited too; they want to build sandcastles and play in the water. I think it's going to be a great holiday!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1gmDWWGnB_gFMUIcsAw9eS8YtuRTWeX4m/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1617,7 +2240,14 @@
       "One pound fifty",
       "Three pounds"
     ],
-    "voiceData": "As I walk into the store, I notice that the cleaning products are on sale. They're usually a bit more expensive, but today they're only one pound fifty. I was expecting to pay three pounds fifty, so it's a nice surprise. I grab a few items since I know I'll need them later. It's a small store, but the deals are always good here. Time to check out!"
+    "voiceData": "As I walk into the store, I notice that the cleaning products are on sale. They're usually a bit more expensive, but today they're only one pound fifty. I was expecting to pay three pounds fifty, so it's a nice surprise. I grab a few items since I know I'll need them later. It's a small store, but the deals are always good here. Time to check out!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1WPm-liD7cnZqaiEUmag-bGrPTiKJ3eJq/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1635,7 +2265,14 @@
       "Where to buy a sofa",
       "Where to buy curtains"
     ],
-    "voiceData": "Hi Ivan. It's Mary. I just moved into my new house. I want something nice for the dining area. I also saw a cute coffee shop nearby, and I'm thinking about getting a mirror for the living room. I need to get some furniture, especially a coffee table. Do you know where to buy one?"
+    "voiceData": "Hi Ivan. It's Mary. I just moved into my new house. I want something nice for the dining area. I also saw a cute coffee shop nearby, and I'm thinking about getting a mirror for the living room. I need to get some furniture, especially a coffee table. Do you know where to buy one?",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1kg8oGBO_PJp1iE9r90iqvkCKBjqxSgK1/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1653,7 +2290,14 @@
       "In the south",
       "In the east"
     ],
-    "voiceData": "Good evening, everyone! Here's your weather update for today. Unfortunately, the weather down south isn't looking too great-strong winds and heavy rain are expected throughout the day, so it might be best to avoid any outdoor plans in that region. On a brighter note, the west will have decent weather with clear skies and mild temperatures, making it a nice option if you're looking for some fresh air. However, the best weather can be found in the east, where we're expecting sunny skies and perfect temperatures for any outdoor activities. If you're planning to travel, I'd highly recommend heading east for the best conditions. Safe travels, and make sure to check local forecasts for any changes!"
+    "voiceData": "Good evening, everyone! Here's your weather update for today. Unfortunately, the weather down south isn't looking too great-strong winds and heavy rain are expected throughout the day, so it might be best to avoid any outdoor plans in that region. On a brighter note, the west will have decent weather with clear skies and mild temperatures, making it a nice option if you're looking for some fresh air. However, the best weather can be found in the east, where we're expecting sunny skies and perfect temperatures for any outdoor activities. If you're planning to travel, I'd highly recommend heading east for the best conditions. Safe travels, and make sure to check local forecasts for any changes!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1CqbZ1e_fJeRKIJE2XMpg2hSjeptqIERa/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1671,7 +2315,14 @@
       "Poor weather conditions",
       "Technical issues"
     ],
-    "voiceData": "Good afternoon, everyone. I'd like to start by saying that we're doing everything we can to assist you with your travel plans today. Unfortunately, due to poor weather conditions, our flight has been cancelled. I know this isn't the news you were hoping for, but your safety comes first. That said, we do have alternatives available. The train services are still running, and buses are also operating, so you have options to continue your journey. If you'd like to explore these alternatives, please come see us, and we'll help with the arrangements. Thank you for your patience and understanding."
+    "voiceData": "Good afternoon, everyone. I'd like to start by saying that we're doing everything we can to assist you with your travel plans today. Unfortunately, due to poor weather conditions, our flight has been cancelled. I know this isn't the news you were hoping for, but your safety comes first. That said, we do have alternatives available. The train services are still running, and buses are also operating, so you have options to continue your journey. If you'd like to explore these alternatives, please come see us, and we'll help with the arrangements. Thank you for your patience and understanding.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/11ejxZ_TAmXF789F8rCUS0PU1Qzmyb8bU/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1689,7 +2340,14 @@
       "Platform Two",
       "Platform Three"
     ],
-    "voiceData": "Attention, all passengers! The 10:30 train to Greenfield is now arriving at Platform 2. Please make sure you have your ticket ready before boarding. This train will stop at River Station and Oakwood before reaching its final destination. Be careful when stepping onto the train, and mind the gap. For your safety, please keep your belongings close and follow all instructions from the staff. Thank you for traveling with us today!"
+    "voiceData": "Attention, all passengers! The 10:30 train to Greenfield is now arriving at Platform 2. Please make sure you have your ticket ready before boarding. This train will stop at River Station and Oakwood before reaching its final destination. Be careful when stepping onto the train, and mind the gap. For your safety, please keep your belongings close and follow all instructions from the staff. Thank you for traveling with us today!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/17GBlKfBLNunpjazEgAXzUvtsOzv9sbFt/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1707,7 +2365,14 @@
       "8pm on Sunday",
       "9am on Sunday"
     ],
-    "voiceData": "Hey Maria, it's me! I wanted to give you a quick call to let you know that I'll be visiting your town this weekend. I've got a few things planned-going to check out the local market and maybe explore some of the nearby parks. But the best part? I'll finally get to see you! I'll be at your place at 9 a.m. on Sunday, so we can catch up. Can't wait to hang out!"
+    "voiceData": "Hey Maria, it's me! I wanted to give you a quick call to let you know that I'll be visiting your town this weekend. I've got a few things planned-going to check out the local market and maybe explore some of the nearby parks. But the best part? I'll finally get to see you! I'll be at your place at 9 a.m. on Sunday, so we can catch up. Can't wait to hang out!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1iRZOp8Ya1P_RIDIHZegyTr65OxxDGHpv/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1725,7 +2390,14 @@
       "15 minutes",
       "25 minutes"
     ],
-    "voiceData": "It usually takes about 20 minutes to get to the station, depending on traffic. It's not too far, so it's a convenient trip to catch the train."
+    "voiceData": "It usually takes about 20 minutes to get to the station, depending on traffic. It's not too far, so it's a convenient trip to catch the train.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1J8RmRDRpEBkt823yRpIyex1__2aw8ZxJ/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1743,7 +2415,14 @@
       "Bad weather",
       "Transportation issue"
     ],
-    "voiceData": "Hello everyone, I hope you're all having a good day. I'm your tour guide, and I was really looking forward to showing you around the city today. However, there is a small issue. The weather is perfect, and transportation is not a problem; everything is ready for our trip. Certainly, these are not the problems. Unfortunately, we don't have enough people for the tour today. Because of this, we have to cancel the tour. I'm really sorry for the inconvenience, and I hope we can see you next time!"
+    "voiceData": "Hello everyone, I hope you're all having a good day. I'm your tour guide, and I was really looking forward to showing you around the city today. However, there is a small issue. The weather is perfect, and transportation is not a problem; everything is ready for our trip. Certainly, these are not the problems. Unfortunately, we don't have enough people for the tour today. Because of this, we have to cancel the tour. I'm really sorry for the inconvenience, and I hope we can see you next time!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1kMoJHMg63GoKg1tgyJwhmuOzBIvfRVmR/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1761,7 +2440,14 @@
       "Cycling",
       "Swimming"
     ],
-    "voiceData": "Last year, I had an amazing trip! One of the best things I enjoyed was going cycling in the countryside. The views were stunning, and it felt great to be outdoors. I also went for a walk a few times, but cycling really allowed me to explore more areas. We even had a picnic one day, which was lovely too!"
+    "voiceData": "Last year, I had an amazing trip! One of the best things I enjoyed was going cycling in the countryside. The views were stunning, and it felt great to be outdoors. I also went for a walk a few times, but cycling really allowed me to explore more areas. We even had a picnic one day, which was lovely too!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1UINsKL9W-6KzKojfHGxnyway_i8Cx5TS/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1779,7 +2465,14 @@
       "Next to the park",
       "In the shopping mall"
     ],
-    "voiceData": "Hello, everyone! Welcome to our tour! My name is Sam, and I'm your tour guide today. I'm excited to show you around this beautiful city. We will visit many interesting places, including parks, museums, and local markets. As we walk, I'll share fun facts and stories about each location. If you have any questions, feel free to ask! Now, before we start, I want to let you know that our office is opposite the hotel where you are staying. If you need any help or information during your stay, you can always come to us. Let's begin our adventure and enjoy exploring together!"
+    "voiceData": "Hello, everyone! Welcome to our tour! My name is Sam, and I'm your tour guide today. I'm excited to show you around this beautiful city. We will visit many interesting places, including parks, museums, and local markets. As we walk, I'll share fun facts and stories about each location. If you have any questions, feel free to ask! Now, before we start, I want to let you know that our office is opposite the hotel where you are staying. If you need any help or information during your stay, you can always come to us. Let's begin our adventure and enjoy exploring together!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/11aeX4nJSaQYCsh5500b-4CS-EPvW3bqN/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1797,7 +2490,14 @@
       "It's comfortable",
       "Practical"
     ],
-    "voiceData": "I've been thinking about how to get to work every day. At first, I considered driving, but the traffic is always really bad in the morning. Then, I thought about riding my bike, but it's too far, and I'd be tired before I even start my day. The bus is another option, but it's often late. After thinking about all the choices, I decided to travel by train. It's practical because it's on time, and I can relax during the trip. Plus, the station is close to my office!"
+    "voiceData": "I've been thinking about how to get to work every day. At first, I considered driving, but the traffic is always really bad in the morning. Then, I thought about riding my bike, but it's too far, and I'd be tired before I even start my day. The bus is another option, but it's often late. After thinking about all the choices, I decided to travel by train. It's practical because it's on time, and I can relax during the trip. Plus, the station is close to my office!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1dCbNDOUKzqKs7dWkbLLKTIB1DPQm1TVP/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1815,7 +2515,14 @@
       "In the shopping center",
       "Next to the bookstore"
     ],
-    "voiceData": "Hey, are you free for coffee later? I found a great new place in town. It's not hard to find at all. You know the big gift shop on Main Street? Well, the coffee shop is right across from it. Just look for the gift shop, then cross the street. You'll see the coffee shop right there, opposite the gift shop. They have amazing pastries too. Let's meet there at 3 PM, okay?"
+    "voiceData": "Hey, are you free for coffee later? I found a great new place in town. It's not hard to find at all. You know the big gift shop on Main Street? Well, the coffee shop is right across from it. Just look for the gift shop, then cross the street. You'll see the coffee shop right there, opposite the gift shop. They have amazing pastries too. Let's meet there at 3 PM, okay?",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Qd6qIEBfO68E2-uzuwTObFXmdZwQPTIR/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1833,7 +2540,14 @@
       "His sister and her children",
       "His cousin"
     ],
-    "voiceData": "Hey, mom! Are you coming over this weekend? I'd really love to see you! What? You're busy? That's too bad. But at least my sister is visiting with her kids. I'm excited about that! Is uncle coming with her too? Oh, he's not? That's a shame. Hopefully, you can all get together next time!"
+    "voiceData": "Hey, mom! Are you coming over this weekend? I'd really love to see you! What? You're busy? That's too bad. But at least my sister is visiting with her kids. I'm excited about that! Is uncle coming with her too? Oh, he's not? That's a shame. Hopefully, you can all get together next time!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Gu32i5Oz-jkl0NUfGFM-6_UadenuPM0X/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1851,7 +2565,14 @@
       "Cousins",
       "Sisters"
     ],
-    "voiceData": "I just got back from an amazing vacation with Lisa! We've been friends for years, and this trip really brought us closer. I can't imagine going with anyone else. Some people think we look like mother and daughter because we care for each other so much, but it's really just best friends hanging out!"
+    "voiceData": "I just got back from an amazing vacation with Lisa! We've been friends for years, and this trip really brought us closer. I can't imagine going with anyone else. Some people think we look like mother and daughter because we care for each other so much, but it's really just best friends hanging out!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1z2oATMq4iJbCexrCUtMybAKlYh4I2zxw/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1869,7 +2590,14 @@
       "Become famous",
       "Earn money"
     ],
-    "voiceData": "I have been thinking a lot about my job, and I really want to become a writer. It's not just about earning a lot of money or becoming famous for me. My main reason is to help people improve themselves. I believe stories can inspire and support others during hard times. I hope my writing can make a difference in their lives, and that's why I'm choosing this path."
+    "voiceData": "I have been thinking a lot about my job, and I really want to become a writer. It's not just about earning a lot of money or becoming famous for me. My main reason is to help people improve themselves. I believe stories can inspire and support others during hard times. I hope my writing can make a difference in their lives, and that's why I'm choosing this path.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Oa31SfO-PzAT9lonDSax3mKYi7DnnQEr/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1887,7 +2615,14 @@
       "Become a writer",
       "Become a chef"
     ],
-    "voiceData": "I used to be a chef, and I loved cooking different dishes for people. It was exciting to create new recipes, but it was also very hard work. After that, I became a history teacher, where I enjoyed sharing stories about the past with my students. Teaching was rewarding, but I wanted to try something new. Now, I want to become a writer! I have many ideas for stories in my mind, and I can't wait to put them on paper."
+    "voiceData": "I used to be a chef, and I loved cooking different dishes for people. It was exciting to create new recipes, but it was also very hard work. After that, I became a history teacher, where I enjoyed sharing stories about the past with my students. Teaching was rewarding, but I wanted to try something new. Now, I want to become a writer! I have many ideas for stories in my mind, and I can't wait to put them on paper.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1pVdQHDlpnZVZd6nPr8XY1qR3F31-PaZO/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1905,7 +2640,14 @@
       "Water",
       "Coffee"
     ],
-    "voiceData": "Hi, Jake! It's Lucy. I just wanted to check in on you. How are you doing? I know you've been busy with work and school lately. I'm worried that you're not drinking enough water. Staying hydrated is really important, especially when you're working hard! Remember to keep a bottle with you. Anyway, I hope you're taking care of yourself. Let's catch up soon!"
+    "voiceData": "Hi, Jake! It's Lucy. I just wanted to check in on you. How are you doing? I know you've been busy with work and school lately. I'm worried that you're not drinking enough water. Staying hydrated is really important, especially when you're working hard! Remember to keep a bottle with you. Anyway, I hope you're taking care of yourself. Let's catch up soon!",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1sVgoz7JXP6GdUvmXwzybhWvFol9f2KJ5/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1923,7 +2665,14 @@
       "Go for a drive",
       "Stay home"
     ],
-    "voiceData": "She's planning to spend some time relaxing, so she will go for a drive. It's a great way for her to unwind, enjoy some fresh air, and clear her mind."
+    "voiceData": "She's planning to spend some time relaxing, so she will go for a drive. It's a great way for her to unwind, enjoy some fresh air, and clear her mind.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/16mX9c8wnNhgz6Ku10hb_DI7CH9DHWUA5/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1941,7 +2690,14 @@
       "They have similar characters",
       "She is very different from Lucy"
     ],
-    "voiceData": "Hi Emma, it's Lucy. I hope you're doing well! I need a small favor from you today. Could you pick up my sister after school? She'll be standing at the school gate at 3 P.M. She looks just like me, so you'll recognize her easily. I have a meeting, and I won't make it in time. Thank you so much! Let me know if that's okay with you."
+    "voiceData": "Hi Emma, it's Lucy. I hope you're doing well! I need a small favor from you today. Could you pick up my sister after school? She'll be standing at the school gate at 3 P.M. She looks just like me, so you'll recognize her easily. I have a meeting, and I won't make it in time. Thank you so much! Let me know if that's okay with you.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1jJSmycsW4bfYbWx7b03NaJ4aI93GpBQr/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1959,7 +2715,14 @@
       "A suit for the office",
       "A hat"
     ],
-    "voiceData": "Man: Hey, Sarah! Let's check out this store. I need something for work. Woman: Sure, John. How about this T-shirt? It looks nice. Man: Hmm, it's cool, but I don't really need a T-shirt right now. I'm actually looking for something more formal. Woman: Oh, okay. What about this hat? It would look great on you. Man: Haha, maybe, but not today. I really need a suit for the office. Look, this one seems perfect. Woman: That's a good choice! It's smart and looks comfortable. Man: Great! I'll buy the suit. Let's keep looking for other things we might need."
+    "voiceData": "Man: Hey, Sarah! Let's check out this store. I need something for work. Woman: Sure, John. How about this T-shirt? It looks nice. Man: Hmm, it's cool, but I don't really need a T-shirt right now. I'm actually looking for something more formal. Woman: Oh, okay. What about this hat? It would look great on you. Man: Haha, maybe, but not today. I really need a suit for the office. Look, this one seems perfect. Woman: That's a good choice! It's smart and looks comfortable. Man: Great! I'll buy the suit. Let's keep looking for other things we might need.",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Ein571ktCn3HDaVWfOit-QYPlAI9joua/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1977,7 +2740,14 @@
       "They fly south",
       "They hunt for food"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Fkg92NvXG7giwUCbPxtAZBv7JxTvOs0F/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -1995,7 +2765,14 @@
       "3 pounds",
       "1.50 pounds"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1AyDPUHyHuilwFONqiJLv_-uFuTkabrxL/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2013,7 +2790,14 @@
       "1pm",
       "2pm"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1BThWqmr_P96eGvpMWhhPBlf8Nj6Z2-XP/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2031,7 +2815,14 @@
       "3pm",
       "2pm"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1jXffd27U9_57gD18UabVxpPxgTCITS04/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2049,7 +2840,14 @@
       "A park",
       "A shopping mall"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1qLrBaElWHWq9dnGHin1b6d0BiUnXJFXe/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2067,7 +2865,14 @@
       "Fish",
       "Birds"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1mL9uxo3vDLzO6yXuH-LTXli_ytsZ6Ksk/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2085,7 +2890,14 @@
       "Chocolates",
       "A toy"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1rPO-PGNzbyuyXMVZshkE5uITlzoEusRO/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2103,7 +2915,14 @@
       "He taught her a lot",
       "He was very friendly"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1I968JmOaIDoUz9FWcIDZNZI4jWLMuNPm/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2121,7 +2940,14 @@
       "Go for a bike ride",
       "Go for a walk"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1mtYqyr15jZ2y0vLV4oJtsd7DEGOx0tGk/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2139,7 +2965,14 @@
       "Wednesday",
       "Tuesday"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1aVKpN4Chks10Ur191SGlrV1BZUYTZiua/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2157,7 +2990,14 @@
       "She works at irregular times",
       "She works at a desk all day"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1QBG44zR0k3l5-FNe8JQ5x67PWrny4axn/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2175,7 +3015,14 @@
       "At a boutique",
       "At a new shopping center"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1o2srGUTZdLAISbReD0CsdTSPpOFY52H5/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2193,7 +3040,14 @@
       "5pm",
       "1pm"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1tdzicBgMdx17jyx9FJMM8K3pYD6kWDQh/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2211,7 +3065,14 @@
       "Juice",
       "Tea"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1dGtzbv-xV8I4TDB1KDH-TQPx-ZOVsAhd/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2229,7 +3090,14 @@
       "Blue",
       "White"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1cl5NZMhP_OC4YNQdyQbUY_DU0m99a3Hk/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2247,7 +3115,14 @@
       "1.50 pounds",
       "2.50 pounds"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1q0u3618Tn65Q3fpBd5A-t1427qEsJeRM/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2265,7 +3140,14 @@
       "Running",
       "Walking"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1BTDrgCfK1Vh2sWfMP9WP1RvaAF_gAhRS/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2283,7 +3165,14 @@
       "Clothes",
       "Shoes"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1aFZDL43IK8yZHf8DZOc1w3yUO5VMFMgq/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2301,7 +3190,14 @@
       "They had similar eye colors",
       "They were thin"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1QGqWatpZZxPXHyc0qHn9QpbWB3bx1UAI/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2319,7 +3215,14 @@
       "One",
       "Three"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1DESa2isIznm4ausyu49Vzm-rmGcnFHwj/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2337,7 +3240,14 @@
       "4 weeks",
       "3 weeks"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1u7_LNxOwGJlzcYTzAvjdNLiK242S-5DX/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2355,7 +3265,14 @@
       "Go to theater and play sports",
       "Watch TV and read books"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1j__MasCmXMWUJtwV-HmJy21YKSunA-rS/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2373,7 +3290,14 @@
       "Go to the park",
       "Go to the beach"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1zuAJPx1di4Yxl5thzt00MnD6WpkA5kiX/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2391,7 +3315,14 @@
       "Play golf",
       "Go swimming"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/11o1CIbar6nBDwYvAYiUAEiqlVj4nneof/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2409,7 +3340,14 @@
       "The college",
       "The beach"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1PByZWoZmQwXGTnhUYcl8WCnx7Xi2syqy/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2427,7 +3365,14 @@
       "15",
       "20"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1COyo4VuglZqQrwJDfVZpkV1GNubvgms8/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2445,7 +3390,14 @@
       "Near the door",
       "In the corner"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1YHYuBDbVFKBlbhi3JyiC8YLv9Ole_rwk/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2463,7 +3415,14 @@
       "The front entrance",
       "The side entrance"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1yMYUutAlb-92SUpEcRfpwSZ3FngOLvon/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2481,7 +3440,14 @@
       "A pair of shoes",
       "A blouse"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1dxPG9wvAjZCDhb4aN1n6d-buRiqi8-LB/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2499,7 +3465,14 @@
       "Print the documents",
       "Arrange the seating"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1CFM5WFyCPl_3sFjCCftUV4jpnUmJ7xjG/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2517,7 +3490,14 @@
       "Thursday",
       "Tuesday"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1FsBT6a-IOF6qgg_1UObSrVKSuLGj7MJ0/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2535,7 +3515,14 @@
       "Spain",
       "France"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/16XkLNfPFEmyyUaKpGZhaURBvtEUXFPrY/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2553,7 +3540,14 @@
       "The windows",
       "The doors"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1iVkDH_OkeU40gpwp4pvSg4boU-IQuOnd/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2571,7 +3565,14 @@
       "Watching movies",
       "Playing video games"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1L39Er0E4-Zu7GNeRlcfKv2qBHhuAt-rH/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2589,7 +3590,14 @@
       "A sports field",
       "A Performance space"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1as0yQq70ICKT_jQnOQMtgF01cLfaQfXf/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2607,7 +3615,14 @@
       "Buy second-hand items",
       "Cook for yourself"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1AMrMdvwDpDGPGxZJIwORVT_mxRwM8nOJ/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2625,7 +3640,14 @@
       "Arrange private classes",
       "Enroll in after-school programs"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1CxypHeTcRZBFmLAMfm8OS-z3Sual8mSO/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2643,7 +3665,14 @@
       "A large stone",
       "A book she read"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Tz1J28s6fLsL906k9lPaJLLsh_oxYjXa/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2661,7 +3690,14 @@
       "10 minutes",
       "15 minutes"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1W7deqlUQqcw0WM7jpZyw-Tjx0_ByS-lM/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2679,7 +3715,14 @@
       "By bus",
       "By train"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1vGqUGe7W1HSQZqPotsfANxZ7WSWgxDmb/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2697,7 +3740,14 @@
       "Goes for a walk",
       "Watches TV"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1VKU3bCqly8vUHVuXP06zYPWK42Yix36c/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2715,7 +3765,14 @@
       "Sports",
       "History classes"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1RJmbYWLe04r6UTpIKqzfK6knZnYls40X/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2733,7 +3790,14 @@
       "The beat",
       "The instruments"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1AkARsLoZH-ktGUABiYaw9pRZIugd2N7e/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2751,7 +3815,14 @@
       "09:30",
       "09:00"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1QkMouA6DuQAwjdQxjnamQ4Mludl6ZuIZ/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2769,7 +3840,14 @@
       "They have similar characters",
       "They are very different"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1pW3l5Q2-VxZAig54akuztD9N9bMEUWPe/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2787,7 +3865,14 @@
       "Take a vacation",
       "Find a new job"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1jOhA_eRJwwI3e-cdHx0mnfDluxfW-RQD/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2805,7 +3890,14 @@
       "20 minutes",
       "60 minutes"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/13myW4zaLZ1Ol7N4KTj9w5l0YJuQGZHhN/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2823,7 +3915,14 @@
       "350 pounds",
       "500 pounds"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1QapB0gdTBPfdHeCxJNbyl0phzA4KneD4/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2841,7 +3940,14 @@
       "50 dollars",
       "70 dollars"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1OIrIdi7El_u-l55_HlgQiDHXx1wCRNeA/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2859,7 +3965,14 @@
       "Heavy traffic",
       "Missed the train"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1m1mlRhdX7l2gYN3JVxBom2wm1i2PqSYa/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2877,7 +3990,14 @@
       "Cooks dinner",
       "Watches TV"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1ZXHf_xvoYXzyQ1-Iy6Tu-jxW4JljZHWr/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2895,7 +4015,14 @@
       "7 PM",
       "8 PM"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1rpD3bLMybiMW8xH9aXdC0dzbCTSrv9mP/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2913,7 +4040,14 @@
       "Invest in stocks",
       "Buy expensive cars"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/13oYrC7pmeuAKRTqhlQ_sQ3G__1jxqkYs/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2931,7 +4065,14 @@
       "A speech",
       "A firework display"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1SnlngeHFXtmidGJS7GV9h2L2bpSWEIWl/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2949,7 +4090,14 @@
       "The drawer",
       "The top"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1rxXchjursbcHv6qSIwnGlKcsYJm3p21G/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2967,7 +4115,14 @@
       "Visit the library",
       "Have coffee"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/17rWs-yVdKgKF5P-_dIwpBk9B49Ac1o2M/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -2985,7 +4140,14 @@
       "Same music taste",
       "Similar interests"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1haiDeJ8rPpKPkKEJXhsVr8VBGw7SQfs5/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3003,7 +4165,14 @@
       "Her new car",
       "Her journey to work"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Xjwo4EsXP0DvcEyZR9thhWoDx68Z8NLW/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3021,7 +4190,14 @@
       "Next to the bank",
       "On the left of the square"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1CM7bNiuPhsBsXNsiTHJ899H3qBwHVIK_/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3039,7 +4215,14 @@
       "Use the public transport",
       "Sell old clothes"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1pgEKYGYvQvrknDV-cyIR_BQHGXvYKGfD/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3057,7 +4240,14 @@
       "£1.5",
       "£5.0"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/14tXj3wmYi_9wNe_T1ihjUp99PVgoAm-4/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3075,7 +4265,14 @@
       "Go to the cinema",
       "Go on a city tour"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1fae0JSj4EQbbW4LXFUH5sh1o_nK8lzv7/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3093,7 +4290,14 @@
       "Outside the station",
       "At the bus stop"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1CWbC1Ygpf4dAeIIwP2fYFeA_mXLGvbx6/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3111,7 +4315,14 @@
       "5.30",
       "6.30"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1h4RB2eGUyOD8Ua8zaYtmh7hJrwoMBKl-/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3129,7 +4340,14 @@
       "In a school",
       "In a bank"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1PaND2UHSRwnLmk6o_xlb1M9lPmDdA2sI/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3147,7 +4365,14 @@
       "In the kitchen",
       "Under the car seat"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1uaDdfL3c7eEUfzSxrFGduIrUwvVNYgDP/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3165,7 +4390,14 @@
       "5 minutes",
       "10 minutes"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1lGT9DrY4OKYpya0W5c1CVQ1GSqhnvCgC/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3183,7 +4415,14 @@
       "06:40",
       "07:15"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Wi7Td5y1OL92ZY0F2fuPlU7ms6jchyhP/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3201,7 +4440,14 @@
       "At the mall",
       "By the park"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/152uMXKqPRslKzB8NNwtU9tKyg2jk_QUp/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3219,7 +4465,14 @@
       "At the bakery",
       "At the traffic lights"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/122c_i_jnFp6HCzLxvNh9xOGd0legMe-Y/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3237,7 +4490,14 @@
       "135 pounds",
       "160 pounds"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1p_viJYKaYYAYrk6RgWU8QoYsA-t6l80g/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3255,7 +4515,14 @@
       "A post office",
       "A department store"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1YKYo_4xFG-EPXg5rmBq5uGhwLeh0g-N0/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3273,7 +4540,14 @@
       "An electrician",
       "A mechanic"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1eLJ_oSCHzRZHlmamPh8RRtsZ1o-oZl8J/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3291,7 +4565,14 @@
       "To travel the world",
       "To help people"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1VTwjamtGH_oaBNnh8hVHBizG6TMOiNpi/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3309,7 +4590,14 @@
       "A ring",
       "A bag"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1PhnXKPt6nGn_tt2C6luAQJ_gQUx9CZqo/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3327,7 +4615,14 @@
       "Miss Brown",
       "Mrs. Green"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1U6ARVC46FLnSACAQPRQyrEI9C6Fdi93a/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3345,7 +4640,14 @@
       "Wrong style",
       "Because of its size"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1HyiZLFbglKojWglrZQtQPQNBrMu6oz8L/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3363,7 +4665,14 @@
       "It is too noisy",
       "The service is slow"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1Q8YcVbRK897Wiqj2q2p6OKewWySi6mCH/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3381,7 +4690,14 @@
       "In a townhouse",
       "In a library"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/1StzD4XL9uWz96Vd3fazOyNtrDMyq3HyF/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   },
   {
     "selected": false,
@@ -3399,6 +4715,13 @@
       "The bank",
       "The bus station"
     ],
-    "voiceData": "kco"
+    "voiceData": "kco",
+    "guestVisible": false,
+    "audioLink": "https://drive.google.com/file/d/156S8uBcaQEF8FGiKc4-UfM_f8Jn0i4DF/view?usp=drivesdk",
+    "correctAnswer": "",
+    "correct": "",
+    "answer": "",
+    "answerKey": "",
+    "correctOption": ""
   }
 ]

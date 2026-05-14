@@ -41,13 +41,13 @@ const parts = [
   },
 ];
 
-export default function ListeningDashboardPage() {
+export default function Page() {
   return (
-    <section className="listeningDashboardContent">
+    <section className="listeningBảng điều khiểnContent">
       <header className="dashboardHero">
         <div>
           <p>QUẢN LÝ LISTENING</p>
-          <h1>Listening Dashboard</h1>
+          <h1>Bảng điều khiển Listening</h1>
           <span>Quản lý toàn bộ 4 phần Listening trong một khu vực quản trị.</span>
         </div>
 
@@ -104,10 +104,11 @@ export default function ListeningDashboardPage() {
       </section>
 
       <style jsx global>{`
-        .listeningDashboardContent {
+        .listeningBảng điều khiểnContent {
           width: 100%;
-          min-height: 100vh;
-          padding: 28px 32px;
+          max-width: none;
+          margin: 0;
+          padding: 0;
           color: #3d0810;
           font-family: Arial, sans-serif;
         }
@@ -118,7 +119,7 @@ export default function ListeningDashboardPage() {
           align-items: center;
           justify-content: space-between;
           gap: 24px;
-          padding: 34px;
+          padding: clamp(24px, 3vw, 38px);
           border-radius: 32px;
           background: rgba(255, 255, 255, 0.94);
           border: 1px solid #ffc0cc;
@@ -163,8 +164,9 @@ export default function ListeningDashboardPage() {
         }
 
         .summaryGrid {
+          width: 100%;
           display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 16px;
           margin-bottom: 22px;
         }
@@ -193,8 +195,9 @@ export default function ListeningDashboardPage() {
         }
 
         .partsGrid {
+          width: 100%;
           display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           gap: 18px;
         }
 
@@ -229,6 +232,7 @@ export default function ListeningDashboardPage() {
           font-size: 32px;
           font-weight: 900;
           box-shadow: 0 12px 24px rgba(217, 4, 41, 0.2);
+          flex-shrink: 0;
         }
 
         .partTop span {
@@ -291,21 +295,7 @@ export default function ListeningDashboardPage() {
           background: white;
         }
 
-        @media (max-width: 1440px) {
-          .partsGrid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-
-          .summaryGrid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-        }
-
         @media (max-width: 900px) {
-          .listeningDashboardContent {
-            padding: 18px;
-          }
-
           .dashboardHero {
             flex-direction: column;
             align-items: flex-start;
@@ -313,11 +303,6 @@ export default function ListeningDashboardPage() {
 
           .studentPreviewBtn {
             width: 100%;
-          }
-
-          .partsGrid,
-          .summaryGrid {
-            grid-template-columns: 1fr;
           }
         }
       `}</style>

@@ -3,19 +3,19 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function StudentApprovalPage() {
-  const [students, setStudents] = useState([]);
+export default function Page() {
+  const [students, setHọc viêns] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchPhone, setSearchPhone] = useState("");
 
-  async function loadStudents() {
+  async function loadHọc viêns() {
     try {
       const res = await fetch("/api/students", { cache: "no-store" });
       const data = await res.json();
-      setStudents(data.students || []);
+      setHọc viêns(data.students || []);
     } catch (error) {
       console.error(error);
-      setStudents([]);
+      setHọc viêns([]);
     } finally {
       setLoading(false);
     }
@@ -30,14 +30,14 @@ export default function StudentApprovalPage() {
       body: JSON.stringify({ id, status }),
     });
 
-    await loadStudents();
+    await loadHọc viêns();
   }
 
   useEffect(() => {
-    loadStudents();
+    loadHọc viêns();
   }, []);
 
-  const filteredStudents = students.filter((student) => {
+  const filteredHọc viêns = students.filter((student) => {
     const phone = String(student.phone || "").replace(/\s+/g, "");
     const keyword = searchPhone.trim().replace(/\s+/g, "");
     return !keyword || phone.includes(keyword);
@@ -141,14 +141,14 @@ export default function StudentApprovalPage() {
                       Đang tải dữ liệu...
                     </td>
                   </tr>
-                ) : filteredStudents.length === 0 ? (
+                ) : filteredHọc viêns.length === 0 ? (
                   <tr>
                     <td colSpan="6" className="px-5 py-10 text-center font-black text-rose-500">
                       Không tìm thấy học viên phù hợp.
                     </td>
                   </tr>
                 ) : (
-                  filteredStudents.map((student) => (
+                  filteredHọc viêns.map((student) => (
                     <tr key={student.id} className="border-b border-rose-100">
                       <td className="px-5 py-4 font-black text-rose-700">{student.id}</td>
                       <td className="px-5 py-4 font-bold">{student.name || "-"}</td>

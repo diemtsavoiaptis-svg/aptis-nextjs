@@ -11,6 +11,8 @@ const columns = [
   { key: "answerA", label: "Đáp án A", type: "text" },
   { key: "answerB", label: "Đáp án B", type: "text" },
   { key: "answerC", label: "Đáp án C", type: "text" },
+  { key: "correctAnswer", label: "Đáp án đúng", type: "letterSelect" },
+
   { key: "voiceData", label: "dữ liệu voice", type: "textarea" },
   { key: "guestStatus", label: "Giao diện khách", type: "status" },
 ];
@@ -18,7 +20,7 @@ const columns = [
 function createEmptyRow(index) {
   return {
     selected: false,
-    showInGuest: false,
+    showInKhách: false,
     audio: "",
     audio_drive_file_id: "",
     stt: String(index + 1),
@@ -53,7 +55,7 @@ export default function AdminListeningPart1Page() {
   }, []);
 
   const selectedRow = rows[selectedIndex] || rows[0] || createEmptyRow(0);
-  const guestCount = useMemo(() => rows.filter((row) => row.showInGuest).length, [rows]);
+  const guestCount = useMemo(() => rows.filter((row) => row.showInKhách).length, [rows]);
   const selectedCount = useMemo(() => rows.filter((row) => row.selected).length, [rows]);
 
   function updateCell(rowIndex, key, value) {
@@ -72,7 +74,7 @@ export default function AdminListeningPart1Page() {
     );
   }
 
-  function pickGuestQuestions() {
+  function pickKháchCâus() {
     const pickedCount = rows.filter((row) => row.selected).length;
 
     if (!pickedCount) {
@@ -83,7 +85,7 @@ export default function AdminListeningPart1Page() {
     setRows((oldRows) =>
       oldRows.map((row) =>
         row.selected
-          ? { ...row, showInGuest: true, selected: false }
+          ? { ...row, showInKhách: true, selected: false }
           : row
       )
     );
@@ -91,7 +93,7 @@ export default function AdminListeningPart1Page() {
     setNotice(`Đã chọn ${pickedCount} câu để hiển thị ở giao diện khách. Nhớ bấm Lưu toàn bộ.`);
   }
 
-  function hideGuestQuestions() {
+  function hideKháchCâus() {
     const pickedCount = rows.filter((row) => row.selected).length;
 
     if (!pickedCount) {
@@ -102,7 +104,7 @@ export default function AdminListeningPart1Page() {
     setRows((oldRows) =>
       oldRows.map((row) =>
         row.selected
-          ? { ...row, showInGuest: false, selected: false }
+          ? { ...row, showInKhách: false, selected: false }
           : row
       )
     );
@@ -170,11 +172,11 @@ export default function AdminListeningPart1Page() {
             </div>
 
             <div className="guestActionBox">
-              <button type="button" className="guestPickBtn" onClick={pickGuestQuestions}>
+              <button type="button" className="guestPickBtn" onClick={pickKháchCâus}>
                 Chọn câu hiển thị giao diện khách
               </button>
 
-              <button type="button" className="guestHideBtn" onClick={hideGuestQuestions}>
+              <button type="button" className="guestHideBtn" onClick={hideKháchCâus}>
                 Ẩn câu khỏi giao diện khách
               </button>
 
@@ -195,7 +197,7 @@ export default function AdminListeningPart1Page() {
             {notice ? <div className="noticeBox">{notice}</div> : null}
 
             <div className="tableWrap">
-              <table>
+              <div className="topScrollWrap"><table>
                 <thead>
                   <tr>
                     <th>#</th>
@@ -207,7 +209,7 @@ export default function AdminListeningPart1Page() {
                   {rows.map((row, rowIndex) => (
                     <tr
                       key={rowIndex}
-                      className={`${rowIndex === selectedIndex ? "activeRow" : ""} ${row.showInGuest ? "guestVisibleRow" : ""}`}
+                      className={`${rowIndex === selectedIndex ? "activeRow" : ""} ${row.showInKhách ? "guestVisibleRow" : ""}`}
                       onClick={() => setSelectedIndex(rowIndex)}
                     >
                       <td>{rowIndex + 1}</td>
@@ -222,8 +224,8 @@ export default function AdminListeningPart1Page() {
                               onClick={(event) => event.stopPropagation()}
                             />
                           ) : column.type === "status" ? (
-                            <span className={row.showInGuest ? "statusOn" : "statusOff"}>
-                              {row.showInGuest ? "Hiện khách" : "Chưa hiện"}
+                            <span className={row.showInKhách ? "statusOn" : "statusOff"}>
+                              {row.showInKhách ? "Hiện khách" : "Chưa hiện"}
                             </span>
                           ) : (
                             <input
@@ -237,14 +239,14 @@ export default function AdminListeningPart1Page() {
                     </tr>
                   ))}
                 </tbody>
-              </table>
+              </table></div>
             </div>
           </div>
 
           <aside className="detailPanel">
             <div className="panelTitle">
               <h2>Dòng đang chọn</h2>
-              <span>Dòng {selectedIndex + 1} · {selectedRow.showInGuest ? "Đang hiện khách" : "Chưa hiện khách"}</span>
+              <span>Dòng {selectedIndex + 1} · {selectedRow.showInKhách ? "Đang hiện khách" : "Chưa hiện khách"}</span>
             </div>
 
             <div className="formGrid">
@@ -628,7 +630,42 @@ export default function AdminListeningPart1Page() {
           .hero { grid-template-columns: 1fr; }
           .panelTitle { align-items: flex-start; flex-direction: column; }
         }
-      `}</style>
+      
+        .topScrollWrap {
+          width: 100%;
+          overflow-x: auto;
+          overflow-y: hidden;
+          transform: rotateX(180deg);
+          border-top: 1px solid #ffd4dc;
+          border-radius: 16px 16px 0 0;
+        }
+
+        .topScrollWrap > table,
+        .topScrollWrap > div,
+        .topScrollWrap .tableInner {
+          transform: rotateX(180deg);
+        }
+
+        .topScrollWrap::-webkit-scrollbar {
+          height: 14px;
+        }
+
+        .topScrollWrap::-webkit-scrollbar-track {
+          background: #fff0f3;
+          border-radius: 999px;
+        }
+
+        .topScrollWrap::-webkit-scrollbar-thumb {
+          background: #b8b8b8;
+          border-radius: 999px;
+          border: 3px solid #fff0f3;
+        }
+
+        .topScrollWrap::-webkit-scrollbar-thumb:hover {
+          background: #8f8f8f;
+        }
+
+`}</style>
     </main>
   );
 }
