@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useMemo, useState, Suspense } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 function normalizeText(value) {
@@ -54,7 +54,7 @@ function getAudioUrl(row) {
   return row?.audio || row?.audioUrl || row?.audioLink || "";
 }
 
-function ListeningPart1PageContent() {
+export default function ListeningPart1Page() {
   const searchParams = useSearchParams();
   const mode = searchParams.get("mode") === "student" ? "student" : "guest";
 
@@ -634,20 +634,5 @@ function ListeningPart1PageContent() {
         }
       `}</style>
     </main>
-  );
-}
-
-
-export default function ListeningPart1SuspenseWrapper() {
-  return (
-    <Suspense
-      fallback={
-        <main style={{ minHeight: "100vh", padding: 24, background: "#fff6f8", color: "#e6003f", fontWeight: 900 }}>
-          Đang tải Part 1...
-        </main>
-      }
-    >
-      <ListeningPart1PageContent />
-    </Suspense>
   );
 }
