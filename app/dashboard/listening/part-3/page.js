@@ -64,10 +64,13 @@ export default function AdminListeningPart3Page() {
     row.question2.trim() &&
     row.answer2.trim()
   ).length;
-  const selectedRows = rows.filter((row) => row.selected).length;
-  const guestRows = rows.filter((row) => row.guestVisible).length;
+  const selectedCount = rows.filter((row) => row.selected).length;
+  const guestCount = rows.filter((row) => row.guestVisible).length;
 
-  const allSelected = useMemo(() => rows.length > 0 && rows.every((row) => row.selected), [rows]);
+  const allSelected = useMemo(
+    () => rows.length > 0 && rows.every((row) => row.selected),
+    [rows]
+  );
 
   function updateCell(index, key, value) {
     setRows((oldRows) =>
@@ -105,38 +108,31 @@ export default function AdminListeningPart3Page() {
 
     setRows((oldRows) =>
       oldRows.map((row) =>
-        row.selected ? { ...row, guestVisible: true } : row
+        row.selected ? { ...row, guestVisible: true, selected: false } : row
       )
     );
+  }
 
-    alert("Đã chọn các câu này để hiển thị ở giao diện khách.");
+  function hideGuestVisible() {
+    const hasSelected = rows.some((row) => row.selected);
+
+    if (!hasSelected) {
+      alert("Vui lòng tick chọn các câu muốn ẩn khỏi giao diện khách.");
+      return;
+    }
+
+    setRows((oldRows) =>
+      oldRows.map((row) =>
+        row.selected ? { ...row, guestVisible: false, selected: false } : row
+      )
+    );
   }
 
   function saveAll() {
     alert("Đã lưu bản thiết kế trên giao diện. Bước sau mình sẽ nối lưu database thật.");
   }
 
-  
-  const selectedCount = rows.filter((row) => row.selected).length;
-  const guestCount = rows.filter((row) => row.showInGuest).length;
-
-  const selectGuestRows = () => {
-    setRows((prev) =>
-      prev.map((row) =>
-        row.selected ? { ...row, showInGuest: true, selected: false } : row
-      )
-    );
-  };
-
-  const hideGuestRows = () => {
-    setRows((prev) =>
-      prev.map((row) =>
-        row.selected ? { ...row, showInGuest: false, selected: false } : row
-      )
-    );
-  };
-
-return (
+  return (
     <main className="page">
       <section className="shell">
         <header className="hero">
@@ -169,69 +165,42 @@ return (
           </div>
           <div className="statCard">
             <span>ĐÃ CHỌN</span>
-            <strong>{selectedRows}</strong>
+            <strong>{selectedCount}</strong>
           </div>
           <div className="statCard">
             <span>HIỆN KHÁCH</span>
-            <strong>{guestRows}</strong>
+            <strong>{guestCount}</strong>
           </div>
         </section>
 
-        
-
-
-
-        <section className="tablePanel">
-          <div className="topScrollWrap">
-            
-        <section className="part3-guest-control-panel rounded-[28px] border border-[#ffc9d2] bg-[#fff7f7] p-5 shadow-sm">
-          <div className="flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={selectGuestRows}
-              className="rounded-2xl bg-[#e9003f] px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#c80035]"
-            >
+        <section className="guestControlPanel">
+          <div className="guestToolbar">
+            <button type="button" className="guestPrimaryBtn" onClick={markGuestVisible}>
               Chọn câu hiển thị giao diện khách
             </button>
 
-            <button
-              type="button"
-              onClick={hideGuestRows}
-              className="rounded-2xl border border-[#ffc0cb] bg-white px-5 py-3 text-sm font-bold text-[#b00030] hover:bg-[#fff0f3]"
-            >
+            <button type="button" onClick={hideGuestVisible}>
               Ẩn câu khỏi giao diện khách
             </button>
 
-            <button
-              type="button"
-              onClick={addRow}
-              className="rounded-2xl border border-[#ffc0cb] bg-white px-5 py-3 text-sm font-bold text-[#b00030] hover:bg-[#fff0f3]"
-            >
+            <button type="button" onClick={() => addRows(1)}>
               + Thêm dòng
             </button>
 
-            <button
-              type="button"
-              onClick={saveAll}
-              className="rounded-2xl bg-[#e9003f] px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#c80035]"
-            >
+            <button type="button" className="saveBtn" onClick={saveAll}>
               Lưu toàn bộ
             </button>
           </div>
         </section>
 
-        <section className="rounded-[28px] border border-[#ffc9d2] bg-[#fff7f7] p-5 shadow-sm">
-          <div className="flex flex-wrap gap-3">
-            <div className="rounded-2xl border border-[#ffc0cb] bg-white px-5 py-3 text-sm font-bold text-[#b00030]">
-              Đang tick: {selectedCount} câu
-            </div>
-            <div className="rounded-2xl border border-[#ffc0cb] bg-white px-5 py-3 text-sm font-bold text-[#b00030]">
-              Hiện khách: {guestCount} câu
-            </div>
-          </div>
+        <section className="guestCountPanel">
+          <div>Đang tick: {selectedCount} câu</div>
+          <div>Hiện khách: {guestCount} câu</div>
         </section>
 
-<table>
+        <section className="tablePanel">
+          <div className="topScrollWrap">
+            <table>
               <thead>
                 <tr>
                   {columns.map((column) => (
@@ -250,12 +219,6 @@ return (
                             type="checkbox"
                             checked={row.selected}
                             onChange={(event) => updateCell(rowIndex, "selected", event.target.checked)}
-                          />
-                        ) : column.key === "voiceParagraph" ? (
-                          <textarea
-                            value={row[column.key]}
-                            onChange={(event) => updateCell(rowIndex, column.key, event.target.value)}
-                            placeholder={column.label}
                           />
                         ) : (
                           <textarea
@@ -306,8 +269,9 @@ return (
         }
 
         .hero,
-        .bulkBox,
         .statCard,
+        .guestControlPanel,
+        .guestCountPanel,
         .tablePanel {
           background: rgba(255, 255, 255, 0.92);
           border: 1px solid #ffc0cc;
@@ -408,32 +372,22 @@ return (
           color: #3d0810;
         }
 
-        .bulkBox {
-          border-radius: 22px;
+        .guestControlPanel {
+          border-radius: 24px;
           padding: 18px;
-          margin-bottom: 18px;
+          margin-bottom: 14px;
         }
 
-        .bulkBox h2 {
-          margin: 0 0 8px;
-          font-size: 24px;
-        }
-
-        .bulkBox p {
-          margin: 0 0 14px;
-          color: #e6003f;
-        }
-
-        .toolbar {
+        .guestToolbar {
           display: flex;
           gap: 10px;
           flex-wrap: wrap;
         }
 
-        .toolbar button {
+        .guestToolbar button {
           min-height: 48px;
           padding: 0 18px;
-          border-radius: 14px;
+          border-radius: 16px;
           border: 1px solid #ffc0cc;
           background: white;
           color: #9f001f;
@@ -442,16 +396,29 @@ return (
           box-shadow: 0 8px 18px rgba(190, 18, 60, 0.1);
         }
 
-        .toolbar .guestBtn {
-          background: linear-gradient(135deg, #ff315b, #d90429);
-          color: white;
-          border-color: #d90429;
-        }
-
-        .toolbar .saveBtn {
+        .guestToolbar .guestPrimaryBtn,
+        .guestToolbar .saveBtn {
           background: #e6003f;
           color: white;
           border-color: #e6003f;
+        }
+
+        .guestCountPanel {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          border-radius: 24px;
+          padding: 18px;
+          margin-bottom: 18px;
+        }
+
+        .guestCountPanel div {
+          border: 1px solid #ffc0cc;
+          background: white;
+          color: #9f001f;
+          border-radius: 18px;
+          padding: 14px 20px;
+          font-weight: 900;
         }
 
         .tablePanel {
