@@ -5,294 +5,114 @@ import Link from "next/link";
 const parts = [
   {
     id: 1,
-    title: "Listening Part 1",
-    subtitle: "Short Conversations",
-    description: "Manage short audio questions with A, B, C answer choices.",
+    title: "Phần 1",
+    subtitle: "Hội thoại ngắn",
+    description: "Quản lý câu hỏi nghe ngắn với lựa chọn A, B, C.",
     adminHref: "/dashboard/listening/part-1",
     studentHref: "/listening/part-1?mode=student",
-    status: "Active",
+    status: "Đang hoạt động",
   },
   {
     id: 2,
-    title: "Listening Part 2",
-    subtitle: "Information Matching",
-    description: "Manage audio, topics, speakers, answer pool and voice data.",
+    title: "Phần 2",
+    subtitle: "Nối thông tin",
+    description: "Quản lý audio, chủ đề, người 1-4, kho đáp án và dữ liệu voice.",
     adminHref: "/dashboard/listening/part-2",
     studentHref: "/listening/part-2",
-    status: "Design",
+    status: "Đang thiết kế",
   },
   {
     id: 3,
-    title: "Listening Part 3",
-    subtitle: "Opinion / Identity",
-    description: "Manage audio, topics, four questions and speaker answers.",
+    title: "Phần 3",
+    subtitle: "Ý kiến / Nhân vật",
+    description: "Quản lý audio, topic, câu hỏi và đáp án Man / Woman / Both.",
     adminHref: "/dashboard/listening/part-3",
     studentHref: "/listening/part-3",
-    status: "Design",
+    status: "Đang thiết kế",
   },
   {
     id: 4,
-    title: "Listening Part 4",
-    subtitle: "Monologue / Summary",
-    description: "Manage long audio passages, questions, answers and paraphrase data.",
+    title: "Phần 4",
+    subtitle: "Bài nói dài / Tóm tắt",
+    description: "Quản lý đoạn nghe dài, câu hỏi, đáp án và dữ liệu paraphrase.",
     adminHref: "/dashboard/listening/part-4",
     studentHref: "/listening/part-4",
-    status: "Design",
+    status: "Đang thiết kế",
   },
 ];
 
 export default function ListeningDashboardPage() {
   return (
-    <main className="dashboardPage">
-      <aside className="sidebar">
-        <div className="brandCard">
-          <div className="brandIcon">A</div>
-          <div>
-            <p>ADMIN SYSTEM</p>
-            <h1>Aptis</h1>
-          </div>
+    <section className="listeningDashboardContent">
+      <header className="dashboardHero">
+        <div>
+          <p>QUẢN LÝ LISTENING</p>
+          <h1>Listening Dashboard</h1>
+          <span>Quản lý toàn bộ 4 phần Listening trong một khu vực quản trị.</span>
         </div>
 
-        <nav className="sideNav">
-          <Link href="/dashboard" className="navItem">
-            <span>D</span>
-            <div>
-              <strong>Dashboard</strong>
-              <small>Overview</small>
+        <Link href="/listening" className="studentPreviewBtn">
+          Xem giao diện học viên
+        </Link>
+      </header>
+
+      <section className="summaryGrid">
+        <div className="summaryCard">
+          <span>Tổng số phần</span>
+          <strong>4</strong>
+        </div>
+
+        <div className="summaryCard">
+          <span>Dữ liệu chính</span>
+          <strong>Part 1</strong>
+        </div>
+
+        <div className="summaryCard">
+          <span>Đang thiết kế</span>
+          <strong>3 phần</strong>
+        </div>
+
+        <div className="summaryCard">
+          <span>Giao diện</span>
+          <strong>Đỏ pastel</strong>
+        </div>
+      </section>
+
+      <section className="partsGrid">
+        {parts.map((part) => (
+          <article key={part.id} className="partCard">
+            <div className="partTop">
+              <div className="partNumber">{part.id}</div>
+              <span>{part.status}</span>
             </div>
-          </Link>
 
-          <Link href="/dashboard/listening" className="navItem active">
-            <span>L</span>
-            <div>
-              <strong>Listening</strong>
-              <small>Admin 1 — 4</small>
+            <h2>{part.title}</h2>
+            <p className="partSubtitle">{part.subtitle}</p>
+            <p className="partDescription">{part.description}</p>
+
+            <div className="partActions">
+              <Link href={part.adminHref} className="primaryAction">
+                Mở trang quản trị
+              </Link>
+
+              <Link href={part.studentHref} className="secondaryAction">
+                Xem học viên
+              </Link>
             </div>
-          </Link>
-
-          <div className="navItem disabled">
-            <span>R</span>
-            <div>
-              <strong>Reading</strong>
-              <small>Coming soon</small>
-            </div>
-          </div>
-
-          <div className="navItem disabled">
-            <span>S</span>
-            <div>
-              <strong>Speaking</strong>
-              <small>Coming soon</small>
-            </div>
-          </div>
-
-          <div className="navItem disabled">
-            <span>W</span>
-            <div>
-              <strong>Writing</strong>
-              <small>Coming soon</small>
-            </div>
-          </div>
-
-          <div className="navItem disabled">
-            <span>G&V</span>
-            <div>
-              <strong>G&V</strong>
-              <small>Coming soon</small>
-            </div>
-          </div>
-        </nav>
-      </aside>
-
-      <section className="mainContent">
-        <header className="hero">
-          <div>
-            <p>LISTENING MANAGEMENT</p>
-            <h2>Listening Dashboard</h2>
-            <span>
-              Manage all Aptis Listening sections in one fluid, full-width admin workspace.
-            </span>
-          </div>
-
-          <Link href="/listening" className="previewBtn">
-            View Student UI
-          </Link>
-        </header>
-
-        <section className="summaryGrid">
-          <div className="summaryCard">
-            <span>Total Parts</span>
-            <strong>4</strong>
-          </div>
-          <div className="summaryCard">
-            <span>Active Data</span>
-            <strong>Part 1</strong>
-          </div>
-          <div className="summaryCard">
-            <span>Design Mode</span>
-            <strong>3 Parts</strong>
-          </div>
-          <div className="summaryCard">
-            <span>Theme</span>
-            <strong>Pastel Red</strong>
-          </div>
-        </section>
-
-        <section className="partsGrid">
-          {parts.map((part) => (
-            <article key={part.id} className="partCard">
-              <div className="partTop">
-                <div className="partNumber">{part.id}</div>
-                <span>{part.status}</span>
-              </div>
-
-              <h3>{part.title}</h3>
-              <p className="subtitle">{part.subtitle}</p>
-              <p className="description">{part.description}</p>
-
-              <div className="cardActions">
-                <Link href={part.adminHref} className="primaryAction">
-                  Open Admin
-                </Link>
-                <Link href={part.studentHref} className="secondaryAction">
-                  Student View
-                </Link>
-              </div>
-            </article>
-          ))}
-        </section>
+          </article>
+        ))}
       </section>
 
       <style jsx global>{`
-        * {
-          box-sizing: border-box;
-        }
-
-        body {
-          margin: 0;
-          background: #fff6f8;
+        .listeningDashboardContent {
+          width: 100%;
+          min-height: 100vh;
+          padding: 28px 32px;
+          color: #3d0810;
           font-family: Arial, sans-serif;
         }
 
-        .dashboardPage {
-          min-height: 100vh;
-          width: 100%;
-          display: flex;
-          background:
-            linear-gradient(rgba(255, 246, 248, 0.94), rgba(255, 246, 248, 0.94)),
-            repeating-linear-gradient(
-              -14deg,
-              rgba(244, 63, 94, 0.075) 0,
-              rgba(244, 63, 94, 0.075) 2px,
-              transparent 2px,
-              transparent 86px
-            );
-          color: #3d0810;
-        }
-
-        .sidebar {
-          width: 280px;
-          flex: 0 0 280px;
-          min-height: 100vh;
-          padding: 24px 18px;
-          background: rgba(255, 255, 255, 0.92);
-          border-right: 1px solid #ffc0cc;
-          box-shadow: 16px 0 40px rgba(190, 18, 60, 0.08);
-        }
-
-        .brandCard {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          padding: 18px;
-          border-radius: 26px;
-          background: #fff0f3;
-          margin-bottom: 28px;
-        }
-
-        .brandIcon {
-          width: 58px;
-          height: 58px;
-          border-radius: 18px;
-          background: linear-gradient(135deg, #ff315b, #d90429);
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 28px;
-          font-weight: 900;
-          box-shadow: 0 12px 24px rgba(217, 4, 41, 0.2);
-        }
-
-        .brandCard p {
-          margin: 0 0 4px;
-          color: #e6003f;
-          font-size: 11px;
-          font-weight: 900;
-        }
-
-        .brandCard h1 {
-          margin: 0;
-          font-size: 22px;
-          color: #3d0810;
-        }
-
-        .sideNav {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .navItem {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          padding: 14px;
-          border-radius: 20px;
-          color: #9f001f;
-          text-decoration: none;
-        }
-
-        .navItem span {
-          width: 42px;
-          height: 42px;
-          border-radius: 14px;
-          background: #ffe3e8;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: 900;
-          flex-shrink: 0;
-        }
-
-        .navItem strong {
-          display: block;
-          font-size: 15px;
-        }
-
-        .navItem small {
-          display: block;
-          margin-top: 3px;
-          color: #e46b82;
-          font-weight: 800;
-        }
-
-        .navItem.active {
-          background: #fff0f3;
-          box-shadow: inset 0 0 0 1px #ffc0cc;
-        }
-
-        .navItem.disabled {
-          opacity: 0.62;
-        }
-
-        .mainContent {
-          flex: 1;
-          min-width: 0;
-          padding: 28px 32px;
-        }
-
-        .hero {
+        .dashboardHero {
           width: 100%;
           display: flex;
           align-items: center;
@@ -300,13 +120,13 @@ export default function ListeningDashboardPage() {
           gap: 24px;
           padding: 34px;
           border-radius: 32px;
-          background: rgba(255, 255, 255, 0.92);
+          background: rgba(255, 255, 255, 0.94);
           border: 1px solid #ffc0cc;
           box-shadow: 0 14px 34px rgba(190, 18, 60, 0.12);
           margin-bottom: 22px;
         }
 
-        .hero p {
+        .dashboardHero p {
           margin: 0 0 10px;
           color: #e6003f;
           font-size: 14px;
@@ -314,20 +134,20 @@ export default function ListeningDashboardPage() {
           letter-spacing: 0.14em;
         }
 
-        .hero h2 {
+        .dashboardHero h1 {
           margin: 0 0 10px;
-          font-size: clamp(42px, 5vw, 72px);
+          font-size: clamp(42px, 5vw, 76px);
           line-height: 1;
           font-weight: 500;
           color: #3d0810;
         }
 
-        .hero span {
+        .dashboardHero span {
           color: #7a2d38;
           font-size: 18px;
         }
 
-        .previewBtn {
+        .studentPreviewBtn {
           min-height: 54px;
           padding: 0 26px;
           border-radius: 18px;
@@ -353,7 +173,7 @@ export default function ListeningDashboardPage() {
           min-height: 130px;
           padding: 22px;
           border-radius: 24px;
-          background: rgba(255, 255, 255, 0.92);
+          background: rgba(255, 255, 255, 0.94);
           border: 1px solid #ffc0cc;
           box-shadow: 0 14px 34px rgba(190, 18, 60, 0.1);
         }
@@ -379,7 +199,7 @@ export default function ListeningDashboardPage() {
         }
 
         .partCard {
-          min-height: 300px;
+          min-height: 320px;
           display: flex;
           flex-direction: column;
           padding: 24px;
@@ -421,26 +241,27 @@ export default function ListeningDashboardPage() {
           font-size: 13px;
         }
 
-        .partCard h3 {
+        .partCard h2 {
           margin: 0 0 8px;
-          font-size: 26px;
+          font-size: 30px;
           color: #3d0810;
         }
 
-        .subtitle {
+        .partSubtitle {
           margin: 0 0 14px;
           color: #e6003f;
           font-weight: 900;
+          font-size: 17px;
         }
 
-        .description {
+        .partDescription {
           margin: 0;
           color: #7a2d38;
           font-size: 15px;
           line-height: 1.55;
         }
 
-        .cardActions {
+        .partActions {
           display: flex;
           gap: 10px;
           flex-wrap: wrap;
@@ -448,7 +269,7 @@ export default function ListeningDashboardPage() {
           padding-top: 24px;
         }
 
-        .cardActions a {
+        .partActions a {
           min-height: 44px;
           padding: 0 16px;
           border-radius: 14px;
@@ -481,28 +302,16 @@ export default function ListeningDashboardPage() {
         }
 
         @media (max-width: 900px) {
-          .dashboardPage {
-            flex-direction: column;
-          }
-
-          .sidebar {
-            width: 100%;
-            flex: none;
-            min-height: auto;
-            border-right: none;
-            border-bottom: 1px solid #ffc0cc;
-          }
-
-          .mainContent {
+          .listeningDashboardContent {
             padding: 18px;
           }
 
-          .hero {
+          .dashboardHero {
             flex-direction: column;
             align-items: flex-start;
           }
 
-          .previewBtn {
+          .studentPreviewBtn {
             width: 100%;
           }
 
@@ -512,6 +321,6 @@ export default function ListeningDashboardPage() {
           }
         }
       `}</style>
-    </main>
+    </section>
   );
 }
