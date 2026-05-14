@@ -85,3 +85,59 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
+
+/* DASHBOARD WIDE LEFT SIDEBAR FIX START */
+@media (min-width: 1024px) {
+  body:has(a[href="/dashboard/listening"]) aside {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 300px !important;
+    margin: 0 !important;
+    border-radius: 0 28px 28px 0 !important;
+    z-index: 50 !important;
+  }
+
+  body:has(a[href="/dashboard/listening"]) main {
+    width: calc(100vw - 300px) !important;
+    max-width: none !important;
+    margin-left: 300px !important;
+    margin-right: 0 !important;
+    padding-left: 24px !important;
+    padding-right: 32px !important;
+  }
+
+  body:has(a[href="/dashboard/listening"]) .shell,
+  body:has(a[href="/dashboard/listening"]) .page > .shell,
+  body:has(a[href="/dashboard/listening"]) main > .shell {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  body:has(a[href="/dashboard/listening"]) .tablePanel {
+    width: 100% !important;
+  }
+
+  body:has(a[href="/dashboard/listening"]) table {
+    min-width: 100% !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  body:has(a[href="/dashboard/listening"]) aside {
+    position: relative !important;
+    width: 100% !important;
+    border-radius: 24px !important;
+  }
+
+  body:has(a[href="/dashboard/listening"]) main {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+/* DASHBOARD WIDE LEFT SIDEBAR FIX END */
