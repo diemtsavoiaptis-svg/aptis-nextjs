@@ -1,0 +1,17 @@
+﻿.next/
+node_modules/
+out/
+.env
+.env.local
+.env.production
+.vercel/
+
+*.py
+scripts/
+__pycache__/
+*.sqlite3
+db.sqlite3
+
+.DS_Store
+Thumbs.db
+.vscode/

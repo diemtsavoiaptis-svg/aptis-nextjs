@@ -1,0 +1,16 @@
+﻿generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Phase 2 sẽ chuyển từ core/models.py sang schema thật.
+// Tạm thời để placeholder để project JS có cấu trúc Prisma.
+model MigrationNote {
+  id        Int      @id @default(autoincrement())
+  title     String
+  createdAt DateTime @default(now())
+}
