@@ -118,62 +118,7 @@ export default function AdminListeningPart3Page() {
 
   return (
     <main className="page">
-      <section className="shell">
-        <header className="hero">
-          <div className="partBadge">3</div>
-
-          <div className="heroText">
-            <p>QUẢN LÝ LISTENING</p>
-            <h1>Admin Part 3</h1>
-            <span>Quản lý audio, topic, 4 câu hỏi, 4 đáp án và paragraph phân tích ý nguyên.</span>
-
-            <div className="heroActions">
-              <Link href="/dashboard/listening">Về quản lý Listening</Link>
-              <Link href="/listening/part-3" className="primaryLink">Xem giao diện học viên</Link>
-            </div>
-          </div>
-        </header>
-
-        <section className="statsGrid">
-          <div className="statCard">
-            <span>TỔNG DÒNG</span>
-            <strong>{totalRows}</strong>
-          </div>
-          <div className="statCard">
-            <span>CÓ AUDIO</span>
-            <strong>{audioRows}</strong>
-          </div>
-          <div className="statCard">
-            <span>HOÀN THIỆN</span>
-            <strong>{completedRows}</strong>
-          </div>
-          <div className="statCard">
-            <span>ĐÃ CHỌN</span>
-            <strong>{selectedRows}</strong>
-          </div>
-          <div className="statCard">
-            <span>HIỆN KHÁCH</span>
-            <strong>{guestRows}</strong>
-          </div>
-        </section>
-
-        <section className="bulkBox">
-          <h2>Bảng cập nhật hàng loạt</h2>
-          <p>Có thể nhập trực tiếp từng dòng. Cột Paragraph dùng để dán phân tích ý nguyên.</p>
-
-          <div className="toolbar">
-            <button type="button" onClick={() => addRows(1)}>+ Thêm 1 dòng</button>
-            <button type="button" onClick={() => addRows(5)}>+ Thêm 5 dòng</button>
-            <button type="button" onClick={toggleAll}>Khóa / Mở tất cả</button>
-            <button type="button" onClick={deleteSelected}>Xóa dòng đã chọn</button>
-            <button type="button" className="guestBtn" onClick={markGuestVisible}>
-              Chọn câu hiển thị giao diện khách
-            </button>
-            <button type="button" className="saveBtn" onClick={saveAll}>Lưu toàn bộ</button>
-          </div>
-        </section>
-
-        <section className="tablePanel">
+      <section className="tablePanel">
           <div className="topScrollWrap">
             <table>
               <thead>
