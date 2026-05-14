@@ -1,0 +1,193 @@
+"use client";
+
+import Link from "next/link";
+
+const demoStudents = [];
+
+export default function StudentApprovalPage() {
+  return (
+    <main className="approvalPage">
+      <section className="approvalHero">
+        <div>
+          <p>QUẢN LÝ HỌC VIÊN</p>
+          <h1>Duyệt học viên đăng ký</h1>
+          <span>Kiểm tra danh sách học viên chờ duyệt tài khoản.</span>
+        </div>
+
+        <Link href="/dashboard" className="backBtn">
+          ← Quay lại
+        </Link>
+      </section>
+
+      <section className="statsGrid">
+        <div className="statCard">
+          <span>CHỜ DUYỆT</span>
+          <strong>{demoStudents.length}</strong>
+        </div>
+
+        <div className="statCard">
+          <span>ĐÃ DUYỆT</span>
+          <strong>0</strong>
+        </div>
+
+        <div className="statCard">
+          <span>TỪ CHỐI</span>
+          <strong>0</strong>
+        </div>
+      </section>
+
+      <section className="tablePanel">
+        <div className="tableHeader">
+          <h2>Danh sách học viên</h2>
+          <span>Chưa có học viên chờ duyệt</span>
+        </div>
+
+        <div className="emptyBox">
+          Hiện chưa có dữ liệu học viên đăng ký trong hệ thống. Khi có form đăng ký hoặc database học viên, danh sách sẽ hiển thị tại đây để admin duyệt.
+        </div>
+      </section>
+
+      <style jsx global>{`
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          background: #fff6f8;
+        }
+
+        .approvalPage {
+          min-height: 100vh;
+          padding: 24px;
+          color: #3d0810;
+          font-family: Arial, sans-serif;
+        }
+
+        .approvalHero,
+        .statCard,
+        .tablePanel {
+          background: rgba(255, 255, 255, 0.94);
+          border: 1px solid #ffc0cc;
+          box-shadow: 0 14px 34px rgba(190, 18, 60, 0.12);
+        }
+
+        .approvalHero {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+          border-radius: 30px;
+          padding: 32px;
+          margin-bottom: 20px;
+        }
+
+        .approvalHero p {
+          margin: 0 0 10px;
+          color: #e6003f;
+          font-size: 15px;
+          font-weight: 900;
+          letter-spacing: 0.12em;
+        }
+
+        .approvalHero h1 {
+          margin: 0 0 12px;
+          font-size: clamp(42px, 5vw, 68px);
+          line-height: 1;
+          font-weight: 500;
+        }
+
+        .approvalHero span {
+          color: #6f2732;
+          font-size: 18px;
+        }
+
+        .backBtn {
+          min-height: 56px;
+          padding: 0 26px;
+          border-radius: 18px;
+          border: 1px solid #ffc0cc;
+          background: #fff4f6;
+          color: #9f001f;
+          text-decoration: none;
+          font-weight: 900;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .statsGrid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+          margin-bottom: 20px;
+        }
+
+        .statCard {
+          border-radius: 20px;
+          padding: 20px;
+        }
+
+        .statCard span {
+          display: block;
+          color: #e6003f;
+          font-size: 13px;
+          font-weight: 900;
+          margin-bottom: 10px;
+        }
+
+        .statCard strong {
+          font-size: 34px;
+        }
+
+        .tablePanel {
+          border-radius: 24px;
+          padding: 22px;
+        }
+
+        .tableHeader {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          margin-bottom: 18px;
+        }
+
+        .tableHeader h2 {
+          margin: 0;
+          font-size: 26px;
+        }
+
+        .tableHeader span {
+          border: 1px solid #ffc0cc;
+          border-radius: 999px;
+          padding: 10px 16px;
+          color: #e6003f;
+          font-weight: 900;
+          background: #fff4f6;
+        }
+
+        .emptyBox {
+          border: 1px dashed #ffc0cc;
+          border-radius: 20px;
+          background: #fff6f8;
+          color: #9f001f;
+          font-weight: 800;
+          line-height: 1.6;
+          padding: 28px;
+        }
+
+        @media (max-width: 900px) {
+          .approvalHero {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .statsGrid {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
+    </main>
+  );
+}
