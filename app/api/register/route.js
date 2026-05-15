@@ -5,6 +5,7 @@ import { hashPassword } from '@/lib/password'
 export async function POST(request) {
   try {
     const body = await request.json()
+
     const fullName = String(body.fullName || '').trim()
     const phone = String(body.phone || '').trim()
     const email = String(body.email || '').trim().toLowerCase()

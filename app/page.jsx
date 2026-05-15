@@ -191,7 +191,7 @@ export default function Page() {
                 <form onSubmit={login} className="mt-8 grid gap-4">
                   <input
                     required
-                    placeholder="Tên đăng nhập hoặc Mật khẩu"
+                    placeholder="Số điện thoại hoặc Email"
                     value={loginForm.username}
                     onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })}
                     className="rounded-2xl border border-rose-200 px-5 py-4 font-bold outline-none focus:border-rose-500"
@@ -323,5 +323,7 @@ export default function Page() {
     </main>
   );
 }
+
+
 
 
