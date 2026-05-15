@@ -1,50 +1,134 @@
 ﻿import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
+import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
 
-const filePath = path.join(process.cwd(), "public", "data", "students.json");
+function clean(value) {
+  return String(value ?? "").trim();
+}
 
-async function readStudents() {
+function makeStudentId(phone, email) {
+  const raw = clean(phone) || clean(email).split("@")[0] || Date.now().toString();
+  return raw.replace(/[^0-9a-zA-Z]/g, "").slice(0, 24);
+}
+
+function normalizeStudent(row) {
+  return {
+    id: row.id,
+    student_id: row.student_id || row.studentId || row.code || row.id,
+    full_name: row.full_name || row.fullName || row.name || "",
+    name: row.full_name || row.fullName || row.name || "",
+    phone: row.phone || row.phoneNumber || row.sdt || "",
+    email: row.email || "",
+    status: row.status || "pending",
+    created_at: row.created_at || row.createdAt || "",
+  };
+}
+
+export async function GET(request) {
   try {
-    const text = await fs.readFile(filePath, "utf8");
-    return JSON.parse(text || "[]");
-  } catch {
-    return [];
+    const { searchParams } = new URL(request.url);
+    const q = clean(searchParams.get("q")).toLowerCase();
+
+    const supabase = getSupabaseAdmin();
+
+    const { data, error } = await supabase
+      .from("students")
+      .select("*")
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      console.error("GET /api/students Supabase error:", error);
+      return NextResponse.json(
+        { ok: false, message: error.message || "Không tải được danh sách học viên." },
+        { status: 500 }
+      );
+    }
+
+    const students = (Array.isArray(data) ? data : []).map(normalizeStudent);
+
+    const filtered = q
+      ? students.filter((student) => {
+          return (
+            String(student.student_id || "").toLowerCase().includes(q) ||
+            String(student.phone || "").toLowerCase().includes(q) ||
+            String(student.email || "").toLowerCase().includes(q)
+          );
+        })
+      : students;
+
+    return NextResponse.json({
+      ok: true,
+      students: filtered,
+      pending: filtered.filter((x) => x.status === "pending").length,
+      approved: filtered.filter((x) => x.status === "approved").length,
+      rejected: filtered.filter((x) => x.status === "rejected").length,
+    });
+  } catch (error) {
+    console.error("GET /api/students error:", error);
+    return NextResponse.json(
+      { ok: false, message: error.message || "Không tải được danh sách học viên." },
+      { status: 500 }
+    );
   }
-}
-
-async function writeStudents(students) {
-  await fs.writeFile(filePath, JSON.stringify(students, null, 2), "utf8");
-}
-
-export async function GET() {
-  const students = await readStudents();
-  return NextResponse.json({ students });
 }
 
 export async function POST(request) {
-  const body = await request.json();
-  const students = await readStudents();
+  try {
+    const body = await request.json();
 
-  const student = {
-    id: body.studentId?.trim() || `STU-${Date.now()}`,
-    name: body.name?.trim() || "No name",
-    phone: body.phone?.trim() || "",
-    email: body.email?.trim() || "",
-    status: "pending",
-    createdAt: new Date().toISOString(),
-  };
+    const student_id = clean(body.student_id || body.studentId || body.id) || makeStudentId(body.phone, body.email);
+    const full_name = clean(body.full_name || body.fullName || body.name);
+    const phone = clean(body.phone || body.phoneNumber || body.sdt);
+    const email = clean(body.email).toLowerCase();
+    const password = clean(body.password);
 
-  const existed = students.find((x) => x.id === student.id);
-  if (existed) {
-    return NextResponse.json({ ok: true, student: existed });
+    if (!full_name || !email) {
+      return NextResponse.json(
+        { ok: false, message: "Vui lòng nhập đầy đủ họ tên và email." },
+        { status: 400 }
+      );
+    }
+
+    const supabase = getSupabaseAdmin();
+
+    const { data, error } = await supabase
+      .from("students")
+      .insert({
+        student_id,
+        full_name,
+        phone,
+        email,
+        password,
+        status: "pending",
+      })
+      .select("*")
+      .single();
+
+    if (error) {
+      console.error("POST /api/students Supabase error:", error);
+
+      if (error.code === "23505" || String(error.message || "").toLowerCase().includes("duplicate")) {
+        return NextResponse.json(
+          { ok: false, message: "Tài khoản/email này đã đăng ký." },
+          { status: 409 }
+        );
+      }
+
+      return NextResponse.json(
+        { ok: false, message: error.message || "Đăng ký thất bại. Vui lòng thử lại." },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({
+      ok: true,
+      message: "Đã gửi đăng ký. Vui lòng chờ quản trị viên duyệt.",
+      student: normalizeStudent(data),
+    });
+  } catch (error) {
+    console.error("POST /api/students error:", error);
+    return NextResponse.json(
+      { ok: false, message: error.message || "Đăng ký thất bại. Vui lòng thử lại." },
+      { status: 500 }
+    );
   }
-
-  students.unshift(student);
-  await writeStudents(students);
-
-  return NextResponse.json({ ok: true, student });
 }
-
-
-

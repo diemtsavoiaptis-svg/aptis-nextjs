@@ -1,39 +1,50 @@
 ﻿import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
+import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
 
-const filePath = path.join(process.cwd(), "public", "data", "students.json");
-
-async function readStudents() {
-  try {
-    const text = await fs.readFile(filePath, "utf8");
-    return JSON.parse(text || "[]");
-  } catch {
-    return [];
-  }
-}
-
-async function writeStudents(students) {
-  await fs.writeFile(filePath, JSON.stringify(students, null, 2), "utf8");
+function clean(value) {
+  return String(value ?? "").trim();
 }
 
 export async function POST(request) {
-  const body = await request.json();
-  const students = await readStudents();
+  try {
+    const body = await request.json();
 
-  const id = body.id;
-  const status = body.status === "approved" ? "approved" : "pending";
+    const id = clean(body.id);
+    const status = clean(body.status);
 
-  const nextStudents = students.map((student) =>
-    student.id === id
-      ? { ...student, status, approvedAt: status === "approved" ? new Date().toISOString() : null }
-      : student
-  );
+    if (!id || !["pending", "approved", "rejected"].includes(status)) {
+      return NextResponse.json(
+        { ok: false, message: "Thiếu ID học viên hoặc trạng thái không hợp lệ." },
+        { status: 400 }
+      );
+    }
 
-  await writeStudents(nextStudents);
+    const supabase = getSupabaseAdmin();
 
-  return NextResponse.json({ ok: true });
+    const { data, error } = await supabase
+      .from("students")
+      .update({ status })
+      .eq("id", id)
+      .select("*")
+      .single();
+
+    if (error) {
+      console.error("POST /api/students/approve Supabase error:", error);
+      return NextResponse.json(
+        { ok: false, message: error.message || "Không cập nhật được học viên." },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({
+      ok: true,
+      student: data,
+    });
+  } catch (error) {
+    console.error("POST /api/students/approve error:", error);
+    return NextResponse.json(
+      { ok: false, message: error.message || "Không cập nhật được học viên." },
+      { status: 500 }
+    );
+  }
 }
-
-
-
