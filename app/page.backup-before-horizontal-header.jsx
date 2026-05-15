@@ -293,132 +293,118 @@ const styles = {
     padding: 28
   },
   shell: {
-    maxWidth: 1320,
+    maxWidth: 1180,
     margin: '0 auto',
     background: 'rgba(255,255,255,.72)',
     border: '1px solid #fecdd3',
-    borderRadius: 30,
-    padding: 24,
-    boxShadow: '0 24px 70px rgba(190,18,60,.1)'
+    borderRadius: 34,
+    padding: 28,
+    boxShadow: '0 28px 80px rgba(190,18,60,.12)'
   },
   header: {
-    display: 'grid',
-    gridTemplateColumns: '310px 1fr 260px',
+    display: 'flex',
     alignItems: 'center',
-    gap: 16,
-    marginBottom: 24
+    justifyContent: 'space-between',
+    gap: 18,
+    marginBottom: 28,
+    flexWrap: 'wrap'
   },
   brand: {
     display: 'flex',
     alignItems: 'center',
-    gap: 12,
-    minWidth: 0,
-    overflow: 'hidden'
+    gap: 14,
+    minWidth: 300,
+    flexShrink: 0
   },
   logo: {
-    width: 54,
-    height: 54,
-    minWidth: 54,
-    borderRadius: 17,
+    width: 58,
+    height: 58,
+    minWidth: 58,
+    borderRadius: 18,
     background: '#f00446',
     color: '#fff',
     display: 'grid',
     placeItems: 'center',
-    fontSize: 28,
-    fontWeight: 900,
-    boxShadow: '0 14px 28px rgba(225,29,72,.24)'
+    fontSize: 30,
+    fontWeight: 800,
+    boxShadow: '0 16px 32px rgba(225,29,72,.28)'
   },
   brandTitle: {
     margin: 0,
-    fontSize: 22,
-    lineHeight: 1.08,
-    fontWeight: 900,
+    fontSize: 25,
+    lineHeight: 1.12,
+    fontWeight: 800,
     color: '#4a0017',
-    whiteSpace: 'nowrap',
-    letterSpacing: '-0.5px',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    whiteSpace: 'nowrap'
   },
   brandSub: {
-    margin: '4px 0 0',
+    margin: '5px 0 0',
     color: '#e11d48',
-    fontSize: 15,
     fontWeight: 800,
-    lineHeight: 1.2,
+    lineHeight: 1.25,
     whiteSpace: 'nowrap'
   },
   nav: {
     display: 'flex',
-    alignItems: 'center',
+    gap: 10,
+    flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: 8,
-    flexWrap: 'nowrap',
-    minWidth: 0
+    flex: 1
   },
   navButton: {
-    padding: '11px 17px',
-    borderRadius: 13,
+    padding: '13px 20px',
+    borderRadius: 14,
     background: '#fff',
     border: '1px solid #fecdd3',
     color: '#4a0017',
-    fontSize: 15,
-    fontWeight: 900,
-    textDecoration: 'none',
-    whiteSpace: 'nowrap'
+    fontWeight: 800,
+    textDecoration: 'none'
   },
   lockedButton: {
-    padding: '11px 17px',
-    borderRadius: 13,
+    padding: '13px 18px',
+    borderRadius: 14,
     background: '#fff',
     border: '1px solid #fecdd3',
     color: '#c06b86',
-    fontSize: 15,
-    fontWeight: 900,
-    whiteSpace: 'nowrap'
+    fontWeight: 800
   },
   authActions: {
     display: 'flex',
-    alignItems: 'center',
     gap: 10,
-    justifyContent: 'flex-end',
-    flexWrap: 'nowrap',
-    minWidth: 0
+    flexWrap: 'wrap',
+    justifyContent: 'flex-end'
   },
   registerButton: {
     border: 0,
     background: '#f00446',
     color: '#fff',
     borderRadius: 14,
-    padding: '13px 22px',
-    fontSize: 15,
-    fontWeight: 900,
+    padding: '14px 20px',
+    fontWeight: 800,
     cursor: 'pointer',
-    boxShadow: '0 14px 28px rgba(225,29,72,.22)',
-    whiteSpace: 'nowrap'
+    boxShadow: '0 15px 30px rgba(225,29,72,.24)'
   },
   loginButton: {
     border: 0,
     background: '#be123c',
     color: '#fff',
     borderRadius: 14,
-    padding: '13px 22px',
-    fontSize: 15,
-    fontWeight: 900,
+    padding: '14px 20px',
+    fontWeight: 800,
     cursor: 'pointer',
-    boxShadow: '0 14px 28px rgba(190,18,60,.18)',
-    whiteSpace: 'nowrap'
+    boxShadow: '0 15px 30px rgba(190,18,60,.18)'
   },
   hero: {
-    minHeight: 350,
+    minHeight: 360,
     background: '#fff',
     border: '1px solid #fecdd3',
-    borderRadius: 26,
+    borderRadius: 28,
     display: 'grid',
-    gridTemplateColumns: '1.35fr .65fr',
+    gridTemplateColumns: '1.2fr .8fr',
     overflow: 'hidden'
   },
   heroText: {
-    padding: 46
+    padding: 56
   },
   pill: {
     display: 'inline-block',
@@ -426,21 +412,19 @@ const styles = {
     border: '1px solid #fecdd3',
     color: '#be123c',
     borderRadius: 999,
-    padding: '10px 16px',
-    fontSize: 15,
-    fontWeight: 900
+    padding: '12px 18px',
+    fontWeight: 800
   },
   heroTitle: {
-    fontSize: 52,
-    lineHeight: 1.06,
-    margin: '20px 0 14px',
-    fontWeight: 900,
-    letterSpacing: '-1.5px'
+    fontSize: 58,
+    lineHeight: 1.08,
+    margin: '22px 0 16px',
+    fontWeight: 800
   },
   heroDesc: {
     color: '#9f1239',
-    lineHeight: 1.65,
-    fontSize: 17,
+    lineHeight: 1.7,
+    fontSize: 18,
     maxWidth: 620
   },
   heroActions: {
@@ -470,21 +454,21 @@ const styles = {
     display: 'grid',
     placeItems: 'center',
     background: 'linear-gradient(135deg, #fff1f2, #ffe4e6)',
-    padding: 34
+    padding: 48
   },
   studentStatCard: {
     width: '100%',
-    maxWidth: 320,
-    minHeight: 260,
-    borderRadius: 30,
+    maxWidth: 360,
+    minHeight: 230,
+    borderRadius: 34,
     background: 'linear-gradient(135deg, #f9a8d4, #fb7185)',
     color: '#7a001d',
-    padding: 30,
+    padding: 34,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    boxShadow: '0 24px 60px rgba(225,29,72,.2)',
-    border: '7px solid rgba(255,255,255,.5)'
+    boxShadow: '0 28px 70px rgba(225,29,72,.22)',
+    border: '8px solid rgba(255,255,255,.55)'
   },
   statKicker: {
     margin: '0 0 14px',
@@ -494,17 +478,17 @@ const styles = {
     opacity: .85
   },
   statNumber: {
-    fontSize: 74,
+    fontSize: 86,
     lineHeight: .95,
     fontWeight: 900,
     letterSpacing: '-3px',
     color: '#7a001d'
   },
   statText: {
-    margin: '8px 0 0',
-    fontSize: 28,
-    lineHeight: 1.1,
-    fontWeight: 900,
+    margin: '10px 0 0',
+    fontSize: 31,
+    lineHeight: 1.12,
+    fontWeight: 800,
     color: '#7a001d'
   },
   statSub: {
@@ -516,9 +500,9 @@ const styles = {
     opacity: .78
   },
   timeBox: {
-    marginTop: 20,
-    padding: '13px 15px',
-    borderRadius: 20,
+    marginTop: 22,
+    padding: '14px 16px',
+    borderRadius: 22,
     background: 'rgba(255,255,255,.38)',
     border: '1px solid rgba(255,255,255,.5)',
     color: '#7a001d'
@@ -652,8 +636,6 @@ const styles = {
     padding: 0
   }
 }
-
-
 
 
 

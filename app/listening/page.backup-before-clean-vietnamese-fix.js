@@ -68,7 +68,6 @@ export default function ListeningHomePage() {
       <section style={styles.hero}>
         <div>
           <p style={styles.badge}>Luyện nghe Aptis</p>
-
           <h1 style={styles.title}>Chọn phần luyện nghe</h1>
 
           <p style={styles.desc}>
@@ -77,7 +76,7 @@ export default function ListeningHomePage() {
 
           <div style={styles.statusBox}>
             {!ready ? (
-              <span>Đang kiểm tra tài khoản...</span>
+              <span>Checking account...</span>
             ) : isApprovedStudent ? (
               <>
                 <span style={styles.openLock}>🔓</span>
@@ -98,18 +97,11 @@ export default function ListeningHomePage() {
 
         <div style={styles.actions}>
           {isApprovedStudent || admin ? (
-            <button onClick={logout} style={styles.logoutButton}>
-              Đăng xuất
-            </button>
+            <button onClick={logout} style={styles.logoutButton}>Đăng xuất</button>
           ) : (
             <>
-              <a href="/login" style={styles.primaryButton}>
-                Đăng nhập
-              </a>
-
-              <a href="/register" style={styles.secondaryButton}>
-                Đăng ký
-              </a>
+              <a href="/login" style={styles.primaryButton}>Đăng nhập</a>
+              <a href="/register" style={styles.secondaryButton}>Đăng ký</a>
             </>
           )}
 
@@ -130,13 +122,11 @@ export default function ListeningHomePage() {
               <div style={styles.cardTop}>
                 <div style={styles.partNumber}>P{index + 1}</div>
 
-                <div
-                  style={{
-                    ...styles.lockIcon,
-                    background: isApprovedStudent ? '#dcfce7' : '#fff1f2',
-                    color: isApprovedStudent ? '#166534' : '#e11d48'
-                  }}
-                >
+                <div style={{
+                  ...styles.lockIcon,
+                  background: isApprovedStudent ? '#e8f8ee' : '#fff1f2',
+                  color: isApprovedStudent ? '#166534' : '#e11d48'
+                }}>
                   {isApprovedStudent ? '🔓' : '🔒'}
                 </div>
               </div>
@@ -157,7 +147,7 @@ export default function ListeningHomePage() {
       </section>
 
       {(isApprovedStudent || admin) && (
-        <button onClick={logout} style={styles.floatingLogout}>
+        <button onClick={logout} style={styles.floatingĐăng xuất}>
           ↩ Đăng xuất
         </button>
       )}
@@ -170,7 +160,7 @@ const styles = {
     minHeight: '100vh',
     background: 'linear-gradient(135deg, #fff5f7, #ffe4e6)',
     color: '#3b0a12',
-    fontFamily: '"Segoe UI", Arial, sans-serif',
+    fontFamily: 'Arial, sans-serif',
     padding: 28
   },
   hero: {
@@ -259,7 +249,7 @@ const styles = {
     textDecoration: 'none',
     fontWeight: 900
   },
-  logoutButton: {
+  Đăng xuấtButton: {
     padding: '14px 20px',
     borderRadius: 16,
     background: '#fff',
@@ -336,7 +326,7 @@ const styles = {
     color: '#be123c',
     fontWeight: 900
   },
-  floatingLogout: {
+  floatingĐăng xuất: {
     position: 'fixed',
     left: 22,
     bottom: 22,
@@ -352,3 +342,7 @@ const styles = {
     backdropFilter: 'blur(8px)'
   }
 }
+
+
+
+

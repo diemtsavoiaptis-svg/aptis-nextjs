@@ -5,29 +5,29 @@ import { useEffect, useState } from 'react'
 const parts = [
   {
     title: 'Listening Part 1',
-    subtitle: 'Hội thoại ngắn',
-    desc: 'Luyện nghe các đoạn hội thoại ngắn với câu hỏi trắc nghiệm.',
+    subtitle: 'Short Conversations',
+    desc: 'Practice short dialogues with multiple-choice questions.',
     href: '/listening/part-1',
     studentHref: '/listening/part-1?mode=student'
   },
   {
     title: 'Listening Part 2',
-    subtitle: 'Ghép thông tin',
-    desc: 'Ghép thông tin, người nói, địa điểm hoặc ý kiến phù hợp.',
+    subtitle: 'Information Matching',
+    desc: 'Match information, speakers, places or opinions.',
     href: '/listening/part-2',
     studentHref: '/listening/part-2?mode=student'
   },
   {
     title: 'Listening Part 3',
-    subtitle: 'Nhận diện ý kiến',
-    desc: 'Nhận diện người nói, quan điểm và ý kiến chung.',
+    subtitle: 'Opinion / Identity',
+    desc: 'Identify speakers, viewpoints and shared opinions.',
     href: '/listening/part-3',
     studentHref: '/listening/part-3?mode=student'
   },
   {
     title: 'Listening Part 4',
-    subtitle: 'Độc thoại / Tóm tắt',
-    desc: 'Nghe bài nói dài hơn và trả lời các câu hỏi chi tiết.',
+    subtitle: 'Monologue / Summary',
+    desc: 'Listen to longer talks and answer detailed questions.',
     href: '/listening/part-4',
     studentHref: '/listening/part-4?mode=student'
   }
@@ -67,29 +67,28 @@ export default function ListeningHomePage() {
     <main style={styles.page}>
       <section style={styles.hero}>
         <div>
-          <p style={styles.badge}>Luyện nghe Aptis</p>
-
-          <h1 style={styles.title}>Chọn phần luyện nghe</h1>
+          <p style={styles.badge}>Aptis Listening Practice</p>
+          <h1 style={styles.title}>Choose your Listening part</h1>
 
           <p style={styles.desc}>
-            Khách chỉ xem được các câu hỏi được quản trị viên chọn. Học viên đã duyệt sẽ mở khóa toàn bộ bài luyện tập.
+            Guest users can preview selected questions. Approved students can unlock the full practice set.
           </p>
 
           <div style={styles.statusBox}>
             {!ready ? (
-              <span>Đang kiểm tra tài khoản...</span>
+              <span>Checking account...</span>
             ) : isApprovedStudent ? (
               <>
                 <span style={styles.openLock}>🔓</span>
                 <span>
-                  Học viên đã mở khóa: <b>{student.fullName || student.email}</b>
+                  Student unlocked: <b>{student.fullName || student.email}</b>
                 </span>
               </>
             ) : (
               <>
                 <span style={styles.closedLock}>🔒</span>
                 <span>
-                  Chế độ khách: chỉ hiển thị câu hỏi được quản trị viên chọn.
+                  Guest mode: only admin-selected questions are visible.
                 </span>
               </>
             )}
@@ -98,24 +97,17 @@ export default function ListeningHomePage() {
 
         <div style={styles.actions}>
           {isApprovedStudent || admin ? (
-            <button onClick={logout} style={styles.logoutButton}>
-              Đăng xuất
-            </button>
+            <button onClick={logout} style={styles.logoutButton}>Logout</button>
           ) : (
             <>
-              <a href="/login" style={styles.primaryButton}>
-                Đăng nhập
-              </a>
-
-              <a href="/register" style={styles.secondaryButton}>
-                Đăng ký
-              </a>
+              <a href="/login" style={styles.primaryButton}>Login</a>
+              <a href="/register" style={styles.secondaryButton}>Register</a>
             </>
           )}
 
           {admin && (
             <a href="/dashboard/admin/students" style={styles.adminButton}>
-              Duyệt học viên
+              Admin approvals
             </a>
           )}
         </div>
@@ -130,13 +122,11 @@ export default function ListeningHomePage() {
               <div style={styles.cardTop}>
                 <div style={styles.partNumber}>P{index + 1}</div>
 
-                <div
-                  style={{
-                    ...styles.lockIcon,
-                    background: isApprovedStudent ? '#dcfce7' : '#fff1f2',
-                    color: isApprovedStudent ? '#166534' : '#e11d48'
-                  }}
-                >
+                <div style={{
+                  ...styles.lockIcon,
+                  background: isApprovedStudent ? '#e8f8ee' : '#fff1f2',
+                  color: isApprovedStudent ? '#166534' : '#e11d48'
+                }}>
                   {isApprovedStudent ? '🔓' : '🔒'}
                 </div>
               </div>
@@ -147,7 +137,7 @@ export default function ListeningHomePage() {
 
               <div style={styles.cardFooter}>
                 <span>
-                  {isApprovedStudent ? 'Toàn quyền học viên' : 'Xem bản khách'}
+                  {isApprovedStudent ? 'Full student access' : 'Guest preview'}
                 </span>
                 <span>→</span>
               </div>
@@ -158,7 +148,7 @@ export default function ListeningHomePage() {
 
       {(isApprovedStudent || admin) && (
         <button onClick={logout} style={styles.floatingLogout}>
-          ↩ Đăng xuất
+          ↩ Logout
         </button>
       )}
     </main>
@@ -170,7 +160,7 @@ const styles = {
     minHeight: '100vh',
     background: 'linear-gradient(135deg, #fff5f7, #ffe4e6)',
     color: '#3b0a12',
-    fontFamily: '"Segoe UI", Arial, sans-serif',
+    fontFamily: 'Arial, sans-serif',
     padding: 28
   },
   hero: {
@@ -352,3 +342,4 @@ const styles = {
     backdropFilter: 'blur(8px)'
   }
 }
+
