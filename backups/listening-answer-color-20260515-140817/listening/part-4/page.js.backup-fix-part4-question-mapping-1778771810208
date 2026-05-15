@@ -1,0 +1,567 @@
+﻿"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
+const letters = ["A", "B", "C"];
+
+function normalize(value) {
+  return String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+function extractDriveId(url) {
+  const text = String(url || "");
+  const match = text.match(/\/d\/([^/]+)/);
+  return match ? match[1] : "";
+}
+
+function getAudioSrc(row) {
+  const driveId =
+    row?.audio_drive_file_id ||
+    row?.audioDriveFileId ||
+    row?.driveFileId ||
+    extractDriveId(row?.audioLink || row?.audio || row?.linkAudio || "");
+
+  if (driveId) return `/api/audio?id=${encodeURIComponent(driveId)}`;
+
+  return row?.audioLink || row?.audio || row?.linkAudio || "";
+}
+
+function cleanText(value) {
+  return String(value || "").trim();
+}
+
+function compactParagraph(text) {
+  return String(text || "")
+    .trim()
+    .replace(/\s+/g, " ")
+    .replace(/\b(Speaker|Narrator|Man|Woman|M|W)\s*:/g, "\n$1:")
+    .replace(/^\n/, "");
+}
+
+function getQuestionSet(row) {
+  const q16 = cleanText(row?.question16 || row?.q16 || row?.["Câu hỏi 16"]);
+  const q17 = cleanText(row?.question17 || row?.q17 || row?.["Câu hỏi 17"]);
+
+  const q16Choices = [
+    cleanText(row?.answer1 || row?.optionA16 || row?.choiceA16),
+    cleanText(row?.answer2 || row?.optionB16 || row?.choiceB16),
+    cleanText(row?.answer3 || row?.optionC16 || row?.choiceC16),
+  ];
+
+  const q17Choices = [
+    cleanText(row?.choice1 || row?.optionA17 || row?.choiceA17),
+    cleanText(row?.choice2 || row?.optionB17 || row?.choiceB17),
+    cleanText(row?.choice3 || row?.optionC17 || row?.choiceC17),
+  ];
+
+  return [
+    {
+      id: "16",
+      title: "16.1",
+      question: q16,
+      choices: q16Choices,
+      correct:
+        cleanText(row?.correct16 || row?.answer16 || row?.correctAnswer16 || row?.["Đáp án 16"]),
+    },
+    {
+      id: "17",
+      title: "16.2",
+      question: q17,
+      choices: q17Choices,
+      correct:
+        cleanText(row?.correct17 || row?.answer17 || row?.correctAnswer17 || row?.["Đáp án 17"]),
+    },
+  ].filter((item) => item.question || item.choices.some(Boolean));
+}
+
+function correctLetter(question) {
+  const raw = cleanText(question.correct);
+  const upper = raw.toUpperCase();
+
+  if (["A", "B", "C"].includes(upper)) return upper;
+
+  const index = question.choices.findIndex((choice) => normalize(choice) === normalize(raw));
+  return letters[index] || "";
+}
+
+export default function ListeningPart4Page() {
+  const [mode, setMode] = useState("guest");
+  const [rows, setRows] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [answers, setAnswers] = useState({});
+  const [checked, setChecked] = useState(false);
+  const [showParagraph, setShowParagraph] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const currentMode = params.get("mode") === "student" ? "student" : "guest";
+    setMode(currentMode);
+
+    async function loadData() {
+      try {
+        const file =
+          currentMode === "student"
+            ? "/data/part4-full.json"
+            : "/data/part4-admin.json";
+
+        const res = await fetch(file, { cache: "no-store" });
+        if (!res.ok) throw new Error("Cannot load Part 4 data");
+
+        const data = await res.json();
+        const list = Array.isArray(data) ? data : data.rows || [];
+
+        const nextRows =
+          currentMode === "student"
+            ? list
+            : list.filter((row) => row.showInGuest || row.guestVisible);
+
+        setRows(nextRows);
+        setActiveIndex(0);
+      } catch (error) {
+        console.error(error);
+        setRows([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadData();
+  }, []);
+
+  const currentRow = rows[activeIndex] || {};
+  const questions = useMemo(() => getQuestionSet(currentRow), [currentRow]);
+  const currentAnswers = answers[activeIndex] || {};
+  const paragraph = compactParagraph(
+    currentRow.paraphrase || currentRow.voiceParagraph || currentRow.transcript
+  );
+
+  function chooseAnswer(questionId, value) {
+    setAnswers((old) => ({
+      ...old,
+      [activeIndex]: {
+        ...(old[activeIndex] || {}),
+        [questionId]: value,
+      },
+    }));
+    setChecked(false);
+  }
+
+  function checkResult() {
+    setChecked(true);
+  }
+
+  function resultOf(question) {
+    const selected = currentAnswers[question.id];
+    if (!selected) return "missing";
+
+    const correct = correctLetter(question);
+    if (!correct) return "info";
+
+    return normalize(selected) === normalize(correct) ? "correct" : "wrong";
+  }
+
+  function goBack() {
+    setActiveIndex((index) => Math.max(0, index - 1));
+    setChecked(false);
+    setShowParagraph(false);
+  }
+
+  function goNext() {
+    setActiveIndex((index) => Math.min(rows.length - 1, index + 1));
+    setChecked(false);
+    setShowParagraph(false);
+  }
+
+  if (loading) {
+    return (
+      <main className="part4PracticePage">
+        <div className="emptyBox">Đang tải dữ liệu Part 4...</div>
+      </main>
+    );
+  }
+
+  if (!rows.length) {
+    return (
+      <main className="part4PracticePage">
+        <div className="emptyBox">
+          {mode === "student"
+            ? "Chưa có dữ liệu Part 4."
+            : "Chưa có bài Part 4 nào được chọn cho giao diện khách."}
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className="part4PracticePage">
+      <section className="practiceShell">
+        <h1 className="pageTitle">
+          Question {activeIndex + 1} of {rows.length}
+        </h1>
+
+        <section className="audioBar">
+          <div className="audioWrap">
+            {getAudioSrc(currentRow) ? (
+              <audio controls src={getAudioSrc(currentRow)} />
+            ) : (
+              <span>Chưa có audio.</span>
+            )}
+          </div>
+
+          <strong>2 of 2 plays remaining</strong>
+        </section>
+
+        <button
+          type="button"
+          className="showParagraphBtn"
+          onClick={() => setShowParagraph((value) => !value)}
+        >
+          {showParagraph ? "Hide Paragraph" : "Show Paragraph"}
+        </button>
+
+        {showParagraph && (
+          <section className="paragraphBox">
+            {paragraph || "Chưa có dữ liệu paragraph."}
+          </section>
+        )}
+
+        <section className="questionCard">
+          <h2>Topic: {currentRow.topic || "Chưa có chủ đề"}</h2>
+
+          {questions.map((question) => {
+            const selected = currentAnswers[question.id] || "";
+            const result = checked ? resultOf(question) : "";
+            const correct = correctLetter(question);
+
+            return (
+              <article key={question.id} className="questionBlock">
+                <h3>
+                  {question.title} {question.question || "Chưa có câu hỏi."}
+                </h3>
+
+                <div className="optionList">
+                  {question.choices.map((choice, index) => {
+                    const letter = letters[index];
+                    const optionId = `${question.id}-${letter}`;
+
+                    return (
+                      <label
+                        key={optionId}
+                        className={
+                          checked && correct === letter
+                            ? "optionRow correctOption"
+                            : "optionRow"
+                        }
+                      >
+                        <input
+                          type="radio"
+                          name={`question-${question.id}`}
+                          value={letter}
+                          checked={selected === letter}
+                          onChange={() => chooseAnswer(question.id, letter)}
+                        />
+                        <span>{choice || `Lựa chọn ${letter}`}</span>
+                      </label>
+                    );
+                  })}
+                </div>
+
+                {checked && result === "correct" && (
+                  <p className="resultText correctText">Chính xác.</p>
+                )}
+
+                {checked && result === "wrong" && (
+                  <p className="resultText wrongText">
+                    Chưa đúng. Đáp án đúng: {correct || question.correct}
+                  </p>
+                )}
+
+                {checked && result === "missing" && (
+                  <p className="resultText missingText">Chưa chọn đáp án.</p>
+                )}
+
+                {checked && result === "info" && (
+                  <p className="resultText missingText">
+                    Câu này chưa có đáp án đúng trong dữ liệu.
+                  </p>
+                )}
+              </article>
+            );
+          })}
+        </section>
+      </section>
+
+      <nav className="bottomNav">
+        <button type="button" onClick={goBack} disabled={activeIndex === 0}>
+          BACK
+        </button>
+
+        <button type="button" className="checkBtn" onClick={checkResult}>
+          Check result
+        </button>
+
+        <button
+          type="button"
+          onClick={goNext}
+          disabled={activeIndex === rows.length - 1}
+        >
+          NEXT
+        </button>
+      </nav>
+
+      <style jsx global>{`
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          background: #fff6f8;
+          font-family: Arial, sans-serif;
+        }
+
+        .part4PracticePage {
+          min-height: 100vh;
+          padding: 22px 22px 104px;
+          background:
+            linear-gradient(rgba(255, 246, 248, 0.96), rgba(255, 246, 248, 0.96)),
+            repeating-linear-gradient(
+              -14deg,
+              rgba(244, 63, 94, 0.06) 0,
+              rgba(244, 63, 94, 0.06) 2px,
+              transparent 2px,
+              transparent 86px
+            );
+          color: #202033;
+        }
+
+        .practiceShell {
+          width: min(1180px, 100%);
+          margin: 0 auto;
+        }
+
+        .pageTitle {
+          margin: 0 0 28px;
+          color: #e6003f;
+          font-size: clamp(30px, 3vw, 42px);
+          font-weight: 900;
+        }
+
+        .audioBar {
+          min-height: 76px;
+          display: grid;
+          grid-template-columns: 1fr auto;
+          align-items: center;
+          gap: 22px;
+          border-radius: 18px;
+          background: #e6003f;
+          padding: 16px 22px;
+          margin-bottom: 28px;
+          color: white;
+          box-shadow: 0 14px 28px rgba(217, 4, 41, 0.16);
+        }
+
+        .audioWrap {
+          min-width: 0;
+        }
+
+        .audioWrap audio {
+          width: 100%;
+          height: 34px;
+        }
+
+        .audioWrap span {
+          font-weight: 900;
+        }
+
+        .audioBar strong {
+          white-space: nowrap;
+          font-size: 16px;
+        }
+
+        .showParagraphBtn {
+          min-width: 190px;
+          min-height: 52px;
+          border-radius: 999px;
+          border: 1px solid #ffc0cc;
+          background: white;
+          color: #e6003f;
+          font-size: 17px;
+          font-weight: 900;
+          cursor: pointer;
+          margin-bottom: 28px;
+        }
+
+        .paragraphBox {
+          max-height: 170px;
+          overflow-y: auto;
+          white-space: pre-wrap;
+          border-radius: 18px;
+          border: 1px solid #ffc0cc;
+          background: white;
+          color: #465063;
+          font-size: 16px;
+          line-height: 1.6;
+          padding: 18px 20px;
+          margin-bottom: 28px;
+        }
+
+        .questionCard {
+          border: 1px solid #ffc0cc;
+          border-radius: 22px;
+          background: rgba(255, 255, 255, 0.94);
+          padding: 38px 42px;
+          margin-bottom: 28px;
+          box-shadow: 0 14px 34px rgba(190, 18, 60, 0.08);
+        }
+
+        .questionCard h2 {
+          margin: 0 0 30px;
+          color: #9f001f;
+          font-size: 26px;
+          font-weight: 900;
+        }
+
+        .questionBlock {
+          margin-bottom: 42px;
+        }
+
+        .questionBlock:last-child {
+          margin-bottom: 0;
+        }
+
+        .questionBlock h3 {
+          margin: 0 0 22px;
+          color: #111827;
+          font-size: 18px;
+          line-height: 1.4;
+          font-weight: 900;
+        }
+
+        .optionList {
+          display: grid;
+          gap: 22px;
+        }
+
+        .optionRow {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          color: #263247;
+          font-size: 18px;
+          line-height: 1.45;
+          cursor: pointer;
+        }
+
+        .optionRow input {
+          width: 20px;
+          height: 20px;
+          accent-color: #e6003f;
+          flex-shrink: 0;
+        }
+
+        .correctOption span {
+          color: #067a3a;
+          font-weight: 900;
+        }
+
+        .resultText {
+          margin: 16px 0 0 34px;
+          font-weight: 900;
+        }
+
+        .correctText {
+          color: #067a3a;
+        }
+
+        .wrongText {
+          color: #d90429;
+        }
+
+        .missingText {
+          color: #9b6500;
+        }
+
+        .bottomNav {
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          min-height: 82px;
+          display: grid;
+          grid-template-columns: 180px 1fr 180px;
+          align-items: center;
+          gap: 20px;
+          padding: 14px 46px;
+          background: rgba(255, 240, 243, 0.96);
+          border-top: 1px solid #ffc0cc;
+          backdrop-filter: blur(12px);
+          z-index: 20;
+        }
+
+        .bottomNav button {
+          min-height: 52px;
+          border-radius: 14px;
+          border: 1px solid #ffc0cc;
+          background: white;
+          color: #e6003f;
+          font-size: 18px;
+          font-weight: 900;
+          cursor: pointer;
+        }
+
+        .bottomNav .checkBtn {
+          width: min(220px, 100%);
+          justify-self: center;
+          background: #e6003f;
+          color: white;
+          border-color: #e6003f;
+          box-shadow: 0 12px 20px rgba(217, 4, 41, 0.18);
+        }
+
+        .bottomNav button:disabled {
+          opacity: 0.45;
+          cursor: not-allowed;
+        }
+
+        .emptyBox {
+          width: min(760px, 100%);
+          margin: 80px auto;
+          border-radius: 20px;
+          border: 1px solid #ffc0cc;
+          background: white;
+          color: #e6003f;
+          font-weight: 900;
+          text-align: center;
+          padding: 38px;
+        }
+
+        @media (max-width: 760px) {
+          .audioBar {
+            grid-template-columns: 1fr;
+          }
+
+          .questionCard {
+            padding: 26px 20px;
+          }
+
+          .bottomNav {
+            grid-template-columns: 1fr;
+            position: static;
+            margin-top: 24px;
+            padding: 14px;
+          }
+
+          .bottomNav .checkBtn {
+            width: 100%;
+          }
+
+          .part4PracticePage {
+            padding-bottom: 22px;
+          }
+        }
+      `}</style>
+    </main>
+  );
+}

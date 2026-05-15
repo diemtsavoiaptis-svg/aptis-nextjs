@@ -18,15 +18,6 @@ export default function HomePage() {
   const [message, setMessage] = useState('')
   const [student, setStudent] = useState(null)
   const [admin, setAdmin] = useState(null)
-  const [currentTime, setCurrentTime] = useState(new Date())
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setCurrentTime(new Date())
-    }, 1000)
-
-    return () => window.clearInterval(timer)
-  }, [])
 
   useEffect(() => {
     try {
@@ -51,19 +42,6 @@ export default function HomePage() {
     setMessage('')
     setModal(null)
   }
-
-  const formattedTime = currentTime.toLocaleTimeString('vi-VN', {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-  })
-
-  const formattedDate = currentTime.toLocaleDateString('vi-VN', {
-    weekday: 'long',
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-  })
 
   function logout() {
     localStorage.removeItem('aptis_student')
@@ -176,14 +154,9 @@ export default function HomePage() {
           <div style={styles.heroArt}>
             <div style={styles.studentStatCard}>
               <p style={styles.statKicker}>Cộng đồng học viên</p>
-
               <div style={styles.statNumber}>21</div>
               <p style={styles.statText}>học viên đã đăng ký</p>
-
-              <div style={styles.timeBox}>
-                <p style={styles.timeText}>{formattedTime}</p>
-                <p style={styles.dateText}>{formattedDate}</p>
-              </div>
+              <p style={styles.statSub}>Đang luyện tập cùng Điểm TSA với APTIS</p>
             </div>
           </div>
         </section>
@@ -499,28 +472,6 @@ const styles = {
     color: '#7a001d',
     opacity: .78
   },
-  timeBox: {
-    marginTop: 22,
-    padding: '14px 16px',
-    borderRadius: 22,
-    background: 'rgba(255,255,255,.38)',
-    border: '1px solid rgba(255,255,255,.5)',
-    color: '#7a001d'
-  },
-  timeText: {
-    margin: 0,
-    fontSize: 28,
-    lineHeight: 1,
-    fontWeight: 900,
-    letterSpacing: '-0.8px'
-  },
-  dateText: {
-    margin: '8px 0 0',
-    fontSize: 14,
-    lineHeight: 1.35,
-    fontWeight: 800,
-    textTransform: 'capitalize'
-  },
   modalLayer: {
     position: 'fixed',
     inset: 0,
@@ -636,8 +587,6 @@ const styles = {
     padding: 0
   }
 }
-
-
 
 
 

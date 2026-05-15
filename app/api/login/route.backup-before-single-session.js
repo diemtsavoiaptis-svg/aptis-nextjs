@@ -130,13 +130,13 @@ export async function POST(request) {
       }, { status: 500 })
     }
 
-    if ((activeSessionCount || 0) >= 1) {
+    if ((activeSessionCount || 0) >= 2) {
       await createSecurityEvent(supabase, {
         student_id: user.id,
         email: user.email,
         student_code: user.student_code,
-        event_type: 'blocked_parallel_login',
-        message: 'Blocked login because this account is already active in another session.',
+        event_type: 'blocked_third_device',
+        message: 'Blocked login because this account already has 2 active devices.',
         device_label: deviceLabel,
         user_agent: userAgent,
         ip_address: ipAddress
@@ -144,8 +144,8 @@ export async function POST(request) {
 
       return NextResponse.json({
         ok: false,
-        code: 'ACCOUNT_ALREADY_ONLINE',
-        message: 'This account is already online on another device or browser. Please logout there first.'
+        code: 'TOO_MANY_DEVICES',
+        message: 'This account is already logged in on 2 devices. Please logout from another device first.'
       }, { status: 403 })
     }
 

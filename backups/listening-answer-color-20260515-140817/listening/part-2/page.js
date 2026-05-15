@@ -658,7 +658,7 @@ function ListeningPart2Content() {
         }
 
         .matchRow.correct {
-          border-color: #c9f2d7;
+          border-color: #86efac;
           background: #f0fff4;
         }
 
@@ -794,4 +794,3 @@ export default function ListeningPart2Page() {
     </Suspense>
   );
 }
-

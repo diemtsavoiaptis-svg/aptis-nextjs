@@ -87,7 +87,7 @@ const styles = {
     display: 'grid',
     placeItems: 'center',
     background: '#f7e7ea',
-    fontFamily: '"Segoe UI", Arial, sans-serif',
+    fontFamily: 'Arial, sans-serif',
     color: '#4a0017',
     padding: 22,
     position: 'relative',
@@ -99,7 +99,7 @@ const styles = {
     top: '30%',
     fontSize: 88,
     lineHeight: 1.05,
-    fontWeight: 700,
+    fontWeight: 900,
     color: 'rgba(74,0,23,.13)',
     filter: 'blur(2px)',
     maxWidth: 900
@@ -133,7 +133,7 @@ const styles = {
     background: '#fff1f2',
     color: '#e11d48',
     fontSize: 24,
-    fontWeight: 700,
+    fontWeight: 900,
     textDecoration: 'none'
   },
   logo: {
@@ -145,25 +145,22 @@ const styles = {
     background: '#f00446',
     color: '#fff',
     fontSize: 38,
-    fontWeight: 700,
+    fontWeight: 900,
     boxShadow: '0 18px 35px rgba(225,29,72,.3)',
     marginBottom: 28
   },
   title: {
     margin: '0 0 12px',
     fontSize: 40,
-    lineHeight: 1.12,
-    fontWeight: 800,
-    color: '#4a0017',
-    letterSpacing: '-0.8px'
+    lineHeight: 1.1,
+    fontWeight: 900,
+    color: '#4a0017'
   },
   desc: {
     color: '#e11d48',
     fontSize: 17,
     lineHeight: 1.65,
-    marginBottom: 30,
-    fontWeight: 500,
-    letterSpacing: '-0.1px'
+    marginBottom: 30
   },
   form: {
     display: 'grid',
@@ -175,12 +172,10 @@ const styles = {
     padding: '19px 24px',
     borderRadius: 18,
     border: '1.5px solid #fda4af',
-    background: 'rgba(255,255,255,.78)',
+    background: 'rgba(255,255,255,.76)',
     color: '#111827',
     fontSize: 17,
-    fontWeight: 600,
-    lineHeight: 1.35,
-    letterSpacing: '-0.15px',
+    fontWeight: 800,
     outline: 'none'
   },
   button: {
@@ -192,8 +187,7 @@ const styles = {
     background: '#f00446',
     color: '#fff',
     fontSize: 18,
-    fontWeight: 800,
-    letterSpacing: '-0.2px',
+    fontWeight: 900,
     cursor: 'pointer',
     boxShadow: '0 18px 32px rgba(225,29,72,.22)'
   },
@@ -204,19 +198,17 @@ const styles = {
     background: '#fff1f2',
     border: '1px solid #fecdd3',
     color: '#be123c',
-    fontWeight: 700
+    fontWeight: 800
   },
   link: {
     display: 'inline-block',
     marginTop: 22,
     color: '#be123c',
     fontSize: 17,
-    fontWeight: 800,
-    letterSpacing: '-0.2px',
+    fontWeight: 900,
     textDecoration: 'none'
   }
 }
-
 
 
 

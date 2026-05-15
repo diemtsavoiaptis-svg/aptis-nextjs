@@ -4,31 +4,18 @@ import { useEffect, useMemo, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
 const WATERMARKS = [
-  { left: '4%', top: '8%', rotate: -8, delay: '0s', duration: '15s', opacity: 0.19 },
-  { left: '22%', top: '13%', rotate: 3, delay: '-3s', duration: '17s', opacity: 0.17 },
-  { left: '48%', top: '9%', rotate: -4, delay: '-5s', duration: '19s', opacity: 0.16 },
-  { left: '72%', top: '15%', rotate: 6, delay: '-2s', duration: '16s', opacity: 0.18 },
-
-  { left: '10%', top: '27%', rotate: 5, delay: '-4s', duration: '18s', opacity: 0.18 },
-  { left: '34%', top: '31%', rotate: -6, delay: '-7s', duration: '20s', opacity: 0.17 },
-  { left: '58%', top: '28%', rotate: 2, delay: '-9s', duration: '21s', opacity: 0.16 },
-  { left: '80%', top: '34%', rotate: -7, delay: '-6s', duration: '18s', opacity: 0.18 },
-
-  { left: '5%', top: '48%', rotate: -3, delay: '-8s', duration: '22s', opacity: 0.16 },
-  { left: '25%', top: '53%', rotate: 7, delay: '-10s', duration: '17s', opacity: 0.19 },
-  { left: '50%', top: '49%', rotate: -5, delay: '-11s', duration: '20s', opacity: 0.17 },
-  { left: '74%', top: '55%', rotate: 4, delay: '-12s', duration: '19s', opacity: 0.18 },
-
-  { left: '14%', top: '72%', rotate: 4, delay: '-13s', duration: '21s', opacity: 0.16 },
-  { left: '38%', top: '78%', rotate: -7, delay: '-14s', duration: '18s', opacity: 0.18 },
-  { left: '62%', top: '73%', rotate: 5, delay: '-15s', duration: '23s', opacity: 0.17 },
-  { left: '84%', top: '80%', rotate: -4, delay: '-16s', duration: '20s', opacity: 0.19 },
-
-  { left: '2%', top: '91%', rotate: -5, delay: '-17s', duration: '24s', opacity: 0.15 },
-  { left: '29%', top: '92%', rotate: 3, delay: '-18s', duration: '18s', opacity: 0.16 },
-  { left: '55%', top: '90%', rotate: -6, delay: '-19s', duration: '22s', opacity: 0.15 },
-  { left: '78%', top: '93%', rotate: 5, delay: '-20s', duration: '19s', opacity: 0.16 }
+  { left: '7%', top: '14%', width: 320, rotate: -1, delay: '0s', duration: '15s', opacity: 0.11 },
+  { left: '18%', top: '41%', width: 270, rotate: 4, delay: '-3s', duration: '17s', opacity: 0.10 },
+  { left: '39%', top: '53%', width: 250, rotate: 1, delay: '-7s', duration: '19s', opacity: 0.09 },
+  { left: '73%', top: '20%', width: 160, rotate: -6, delay: '-2s', duration: '16s', opacity: 0.12 },
+  { left: '68%', top: '35%', width: 205, rotate: 2, delay: '-5s', duration: '20s', opacity: 0.09 },
+  { left: '82%', top: '80%', width: 310, rotate: 2, delay: '-9s', duration: '18s', opacity: 0.10 },
+  { left: '12%', top: '73%', width: 95, rotate: 1, delay: '-4s', duration: '14s', opacity: 0.12 },
+  { left: '4%', top: '89%', width: 210, rotate: -4, delay: '-8s', duration: '21s', opacity: 0.08 },
+  { left: '54%', top: '9%', width: 180, rotate: 3, delay: '-10s', duration: '22s', opacity: 0.07 },
+  { left: '58%', top: '68%', width: 260, rotate: -3, delay: '-6s', duration: '19s', opacity: 0.08 }
 ]
+
 export default function StudentAccessGate({ children }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -40,48 +27,14 @@ export default function StudentAccessGate({ children }) {
   const isListeningPage = pathname?.startsWith('/listening')
 
   useEffect(() => {
-    let parsedStudent = null
-
     try {
       const saved = localStorage.getItem('aptis_student')
-      parsedStudent = saved ? JSON.parse(saved) : null
-      setStudent(parsedStudent)
+      setStudent(saved ? JSON.parse(saved) : null)
     } catch {
-      parsedStudent = null
       setStudent(null)
     }
 
     setReady(true)
-
-    async function checkSession() {
-      if (!parsedStudent?.id || !parsedStudent?.sessionToken) return
-
-      try {
-        const res = await fetch('/api/student/session-check', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            studentId: parsedStudent.id,
-            sessionToken: parsedStudent.sessionToken
-          })
-        })
-
-        const data = await res.json()
-
-        if (!data.active) {
-          localStorage.removeItem('aptis_student')
-          alert('Tài khoản của bạn đã bị đăng xuất khỏi thiết bị này.')
-          window.location.href = '/login'
-        }
-      } catch {}
-    }
-
-    checkSession()
-    const timer = setInterval(checkSession, 30000)
-
-    return () => clearInterval(timer)
   }, [])
 
   const watermarkId = useMemo(() => {
@@ -138,6 +91,7 @@ export default function StudentAccessGate({ children }) {
                 ...styles.watermarkLine,
                 left: item.left,
                 top: item.top,
+                width: item.width,
                 opacity: item.opacity,
                 animationDelay: item.delay,
                 animationDuration: item.duration,
@@ -242,7 +196,7 @@ const styles = {
     borderRadius: 16,
     background: '#f00446',
     color: '#fff',
-    fontWeight: 900,
+    fontWeight: 800,
     textDecoration: 'none'
   },
   secondary: {
@@ -251,7 +205,7 @@ const styles = {
     background: '#fff1f2',
     color: '#be123c',
     border: '1px solid #fecdd3',
-    fontWeight: 900,
+    fontWeight: 800,
     textDecoration: 'none'
   },
   watermarkViewport: {
@@ -263,8 +217,8 @@ const styles = {
   },
   watermarkLine: {
     position: 'absolute',
-    minWidth: 150,
-    height: 40,
+    height: 22,
+    borderTop: '3px solid rgba(127, 29, 29, .72)',
     animationName: 'aptisRandomWatermark',
     animationTimingFunction: 'ease-in-out',
     animationIterationCount: 'infinite',
@@ -274,14 +228,13 @@ const styles = {
   watermarkText: {
     position: 'absolute',
     left: 0,
-    top: 0,
+    top: -21,
     color: '#7f1d1d',
-    fontSize: 17,
-    fontWeight: 900,
-    letterSpacing: '0.4px',
+    fontSize: 12,
+    fontWeight: 800,
+    letterSpacing: '0.2px',
     whiteSpace: 'nowrap',
-    userSelect: 'none',
-    textShadow: '0 1px 0 rgba(255,255,255,.55)'
+    userSelect: 'none'
   },
   logout: {
     position: 'fixed',
@@ -296,7 +249,7 @@ const styles = {
     color: '#4a0017',
     padding: '12px 16px',
     borderRadius: 18,
-    fontWeight: 900,
+    fontWeight: 800,
     cursor: 'pointer',
     boxShadow: '0 18px 35px rgba(190,18,60,.16)',
     backdropFilter: 'blur(8px)'
@@ -311,6 +264,3 @@ const styles = {
     color: '#e11d48'
   }
 }
-
-
-

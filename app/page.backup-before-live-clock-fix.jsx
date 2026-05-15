@@ -21,14 +21,6 @@ export default function HomePage() {
   const [currentTime, setCurrentTime] = useState(new Date())
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
-      setCurrentTime(new Date())
-    }, 1000)
-
-    return () => window.clearInterval(timer)
-  }, [])
-
-  useEffect(() => {
     try {
       const savedStudent = localStorage.getItem('aptis_student')
       const savedAdmin = localStorage.getItem('aptis_admin')
@@ -636,7 +628,6 @@ const styles = {
     padding: 0
   }
 }
-
 
 
 

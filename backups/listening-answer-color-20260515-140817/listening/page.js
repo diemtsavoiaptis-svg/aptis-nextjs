@@ -124,7 +124,7 @@ export default function ListeningHomePage() {
 
                 <div style={{
                   ...styles.lockIcon,
-                  background: isApprovedStudent ? '#e8f8ee' : '#fff1f2',
+                  background: isApprovedStudent ? '#dcfce7' : '#fff1f2',
                   color: isApprovedStudent ? '#166534' : '#e11d48'
                 }}>
                   {isApprovedStudent ? '🔓' : '🔒'}
@@ -342,4 +342,3 @@ const styles = {
     backdropFilter: 'blur(8px)'
   }
 }
-

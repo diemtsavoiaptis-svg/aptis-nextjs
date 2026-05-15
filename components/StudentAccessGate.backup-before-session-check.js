@@ -40,48 +40,14 @@ export default function StudentAccessGate({ children }) {
   const isListeningPage = pathname?.startsWith('/listening')
 
   useEffect(() => {
-    let parsedStudent = null
-
     try {
       const saved = localStorage.getItem('aptis_student')
-      parsedStudent = saved ? JSON.parse(saved) : null
-      setStudent(parsedStudent)
+      setStudent(saved ? JSON.parse(saved) : null)
     } catch {
-      parsedStudent = null
       setStudent(null)
     }
 
     setReady(true)
-
-    async function checkSession() {
-      if (!parsedStudent?.id || !parsedStudent?.sessionToken) return
-
-      try {
-        const res = await fetch('/api/student/session-check', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            studentId: parsedStudent.id,
-            sessionToken: parsedStudent.sessionToken
-          })
-        })
-
-        const data = await res.json()
-
-        if (!data.active) {
-          localStorage.removeItem('aptis_student')
-          alert('Tài khoản của bạn đã bị đăng xuất khỏi thiết bị này.')
-          window.location.href = '/login'
-        }
-      } catch {}
-    }
-
-    checkSession()
-    const timer = setInterval(checkSession, 30000)
-
-    return () => clearInterval(timer)
   }, [])
 
   const watermarkId = useMemo(() => {
@@ -311,6 +277,5 @@ const styles = {
     color: '#e11d48'
   }
 }
-
 
 
