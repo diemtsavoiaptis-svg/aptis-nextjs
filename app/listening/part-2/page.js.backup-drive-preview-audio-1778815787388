@@ -42,10 +42,10 @@ function clean(value) {
 
 function getAudioUrl(row) {
   const candidates = [
+    row.audioUrl,
     row.audioLink,
     row.audio,
     row.linkAudio,
-    row.audioUrl,
     row.audio_file,
     row.audioFile,
     row["Link Audio"],
@@ -53,12 +53,11 @@ function getAudioUrl(row) {
     row["audio"],
   ];
 
-  const rawUrl = candidates.map(clean).find(Boolean) || "";
-  const savedId = clean(row.audio_drive_file_id || row.audioDriveFileId || row.driveId);
+  const url = candidates.map(clean).find(Boolean) || "";
+  const id = clean(row.audio_drive_file_id || row.audioDriveFileId || row.driveId);
 
   function extractDriveId(value) {
     const text = clean(value);
-
     const match1 = text.match(/\/d\/([^/]+)/);
     if (match1) return match1[1];
 
@@ -68,13 +67,13 @@ function getAudioUrl(row) {
     return "";
   }
 
-  const driveId = savedId || extractDriveId(rawUrl);
+  const driveId = extractDriveId(url) || id;
 
   if (driveId) {
-    return `/api/audio/drive?id=${encodeURIComponent(driveId)}`;
+    return `https://drive.google.com/uc?export=download&id=${driveId}`;
   }
 
-  return rawUrl;
+  return url;
 }
 
 function getAnswerOptions(row) {
@@ -274,12 +273,7 @@ function ListeningPart2Content() {
 
             <div className="audioBar">
               {activeRow.audioUrl ? (
-                <audio
-                  key={activeRow.audioUrl}
-                  controls
-                  preload="metadata"
-                  src={activeRow.audioUrl}
-                />
+                <audio controls src={activeRow.audioUrl} preload="metadata" />
               ) : (
                 <div className="audioMissing">Chưa có audio cho bài này</div>
               )}

@@ -71,7 +71,7 @@ function getAudioUrl(row) {
   const driveId = savedId || extractDriveId(rawUrl);
 
   if (driveId) {
-    return `/api/audio/drive?id=${encodeURIComponent(driveId)}`;
+    return `https://drive.google.com/uc?export=download&id=${driveId}`;
   }
 
   return rawUrl;

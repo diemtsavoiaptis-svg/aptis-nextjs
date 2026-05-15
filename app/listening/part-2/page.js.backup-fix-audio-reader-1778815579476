@@ -41,40 +41,18 @@ function clean(value) {
 }
 
 function getAudioUrl(row) {
-  const candidates = [
-    row.audioLink,
-    row.audio,
-    row.linkAudio,
-    row.audioUrl,
-    row.audio_file,
-    row.audioFile,
-    row["Link Audio"],
-    row["Audio"],
-    row["audio"],
-  ];
+  const url = clean(row.audioLink || row.audio);
+  const id = clean(row.audio_drive_file_id);
 
-  const rawUrl = candidates.map(clean).find(Boolean) || "";
-  const savedId = clean(row.audio_drive_file_id || row.audioDriveFileId || row.driveId);
-
-  function extractDriveId(value) {
-    const text = clean(value);
-
-    const match1 = text.match(/\/d\/([^/]+)/);
-    if (match1) return match1[1];
-
-    const match2 = text.match(/[?&]id=([^&]+)/);
-    if (match2) return match2[1];
-
-    return "";
+  if (url.includes("drive.google.com")) {
+    const match = url.match(/\/d\/([^/]+)/);
+    const fileId = match ? match[1] : id;
+    return fileId ? `https://drive.google.com/uc?export=download&id=${fileId}` : url;
   }
 
-  const driveId = savedId || extractDriveId(rawUrl);
+  if (id) return `https://drive.google.com/uc?export=download&id=${id}`;
 
-  if (driveId) {
-    return `/api/audio/drive?id=${encodeURIComponent(driveId)}`;
-  }
-
-  return rawUrl;
+  return url;
 }
 
 function getAnswerOptions(row) {
@@ -273,16 +251,7 @@ function ListeningPart2Content() {
             <div className="sectionLabel">AUDIO</div>
 
             <div className="audioBar">
-              {activeRow.audioUrl ? (
-                <audio
-                  key={activeRow.audioUrl}
-                  controls
-                  preload="metadata"
-                  src={activeRow.audioUrl}
-                />
-              ) : (
-                <div className="audioMissing">Chưa có audio cho bài này</div>
-              )}
+              <audio controls src={activeRow.audioUrl} />
             </div>
 
             <button
@@ -556,18 +525,6 @@ function ListeningPart2Content() {
           width: 100%;
           height: 44px;
           border-radius: 999px;
-        }
-
-        .audioMissing {
-          width: 100%;
-          min-height: 44px;
-          border-radius: 999px;
-          background: rgba(255, 255, 255, 0.92);
-          color: #9f001f;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: 900;
         }
 
         .outlineBtn {

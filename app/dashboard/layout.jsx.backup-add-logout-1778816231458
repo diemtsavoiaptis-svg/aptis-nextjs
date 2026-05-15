@@ -1,22 +1,4 @@
-"use client";
-
 ﻿import Link from "next/link";
-
-function handleAdminLogout() {
-  try {
-    localStorage.removeItem("admin");
-    localStorage.removeItem("adminUser");
-    localStorage.removeItem("adminToken");
-    localStorage.removeItem("student");
-    localStorage.removeItem("studentUser");
-    localStorage.removeItem("studentToken");
-    sessionStorage.clear();
-  } catch (error) {
-    console.warn(error);
-  }
-
-  window.location.href = "/";
-}
 
 const skills = [
   {
@@ -132,14 +114,7 @@ export default function DashboardLayout({ children }) {
               )
             )}
           </nav>
-                <button type="button" className="adminLogoutBtn" onClick={handleAdminLogout}>
-          <span>↩</span>
-          <div>
-            <strong>Đăng xuất</strong>
-            <small>Về trang chủ</small>
-          </div>
-        </button>
-      </aside>
+        </aside>
 
         <section className="min-w-0">
           {children}
