@@ -41,9 +41,7 @@ export default function AdminStudentsPage() {
 
       if (selectedId) {
         const fresh = (data.students || []).find(student => student.id === selectedId)
-        if (fresh) {
-          setDraft(createDraft(fresh))
-        }
+        if (fresh) setDraft(createDraft(fresh))
       }
     } else {
       setMessage(data.message || 'Cannot load students.')
@@ -87,9 +85,7 @@ export default function AdminStudentsPage() {
     setMessage(data.message || 'Done.')
     setSaving(false)
 
-    if (data.ok) {
-      await loadStudents()
-    }
+    if (data.ok) await loadStudents()
   }
 
   async function approveProfile() {
@@ -116,9 +112,7 @@ export default function AdminStudentsPage() {
     setMessage(data.message || 'Done.')
     setSaving(false)
 
-    if (data.ok) {
-      await loadStudents()
-    }
+    if (data.ok) await loadStudents()
   }
 
   async function deleteProfile() {
@@ -153,176 +147,152 @@ export default function AdminStudentsPage() {
 
   return (
     <main style={styles.page}>
-      <section style={styles.shell}>
-        <aside style={styles.sidebar}>
-          <div style={styles.brand}>
-            <div style={styles.logo}>A</div>
-            <div>
-              <p style={styles.brandKicker}>HỆ THỐNG QUẢN TRỊ</p>
-              <h2 style={styles.brandTitle}>Quản trị Aptis</h2>
+      <section style={styles.header}>
+        <div>
+          <p style={styles.badge}>Admin</p>
+          <h1 style={styles.title}>Duyệt học viên</h1>
+          <p style={styles.desc}>
+            Mở hồ sơ học viên để nhập mã, chỉnh sửa thông tin, lưu lại, duyệt hoặc xoá hồ sơ.
+          </p>
+        </div>
+
+        <button onClick={loadStudents} style={styles.refresh}>Refresh</button>
+      </section>
+
+      {message && <p style={styles.message}>{message}</p>}
+
+      <section style={styles.layout}>
+        <div style={styles.listCard}>
+          <h2 style={styles.sectionTitle}>Danh sách hồ sơ</h2>
+
+          {loading ? (
+            <p style={styles.muted}>Loading students...</p>
+          ) : students.length === 0 ? (
+            <div style={styles.empty}>Chưa có học viên đăng ký.</div>
+          ) : (
+            <div style={styles.studentList}>
+              {students.map(student => (
+                <button
+                  key={student.id}
+                  onClick={() => openProfile(student)}
+                  style={{
+                    ...styles.studentItem,
+                    borderColor: selectedId === student.id ? '#e11d48' : '#fecdd3',
+                    background: selectedId === student.id ? '#fff1f2' : '#fff'
+                  }}
+                >
+                  <div>
+                    <strong style={styles.studentName}>{student.full_name}</strong>
+                    <p style={styles.studentMeta}>
+                      {student.student_code || 'Chưa có mã'} · {student.email}
+                    </p>
+                  </div>
+
+                  <span style={{
+                    ...styles.status,
+                    background: student.status === 'approved' ? '#dcfce7' : '#fff7ed',
+                    color: student.status === 'approved' ? '#166534' : '#9a3412'
+                  }}>
+                    {student.status === 'approved' ? 'Đã duyệt' : 'Chờ duyệt'}
+                  </span>
+                </button>
+              ))}
             </div>
-          </div>
+          )}
+        </div>
 
-          <a href="/dashboard/listening" style={styles.navItem}>
-            <span style={styles.navIcon}>L</span>
-            <span>Listening</span>
-          </a>
-
-          <a href="/login" style={styles.navItem}>
-            <span style={styles.navIcon}>↩</span>
-            <span>Đăng xuất</span>
-          </a>
-        </aside>
-
-        <section style={styles.content}>
-          <div style={styles.header}>
-            <div>
-              <p style={styles.badge}>Admin</p>
-              <h1 style={styles.title}>Duyệt học viên</h1>
-              <p style={styles.desc}>
-                Mở hồ sơ học viên để nhập mã, chỉnh sửa thông tin, lưu lại, duyệt hoặc xoá hồ sơ.
-              </p>
+        <div style={styles.profileCard}>
+          {!draft ? (
+            <div style={styles.placeholder}>
+              <div style={styles.placeholderIcon}>👤</div>
+              <h2 style={styles.sectionTitle}>Chưa mở hồ sơ</h2>
+              <p style={styles.muted}>Chọn một học viên bên trái rồi bấm mở hồ sơ để chỉnh sửa.</p>
             </div>
-
-            <button onClick={loadStudents} style={styles.refresh}>Refresh</button>
-          </div>
-
-          {message && <p style={styles.message}>{message}</p>}
-
-          <div style={styles.layout}>
-            <div style={styles.listCard}>
-              <h2 style={styles.sectionTitle}>Danh sách hồ sơ</h2>
-
-              {loading ? (
-                <p style={styles.muted}>Loading students...</p>
-              ) : students.length === 0 ? (
-                <div style={styles.empty}>Chưa có học viên đăng ký.</div>
-              ) : (
-                <div style={styles.studentList}>
-                  {students.map(student => (
-                    <button
-                      key={student.id}
-                      onClick={() => openProfile(student)}
-                      style={{
-                        ...styles.studentItem,
-                        borderColor: selectedId === student.id ? '#e11d48' : '#fecdd3',
-                        background: selectedId === student.id ? '#fff1f2' : '#fff'
-                      }}
-                    >
-                      <div>
-                        <strong style={styles.studentName}>{student.full_name}</strong>
-                        <p style={styles.studentMeta}>
-                          {student.student_code || 'Chưa có mã'} · {student.email}
-                        </p>
-                      </div>
-
-                      <span style={{
-                        ...styles.status,
-                        background: student.status === 'approved' ? '#dcfce7' : '#fff7ed',
-                        color: student.status === 'approved' ? '#166534' : '#9a3412'
-                      }}>
-                        {student.status === 'approved' ? 'Đã duyệt' : 'Chờ duyệt'}
-                      </span>
-                    </button>
-                  ))}
+          ) : (
+            <>
+              <div style={styles.profileHeader}>
+                <div>
+                  <h2 style={styles.sectionTitle}>Hồ sơ học viên</h2>
+                  <p style={styles.muted}>
+                    Created: {selectedStudent?.created_at ? new Date(selectedStudent.created_at).toLocaleString() : '-'}
+                  </p>
                 </div>
-              )}
-            </div>
 
-            <div style={styles.profileCard}>
-              {!draft ? (
-                <div style={styles.placeholder}>
-                  <div style={styles.placeholderIcon}>👤</div>
-                  <h2 style={styles.sectionTitle}>Chưa mở hồ sơ</h2>
-                  <p style={styles.muted}>Chọn một học viên bên trái rồi bấm mở hồ sơ để chỉnh sửa.</p>
-                </div>
-              ) : (
-                <>
-                  <div style={styles.profileHeader}>
-                    <div>
-                      <h2 style={styles.sectionTitle}>Hồ sơ học viên</h2>
-                      <p style={styles.muted}>
-                        Created: {selectedStudent?.created_at ? new Date(selectedStudent.created_at).toLocaleString() : '-'}
-                      </p>
-                    </div>
+                <button onClick={closeProfile} style={styles.closeButton}>Đóng</button>
+              </div>
 
-                    <button onClick={closeProfile} style={styles.closeButton}>Đóng</button>
-                  </div>
+              <div style={styles.formGrid}>
+                <label style={styles.label}>
+                  <span>Mã học viên</span>
+                  <input
+                    style={styles.input}
+                    placeholder="VD: HV001"
+                    value={draft.studentCode}
+                    onChange={e => updateDraft('studentCode', e.target.value)}
+                  />
+                </label>
 
-                  <div style={styles.formGrid}>
-                    <label style={styles.label}>
-                      <span>Mã học viên</span>
-                      <input
-                        style={styles.input}
-                        placeholder="VD: HV001"
-                        value={draft.studentCode}
-                        onChange={e => updateDraft('studentCode', e.target.value)}
-                      />
-                    </label>
+                <label style={styles.label}>
+                  <span>Trạng thái</span>
+                  <select
+                    style={styles.input}
+                    value={draft.status}
+                    onChange={e => updateDraft('status', e.target.value)}
+                  >
+                    <option value="pending">Chờ duyệt</option>
+                    <option value="approved">Đã duyệt</option>
+                    <option value="rejected">Từ chối</option>
+                  </select>
+                </label>
 
-                    <label style={styles.label}>
-                      <span>Trạng thái</span>
-                      <select
-                        style={styles.input}
-                        value={draft.status}
-                        onChange={e => updateDraft('status', e.target.value)}
-                      >
-                        <option value="pending">Chờ duyệt</option>
-                        <option value="approved">Đã duyệt</option>
-                        <option value="rejected">Từ chối</option>
-                      </select>
-                    </label>
+                <label style={styles.labelFull}>
+                  <span>Họ và tên</span>
+                  <input
+                    style={styles.input}
+                    placeholder="Họ và tên"
+                    value={draft.fullName}
+                    onChange={e => updateDraft('fullName', e.target.value)}
+                  />
+                </label>
 
-                    <label style={styles.labelFull}>
-                      <span>Họ và tên</span>
-                      <input
-                        style={styles.input}
-                        placeholder="Họ và tên"
-                        value={draft.fullName}
-                        onChange={e => updateDraft('fullName', e.target.value)}
-                      />
-                    </label>
+                <label style={styles.label}>
+                  <span>Số điện thoại</span>
+                  <input
+                    style={styles.input}
+                    placeholder="Số điện thoại"
+                    value={draft.phone}
+                    onChange={e => updateDraft('phone', e.target.value)}
+                  />
+                </label>
 
-                    <label style={styles.label}>
-                      <span>Số điện thoại</span>
-                      <input
-                        style={styles.input}
-                        placeholder="Số điện thoại"
-                        value={draft.phone}
-                        onChange={e => updateDraft('phone', e.target.value)}
-                      />
-                    </label>
+                <label style={styles.label}>
+                  <span>Email</span>
+                  <input
+                    style={styles.input}
+                    placeholder="Email"
+                    type="email"
+                    value={draft.email}
+                    onChange={e => updateDraft('email', e.target.value)}
+                  />
+                </label>
+              </div>
 
-                    <label style={styles.label}>
-                      <span>Email</span>
-                      <input
-                        style={styles.input}
-                        placeholder="Email"
-                        type="email"
-                        value={draft.email}
-                        onChange={e => updateDraft('email', e.target.value)}
-                      />
-                    </label>
-                  </div>
+              <div style={styles.profileActions}>
+                <button onClick={saveProfile} disabled={saving} style={styles.saveButton}>
+                  {saving ? 'Đang lưu...' : 'Lưu hồ sơ'}
+                </button>
 
-                  <div style={styles.profileActions}>
-                    <button onClick={saveProfile} disabled={saving} style={styles.saveButton}>
-                      {saving ? 'Đang lưu...' : 'Lưu hồ sơ'}
-                    </button>
+                <button onClick={approveProfile} disabled={saving} style={styles.approveButton}>
+                  Duyệt
+                </button>
 
-                    <button onClick={approveProfile} disabled={saving} style={styles.approveButton}>
-                      Duyệt
-                    </button>
-
-                    <button onClick={deleteProfile} disabled={saving} style={styles.deleteButton}>
-                      Xoá hồ sơ
-                    </button>
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        </section>
+                <button onClick={deleteProfile} disabled={saving} style={styles.deleteButton}>
+                  Xoá hồ sơ
+                </button>
+              </div>
+            </>
+          )}
+        </div>
       </section>
     </main>
   )
@@ -330,83 +300,11 @@ export default function AdminStudentsPage() {
 
 const styles = {
   page: {
+    width: '100%',
     minHeight: '100vh',
-    background: 'linear-gradient(135deg, #fff5f7, #ffe4e6)',
+    background: 'transparent',
     color: '#3b0a12',
     fontFamily: 'Arial, sans-serif',
-    padding: 26
-  },
-  shell: {
-    maxWidth: 1400,
-    margin: '0 auto',
-    display: 'grid',
-    gridTemplateColumns: '320px 1fr',
-    gap: 24
-  },
-  sidebar: {
-    minHeight: 'calc(100vh - 52px)',
-    background: 'rgba(255,255,255,.92)',
-    border: '1px solid #fecdd3',
-    borderRadius: 34,
-    padding: 28,
-    boxShadow: '0 24px 70px rgba(190,18,60,.1)'
-  },
-  brand: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 16,
-    background: '#fff1f2',
-    borderRadius: 26,
-    padding: 18,
-    marginBottom: 30
-  },
-  logo: {
-    width: 64,
-    height: 64,
-    borderRadius: 22,
-    display: 'grid',
-    placeItems: 'center',
-    background: '#f00446',
-    color: '#fff',
-    fontSize: 34,
-    fontWeight: 900,
-    boxShadow: '0 16px 32px rgba(225,29,72,.25)'
-  },
-  brandKicker: {
-    margin: 0,
-    color: '#e11d48',
-    fontSize: 13,
-    fontWeight: 900
-  },
-  brandTitle: {
-    margin: '5px 0 0',
-    color: '#4a0017',
-    fontSize: 22
-  },
-  navItem: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 14,
-    padding: '15px 14px',
-    marginBottom: 12,
-    borderRadius: 18,
-    color: '#4a0017',
-    textDecoration: 'none',
-    fontWeight: 900
-  },
-  navIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 16,
-    display: 'grid',
-    placeItems: 'center',
-    background: '#ffe4e6',
-    color: '#e11d48',
-    fontWeight: 900
-  },
-  content: {
-    background: 'rgba(255,255,255,.78)',
-    borderRadius: 34,
     padding: 26
   },
   header: {
@@ -459,7 +357,7 @@ const styles = {
   },
   layout: {
     display: 'grid',
-    gridTemplateColumns: 'minmax(320px, 420px) 1fr',
+    gridTemplateColumns: 'minmax(320px, 430px) 1fr',
     gap: 20
   },
   listCard: {
