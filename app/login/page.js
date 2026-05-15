@@ -55,7 +55,7 @@ export default function LoginPage() {
         <form onSubmit={submitLogin} style={styles.form}>
           <input
             style={styles.input}
-            placeholder="Tên đăng nhập / Mật khẩu / email"
+            placeholder="Số điện thoại hoặc Email"
             value={form.username}
             onChange={e => setForm({ ...form, username: e.target.value })}
           />
@@ -172,7 +172,7 @@ const styles = {
     padding: '19px 24px',
     borderRadius: 18,
     border: '1.5px solid #fda4af',
-    background: '#eef4ff',
+    background: 'rgba(255,255,255,.76)',
     color: '#111827',
     fontSize: 17,
     fontWeight: 800,
@@ -209,4 +209,3 @@ const styles = {
     textDecoration: 'none'
   }
 }
-

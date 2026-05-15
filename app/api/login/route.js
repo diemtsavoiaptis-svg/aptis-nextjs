@@ -54,7 +54,7 @@ export async function POST(request) {
     const { data: user, error } = await supabase
       .from('student_accounts')
       .select('*')
-      .or(`email.eq.${loginValue},student_code.eq.${username}`)
+      .or(`email.eq.${loginValue},phone.eq.${username}`)
       .maybeSingle()
 
     if (error) {
@@ -67,7 +67,7 @@ export async function POST(request) {
     if (!user || !verifyPassword(password, user.password_hash || '')) {
       return NextResponse.json({
         ok: false,
-        message: 'Invalid username or password.'
+        message: 'Invalid email/phone or password.'
       }, { status: 401 })
     }
 
