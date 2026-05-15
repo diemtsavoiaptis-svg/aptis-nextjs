@@ -15,6 +15,9 @@ export default function LoginPage() {
     setLoading(true)
     setMessage('')
 
+    localStorage.removeItem('aptis_admin')
+    localStorage.removeItem('aptis_student')
+
     const res = await fetch('/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -50,8 +53,20 @@ export default function LoginPage() {
         <p style={styles.desc}>Đăng nhập để mở khu vực học Aptis.</p>
 
         <form onSubmit={submitLogin} style={styles.form}>
-          <input style={styles.input} placeholder="Tên đăng nhập / mã học viên / email" value={form.username} onChange={e => setForm({ ...form, username: e.target.value })} />
-          <input style={styles.input} placeholder="Mật khẩu" type="password" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} />
+          <input
+            style={styles.input}
+            placeholder="Tên đăng nhập / mã học viên / email"
+            value={form.username}
+            onChange={e => setForm({ ...form, username: e.target.value })}
+          />
+
+          <input
+            style={styles.input}
+            placeholder="Mật khẩu"
+            type="password"
+            value={form.password}
+            onChange={e => setForm({ ...form, password: e.target.value })}
+          />
 
           <button style={styles.button} disabled={loading}>
             {loading ? 'Đang kiểm tra...' : 'Đăng nhập'}
