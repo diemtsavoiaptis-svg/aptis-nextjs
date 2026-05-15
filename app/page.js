@@ -279,7 +279,7 @@ export default function HomePage() {
                     onChange={(event) =>
                       setRegisterForm((old) => ({ ...old, student_code: event.target.value }))
                     }
-                    placeholder="ID học viên"
+                    placeholder="Mật khẩu"
                     required
                   />
 
@@ -340,7 +340,7 @@ export default function HomePage() {
                     onChange={(event) =>
                       setLoginForm((old) => ({ ...old, account: event.target.value }))
                     }
-                    placeholder="ID học viên, số điện thoại hoặc email"
+                    placeholder="Mật khẩu, số điện thoại hoặc email"
                     required
                   />
 
@@ -763,3 +763,4 @@ export default function HomePage() {
     </main>
   );
 }
+
