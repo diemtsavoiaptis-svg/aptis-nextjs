@@ -1,5 +1,6 @@
 ﻿import { NextResponse } from 'next/server'
 import { createSupabaseAdmin } from '@/lib/supabaseAdmin'
+import { hashPassword } from '@/lib/password'
 
 function clean(value) {
   return String(value ?? '').trim()
@@ -15,6 +16,7 @@ export async function POST(request) {
     const phone = clean(body.phone)
     const email = clean(body.email).toLowerCase()
     const status = clean(body.status) || 'pending'
+    const password = String(body.password || '')
 
     if (!id) {
       return NextResponse.json({ ok: false, message: 'Missing student id.' }, { status: 400 })
@@ -22,6 +24,10 @@ export async function POST(request) {
 
     if (!fullName || !phone || !email) {
       return NextResponse.json({ ok: false, message: 'Please fill in name, phone and email.' }, { status: 400 })
+    }
+
+    if (password && password.length < 4) {
+      return NextResponse.json({ ok: false, message: 'Password must be at least 4 characters.' }, { status: 400 })
     }
 
     const supabase = createSupabaseAdmin()
@@ -58,6 +64,10 @@ export async function POST(request) {
       status
     }
 
+    if (password) {
+      updateData.password_hash = hashPassword(password)
+    }
+
     if (status === 'approved') {
       updateData.approved_at = new Date().toISOString()
     }
@@ -79,7 +89,7 @@ export async function POST(request) {
 
     return NextResponse.json({
       ok: true,
-      message: 'Student profile saved successfully.',
+      message: password ? 'Student profile and password saved successfully.' : 'Student profile saved successfully.',
       student: data
     })
   } catch (error) {

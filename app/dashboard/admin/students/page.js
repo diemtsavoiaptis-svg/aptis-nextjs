@@ -13,8 +13,15 @@ function createDraft(student) {
     fullName: toInputValue(student.full_name),
     phone: toInputValue(student.phone),
     email: toInputValue(student.email),
-    status: toInputValue(student.status || 'pending')
+    status: toInputValue(student.status || 'pending'),
+    password: ''
   }
+}
+
+function statusText(status) {
+  if (status === 'approved') return 'Đã duyệt'
+  if (status === 'rejected') return 'Từ chối'
+  return 'Chờ duyệt'
 }
 
 export default function AdminStudentsPage() {
@@ -28,6 +35,15 @@ export default function AdminStudentsPage() {
   const selectedStudent = useMemo(() => {
     return students.find(student => student.id === selectedId) || null
   }, [students, selectedId])
+
+  const approvedCount = students.filter(student => student.status === 'approved').length
+  const pendingCount = students.filter(student => student.status !== 'approved').length
+
+  const sortedStudents = [...students].sort((a, b) => {
+    if (a.status === 'approved' && b.status !== 'approved') return -1
+    if (a.status !== 'approved' && b.status === 'approved') return 1
+    return new Date(b.created_at || 0) - new Date(a.created_at || 0)
+  })
 
   async function loadStudents() {
     setLoading(true)
@@ -44,7 +60,7 @@ export default function AdminStudentsPage() {
         if (fresh) setDraft(createDraft(fresh))
       }
     } else {
-      setMessage(data.message || 'Cannot load students.')
+      setMessage(data.message || 'Không thể tải danh sách học viên.')
     }
 
     setLoading(false)
@@ -82,17 +98,20 @@ export default function AdminStudentsPage() {
     })
 
     const data = await res.json()
-    setMessage(data.message || 'Done.')
+    setMessage(data.message || 'Đã xử lý xong.')
     setSaving(false)
 
-    if (data.ok) await loadStudents()
+    if (data.ok) {
+      await loadStudents()
+      setDraft(current => current ? { ...current, password: '' } : current)
+    }
   }
 
   async function approveProfile() {
     if (!draft) return
 
     if (!String(draft.studentCode || '').trim()) {
-      setMessage('Please enter student code before approval.')
+      setMessage('Vui lòng nhập mã học viên trước khi duyệt.')
       return
     }
 
@@ -109,16 +128,18 @@ export default function AdminStudentsPage() {
     })
 
     const data = await res.json()
-    setMessage(data.message || 'Done.')
+    setMessage(data.message || 'Đã xử lý xong.')
     setSaving(false)
 
-    if (data.ok) await loadStudents()
+    if (data.ok) {
+      await loadStudents()
+    }
   }
 
   async function deleteProfile() {
     if (!draft) return
 
-    const ok = window.confirm('Delete this student profile? This action cannot be undone.')
+    const ok = window.confirm('Bạn có chắc muốn xoá hồ sơ học viên này không?')
     if (!ok) return
 
     setSaving(true)
@@ -131,7 +152,7 @@ export default function AdminStudentsPage() {
     })
 
     const data = await res.json()
-    setMessage(data.message || 'Done.')
+    setMessage(data.message || 'Đã xử lý xong.')
     setSaving(false)
 
     if (data.ok) {
@@ -148,7 +169,7 @@ export default function AdminStudentsPage() {
   return (
     <main style={styles.page}>
       <section style={styles.header}>
-        <div>
+        <div style={styles.headerLeft}>
           <p style={styles.badge}>Admin</p>
           <h1 style={styles.title}>Duyệt học viên</h1>
           <p style={styles.desc}>
@@ -156,22 +177,37 @@ export default function AdminStudentsPage() {
           </p>
         </div>
 
-        <button onClick={loadStudents} style={styles.refresh}>Refresh</button>
+        <div style={styles.statsWrap}>
+          <div style={styles.statCard}>
+            <strong style={styles.statNumber}>{approvedCount}</strong>
+            <span style={styles.statLabel}>Học viên đã duyệt</span>
+          </div>
+
+          <div style={styles.statCard}>
+            <strong style={styles.statNumber}>{pendingCount}</strong>
+            <span style={styles.statLabel}>Chờ duyệt</span>
+          </div>
+        </div>
+
+        <button onClick={loadStudents} style={styles.refresh}>Làm mới</button>
       </section>
 
       {message && <p style={styles.message}>{message}</p>}
 
-      <section style={styles.layout}>
-        <div style={styles.listCard}>
-          <h2 style={styles.sectionTitle}>Danh sách hồ sơ</h2>
+      <section style={styles.mainGrid}>
+        <aside style={styles.listPanel}>
+          <div style={styles.panelHeader}>
+            <h2 style={styles.panelTitle}>Danh sách hồ sơ</h2>
+            <span style={styles.smallCount}>{students.length} hồ sơ</span>
+          </div>
 
           {loading ? (
-            <p style={styles.muted}>Loading students...</p>
-          ) : students.length === 0 ? (
+            <div style={styles.empty}>Đang tải danh sách...</div>
+          ) : sortedStudents.length === 0 ? (
             <div style={styles.empty}>Chưa có học viên đăng ký.</div>
           ) : (
             <div style={styles.studentList}>
-              {students.map(student => (
+              {sortedStudents.map(student => (
                 <button
                   key={student.id}
                   onClick={() => openProfile(student)}
@@ -182,39 +218,43 @@ export default function AdminStudentsPage() {
                   }}
                 >
                   <div>
-                    <strong style={styles.studentName}>{student.full_name}</strong>
+                    <strong style={styles.studentName}>{student.full_name || 'Chưa có tên'}</strong>
                     <p style={styles.studentMeta}>
-                      {student.student_code || 'Chưa có mã'} · {student.email}
+                      ID: {student.student_code || 'Chưa nhập'} · {student.email || '-'}
                     </p>
                   </div>
 
-                  <span style={{
-                    ...styles.status,
-                    background: student.status === 'approved' ? '#dcfce7' : '#fff7ed',
-                    color: student.status === 'approved' ? '#166534' : '#9a3412'
-                  }}>
-                    {student.status === 'approved' ? 'Đã duyệt' : 'Chờ duyệt'}
+                  <span
+                    style={{
+                      ...styles.statusPill,
+                      background: student.status === 'approved' ? '#dcfce7' : '#fff1f2',
+                      color: student.status === 'approved' ? '#166534' : '#be123c'
+                    }}
+                  >
+                    {statusText(student.status)}
                   </span>
                 </button>
               ))}
             </div>
           )}
-        </div>
+        </aside>
 
-        <div style={styles.profileCard}>
+        <section style={styles.profilePanel}>
           {!draft ? (
             <div style={styles.placeholder}>
               <div style={styles.placeholderIcon}>👤</div>
-              <h2 style={styles.sectionTitle}>Chưa mở hồ sơ</h2>
-              <p style={styles.muted}>Chọn một học viên bên trái rồi bấm mở hồ sơ để chỉnh sửa.</p>
+              <h2 style={styles.profileTitle}>Chưa mở hồ sơ</h2>
+              <p style={styles.placeholderText}>
+                Chọn một học viên trong danh sách bên trái để xem và chỉnh sửa hồ sơ.
+              </p>
             </div>
           ) : (
             <>
-              <div style={styles.profileHeader}>
+              <div style={styles.profileTop}>
                 <div>
-                  <h2 style={styles.sectionTitle}>Hồ sơ học viên</h2>
-                  <p style={styles.muted}>
-                    Created: {selectedStudent?.created_at ? new Date(selectedStudent.created_at).toLocaleString() : '-'}
+                  <h2 style={styles.profileTitle}>Hồ sơ học viên</h2>
+                  <p style={styles.createdText}>
+                    Created: {selectedStudent?.created_at ? new Date(selectedStudent.created_at).toLocaleString('vi-VN') : '-'}
                   </p>
                 </div>
 
@@ -275,9 +315,20 @@ export default function AdminStudentsPage() {
                     onChange={e => updateDraft('email', e.target.value)}
                   />
                 </label>
+
+                <label style={styles.labelFull}>
+                  <span>Mật khẩu mới</span>
+                  <input
+                    style={styles.input}
+                    placeholder="Để trống nếu không đổi mật khẩu"
+                    type="password"
+                    value={draft.password || ''}
+                    onChange={e => updateDraft('password', e.target.value)}
+                  />
+                </label>
               </div>
 
-              <div style={styles.profileActions}>
+              <div style={styles.actions}>
                 <button onClick={saveProfile} disabled={saving} style={styles.saveButton}>
                   {saving ? 'Đang lưu...' : 'Lưu hồ sơ'}
                 </button>
@@ -292,7 +343,7 @@ export default function AdminStudentsPage() {
               </div>
             </>
           )}
-        </div>
+        </section>
       </section>
     </main>
   )
@@ -302,52 +353,86 @@ const styles = {
   page: {
     width: '100%',
     minHeight: '100vh',
+    padding: 26,
     background: 'transparent',
     color: '#3b0a12',
-    fontFamily: 'Arial, sans-serif',
-    padding: 26
+    fontFamily: '"Segoe UI", Arial, sans-serif'
   },
   header: {
     background: '#fff',
     border: '1px solid #fecdd3',
     borderRadius: 28,
-    padding: 26,
-    display: 'flex',
-    justifyContent: 'space-between',
-    gap: 20,
-    alignItems: 'flex-start',
+    padding: 24,
+    display: 'grid',
+    gridTemplateColumns: '1fr auto auto',
+    alignItems: 'center',
+    gap: 18,
     boxShadow: '0 18px 45px rgba(190,18,60,.08)',
-    marginBottom: 20
+    marginBottom: 18
+  },
+  headerLeft: {
+    minWidth: 0
   },
   badge: {
     display: 'inline-block',
+    margin: '0 0 14px',
     background: '#ffe4e6',
     color: '#be123c',
     padding: '7px 14px',
     borderRadius: 999,
-    fontWeight: 900,
-    margin: 0
+    fontWeight: 900
   },
   title: {
-    fontSize: 34,
+    margin: 0,
     color: '#be123c',
-    margin: '14px 0 8px'
+    fontSize: 40,
+    lineHeight: 1.05,
+    fontWeight: 500,
+    letterSpacing: '-1px'
   },
   desc: {
-    lineHeight: 1.6,
+    margin: '18px 0 0',
     color: '#6b2737',
-    margin: 0
+    lineHeight: 1.55,
+    fontSize: 16
+  },
+  statsWrap: {
+    display: 'flex',
+    gap: 12,
+    flexWrap: 'nowrap'
+  },
+  statCard: {
+    minWidth: 160,
+    padding: '16px 18px',
+    borderRadius: 18,
+    background: '#fff1f2',
+    border: '1px solid #fecdd3',
+    display: 'grid',
+    gap: 4
+  },
+  statNumber: {
+    color: '#be123c',
+    fontSize: 34,
+    lineHeight: 1,
+    fontWeight: 900
+  },
+  statLabel: {
+    color: '#4a0017',
+    fontSize: 15,
+    fontWeight: 900
   },
   refresh: {
     border: '1px solid #fecdd3',
     background: '#fff1f2',
     color: '#be123c',
-    borderRadius: 14,
-    padding: '12px 16px',
+    borderRadius: 16,
+    padding: '14px 20px',
     fontWeight: 900,
+    fontSize: 15,
     cursor: 'pointer'
   },
   message: {
+    margin: '0 0 18px',
     background: '#fff1f2',
     border: '1px solid #fecdd3',
     padding: 14,
@@ -355,37 +440,43 @@ const styles = {
     color: '#be123c',
     fontWeight: 800
   },
-  layout: {
+  mainGrid: {
     display: 'grid',
-    gridTemplateColumns: 'minmax(320px, 430px) 1fr',
-    gap: 20
+    gridTemplateColumns: 'minmax(320px, 420px) 1fr',
+    gap: 18,
+    alignItems: 'start'
   },
-  listCard: {
+  listPanel: {
     background: '#fff',
     border: '1px solid #fecdd3',
     borderRadius: 28,
-    padding: 22,
-    boxShadow: '0 18px 45px rgba(190,18,60,.08)'
+    padding: 20,
+    boxShadow: '0 18px 45px rgba(190,18,60,.08)',
+    minHeight: 420
   },
-  profileCard: {
-    background: '#fff',
-    border: '1px solid #fecdd3',
-    borderRadius: 28,
-    padding: 24,
-    minHeight: 420,
-    boxShadow: '0 18px 45px rgba(190,18,60,.08)'
+  panelHeader: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 16
   },
-  sectionTitle: {
-    margin: '0 0 14px',
+  panelTitle: {
+    margin: 0,
     color: '#4a0017',
-    fontSize: 24
+    fontSize: 24,
+    fontWeight: 800
   },
-  muted: {
-    color: '#9f1239',
-    lineHeight: 1.5
+  smallCount: {
+    color: '#be123c',
+    fontWeight: 900,
+    background: '#fff1f2',
+    borderRadius: 999,
+    padding: '7px 11px',
+    fontSize: 13
   },
   empty: {
-    padding: 26,
+    padding: 24,
     borderRadius: 20,
     background: '#fff1f2',
     color: '#be123c',
@@ -403,10 +494,10 @@ const styles = {
     padding: 14,
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     gap: 12,
-    textAlign: 'left',
     cursor: 'pointer',
-    alignItems: 'center'
+    textAlign: 'left'
   },
   studentName: {
     color: '#4a0017',
@@ -418,12 +509,20 @@ const styles = {
     fontSize: 13,
     lineHeight: 1.35
   },
-  status: {
+  statusPill: {
     padding: '7px 10px',
     borderRadius: 999,
     fontWeight: 900,
     whiteSpace: 'nowrap',
-    fontSize: 13
+    fontSize: 12
+  },
+  profilePanel: {
+    background: '#fff',
+    border: '1px solid #fecdd3',
+    borderRadius: 28,
+    padding: 26,
+    boxShadow: '0 18px 45px rgba(190,18,60,.08)',
+    minHeight: 420
   },
   placeholder: {
     minHeight: 360,
@@ -441,19 +540,36 @@ const styles = {
     fontSize: 36,
     margin: '0 auto 16px'
   },
-  profileHeader: {
+  placeholderText: {
+    color: '#9f1239',
+    lineHeight: 1.5,
+    maxWidth: 360
+  },
+  profileTop: {
     display: 'flex',
     justifyContent: 'space-between',
     gap: 16,
     alignItems: 'flex-start',
     marginBottom: 22
   },
+  profileTitle: {
+    margin: 0,
+    color: '#4a0017',
+    fontSize: 30,
+    fontWeight: 500,
+    letterSpacing: '-.5px'
+  },
+  createdText: {
+    margin: '14px 0 0',
+    color: '#be123c',
+    fontSize: 16
+  },
   closeButton: {
     border: '1px solid #fecdd3',
     background: '#fff1f2',
     color: '#be123c',
-    borderRadius: 14,
-    padding: '11px 15px',
+    borderRadius: 16,
+    padding: '13px 18px',
     fontWeight: 900,
     cursor: 'pointer'
   },
@@ -466,13 +582,15 @@ const styles = {
     display: 'grid',
     gap: 8,
     color: '#be123c',
-    fontWeight: 900
+    fontWeight: 900,
+    fontSize: 16
   },
   labelFull: {
     display: 'grid',
     gap: 8,
     color: '#be123c',
     fontWeight: 900,
+    fontSize: 16,
     gridColumn: '1 / -1'
   },
   input: {
@@ -480,25 +598,26 @@ const styles = {
     boxSizing: 'border-box',
     border: '1px solid #fda4af',
     borderRadius: 16,
-    padding: '14px 16px',
+    padding: '14px 18px',
     color: '#4a0017',
     fontWeight: 800,
     fontSize: 15,
     outline: 'none',
-    background: '#fff'
+    background: '#fff',
+    minHeight: 52
   },
-  profileActions: {
+  actions: {
     display: 'flex',
     flexWrap: 'wrap',
     gap: 12,
-    marginTop: 24
+    marginTop: 22
   },
   saveButton: {
     border: 0,
     background: '#4a0017',
     color: '#fff',
     borderRadius: 14,
-    padding: '13px 18px',
+    padding: '14px 22px',
     fontWeight: 900,
     cursor: 'pointer'
   },
@@ -507,7 +626,7 @@ const styles = {
     background: '#e11d48',
     color: '#fff',
     borderRadius: 14,
-    padding: '13px 18px',
+    padding: '14px 22px',
     fontWeight: 900,
     cursor: 'pointer'
   },
@@ -516,7 +635,7 @@ const styles = {
     background: '#fee2e2',
     color: '#991b1b',
     borderRadius: 14,
-    padding: '13px 18px',
+    padding: '14px 22px',
     fontWeight: 900,
     cursor: 'pointer'
   }
