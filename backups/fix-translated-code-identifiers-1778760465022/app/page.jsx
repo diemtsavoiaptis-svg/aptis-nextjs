@@ -198,70 +198,34 @@ export default function HomePage() {
                   />
 
                   <input
-                    required
-                    type="password"
-                    placeholder="Mật khẩu"
-                    value={loginForm.password}
-                    onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })}
-                    className="rounded-2xl border border-rose-200 px-5 py-4 font-bold outline-none focus:border-rose-500"
-                  />
+            style={styles.input}
+            placeholder="Họ và tên"
+            value={form.fullName}
+            onChange={e => setForm({ ...form, fullName: e.target.value })}
+          />
 
-                  {message && (
-                    <div className="rounded-2xl bg-rose-100 px-5 py-3 font-bold text-rose-700">
-                      {message}
-                    </div>
-                  )}
+          <input
+            style={styles.input}
+            placeholder="Số điện thoại"
+            value={form.phone}
+            onChange={e => setForm({ ...form, phone: e.target.value })}
+          />
 
-                  <button className="rounded-2xl bg-rose-600 px-6 py-4 font-black text-white shadow-lg">
-                    Đăng nhập
-                  </button>
-                </form>
+          <input
+            style={styles.input}
+            placeholder="Email"
+            type="email"
+            value={form.email}
+            onChange={e => setForm({ ...form, email: e.target.value })}
+          />
 
-                <button
-                  type="button"
-                  onClick={() => openModal("register")}
-                  className="mt-5 font-black text-rose-700"
-                >
-                  Tạo tài khoản học viên →
-                </button>
-              </>
-            ) : (
-              <>
-                <h2 className="text-4xl font-black">Tạo tài khoản</h2>
-                <p className="mt-3 text-rose-700">
-                  Đăng ký trước. Cần quản trị viên duyệt để mở khóa toàn bộ bài học.
-                </p>
-
-                <form onSubmit={register} className="mt-8 grid gap-4">
-                  <input
-                    required
-                    placeholder="Mật khẩu"
-                    value={registerForm.studentId}
-                    onChange={(e) => setRegisterForm({ ...registerForm, studentId: e.target.value })}
-                    className="rounded-2xl border border-rose-200 px-5 py-4 font-bold outline-none focus:border-rose-500"
-                  />
-
-                  <input
-                    required
-                    placeholder="Họ và tên"
-                    value={registerForm.name}
-                    onChange={(e) => setRegisterForm({ ...registerForm, name: e.target.value })}
-                    className="rounded-2xl border border-rose-200 px-5 py-4 font-bold outline-none focus:border-rose-500"
-                  />
-
-                  <input
-                    placeholder="Số điện thoại"
-                    value={registerForm.phone}
-                    onChange={(e) => setRegisterForm({ ...registerForm, phone: e.target.value })}
-                    className="rounded-2xl border border-rose-200 px-5 py-4 font-bold outline-none focus:border-rose-500"
-                  />
-
-                  <input
-                    placeholder="Email"
-                    value={registerForm.email}
-                    onChange={(e) => setRegisterForm({ ...registerForm, email: e.target.value })}
-                    className="rounded-2xl border border-rose-200 px-5 py-4 font-bold outline-none focus:border-rose-500"
-                  />
+          <input
+            style={styles.input}
+            placeholder="Mật khẩu"
+            type="password"
+            value={form.password}
+            onChange={e => setForm({ ...form, password: e.target.value })}
+          />
 
                   {message && (
                     <div className="rounded-2xl bg-rose-100 px-5 py-3 font-bold text-rose-700">
@@ -323,6 +287,7 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
 
