@@ -11,11 +11,17 @@ export async function POST(request) {
     const password = String(body.password || '')
 
     if (!fullName || !phone || !email || !password) {
-      return NextResponse.json({ ok: false, message: 'Please fill in all fields.' }, { status: 400 })
+      return NextResponse.json({
+        ok: false,
+        message: 'Please fill in all fields.'
+      }, { status: 400 })
     }
 
     if (password.length < 6) {
-      return NextResponse.json({ ok: false, message: 'Password must be at least 6 characters.' }, { status: 400 })
+      return NextResponse.json({
+        ok: false,
+        message: 'Password must be at least 6 characters.'
+      }, { status: 400 })
     }
 
     const supabase = createSupabaseAdmin()
@@ -27,7 +33,10 @@ export async function POST(request) {
       .maybeSingle()
 
     if (existing) {
-      return NextResponse.json({ ok: false, message: 'This email is already registered.' }, { status: 409 })
+      return NextResponse.json({
+        ok: false,
+        message: 'This email is already registered.'
+      }, { status: 409 })
     }
 
     const { data, error } = await supabase
@@ -45,7 +54,10 @@ export async function POST(request) {
       .single()
 
     if (error) {
-      return NextResponse.json({ ok: false, message: error.message }, { status: 500 })
+      return NextResponse.json({
+        ok: false,
+        message: error.message
+      }, { status: 500 })
     }
 
     return NextResponse.json({
@@ -54,6 +66,9 @@ export async function POST(request) {
       user: data
     })
   } catch (error) {
-    return NextResponse.json({ ok: false, message: error.message }, { status: 500 })
+    return NextResponse.json({
+      ok: false,
+      message: error.message
+    }, { status: 500 })
   }
 }

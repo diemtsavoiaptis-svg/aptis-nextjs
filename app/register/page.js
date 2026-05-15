@@ -9,6 +9,7 @@ export default function RegisterPage() {
     email: '',
     password: ''
   })
+
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
 
@@ -48,13 +49,38 @@ export default function RegisterPage() {
         <div style={styles.logo}>A</div>
 
         <h1 style={styles.title}>Tạo tài khoản</h1>
-        <p style={styles.desc}>Đăng ký trước. Quản trị viên sẽ thêm mã học viên khi duyệt hồ sơ.</p>
+        <p style={styles.desc}>Đăng ký trước. Cần quản trị viên duyệt để mở khóa toàn bộ bài học.</p>
 
         <form onSubmit={submitRegister} style={styles.form}>
-          <input style={styles.input} placeholder="Họ và tên" value={form.fullName} onChange={e => setForm({ ...form, fullName: e.target.value })} />
-          <input style={styles.input} placeholder="Số điện thoại" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} />
-          <input style={styles.input} placeholder="Email" type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
-          <input style={styles.input} placeholder="Mật khẩu" type="password" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} />
+          <input
+            style={styles.input}
+            placeholder="Họ và tên"
+            value={form.fullName}
+            onChange={e => setForm({ ...form, fullName: e.target.value })}
+          />
+
+          <input
+            style={styles.input}
+            placeholder="Số điện thoại"
+            value={form.phone}
+            onChange={e => setForm({ ...form, phone: e.target.value })}
+          />
+
+          <input
+            style={styles.input}
+            placeholder="Email"
+            type="email"
+            value={form.email}
+            onChange={e => setForm({ ...form, email: e.target.value })}
+          />
+
+          <input
+            style={styles.input}
+            placeholder="Mật khẩu"
+            type="password"
+            value={form.password}
+            onChange={e => setForm({ ...form, password: e.target.value })}
+          />
 
           <button style={styles.button} disabled={loading}>
             {loading ? 'Đang gửi...' : 'Gửi đăng ký'}
